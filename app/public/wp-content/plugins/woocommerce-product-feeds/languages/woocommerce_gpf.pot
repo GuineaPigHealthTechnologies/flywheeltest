@@ -1,0 +1,713 @@
+# Copyright (C) 2017 Ademti Software Ltd.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Google Product Feed 7.2.1\n"
+"Report-Msgid-Bugs-To: https://plugins.leewillis.co.uk/support\n"
+"POT-Creation-Date: 2017-10-02 09:59:17+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \"Ademti Software WooCommerce Support\" "
+"<wcsupport@ademti-software.co.uk>\n"
+"Language-Team: \"Ademti Software WooCommerce Support\" "
+"<wcsupport@ademti-software.co.uk>\n"
+"Poedit: \n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Generator: grunt-wp-i18n1.0.0\n"
+
+#: templates/woo-gpf-admin-cache-status.php:2
+msgid "Feed status"
+msgstr ""
+
+#: templates/woo-gpf-admin-include-variations.php:9
+msgid "Other settings"
+msgstr ""
+
+#: templates/woo-gpf-admin-include-variations.php:13
+msgid "Include variations in your feed."
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:2
+msgid "Settings for your store"
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:4
+msgid "This page allows you to control what data is added to your product feeds."
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:5
+msgid ""
+"Choose the fields you want to include here, and also set store-wide "
+"defaults. You can also set defaults against categories, or provide "
+"information on each product page. "
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:6
+msgid "Notes about Google"
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:7
+msgid ""
+"Depending on what you sell, and where you are selling it to Google apply "
+"different rules as to which information you should supply. You can find "
+"Google's list of what information is required on "
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:7
+msgid "this page"
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:8
+msgid "Getting your feed"
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:10
+msgid "Your feed is available here: "
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:35
+msgid "Feed fields to enable"
+msgstr ""
+
+#: templates/woo-gpf-admin-intro.php:37
+msgid ""
+"Choose which fields you want in your feed for each product, and set "
+"store-wide defaults below where necessary: "
+msgstr ""
+
+#: templates/woo-gpf-admin-send-item-group-id.php:4
+msgid "Send &ldquo;item_group_id&rdquo; in Google feed for variable products"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-adult.php:3
+msgid "Yes"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-adult.php:4
+#: woocommerce-gpf-admin.php:1169 woocommerce-gpf-status-report.php:104
+#: woocommerce-gpf-status-report.php:118
+msgid "No"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-age-group.php:3
+msgid "Newborn"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-age-group.php:4
+msgid "Infant"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-age-group.php:5
+msgid "Toddler"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-age-group.php:6
+msgid "Children"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-age-group.php:7
+msgid "Adults"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-availability.php:3
+msgid "In Stock"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-availability.php:4
+msgid "Available for order"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-availability.php:5
+msgid "Pre-Order"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-availability.php:6
+msgid "Out of stock"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-condition.php:3
+msgid "New"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-condition.php:4
+msgid "Refurbished"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-condition.php:5
+msgid "Used"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-gender.php:3
+msgid "Male"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-gender.php:4
+msgid "Female"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-gender.php:5
+msgid "Unisex"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-iexists.php:3
+msgid "Included"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-iexists.php:4
+msgid "Not included"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-installment.php:1
+msgid "Number of monthly instalments:"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-installment.php:5
+msgid "Amount of each payment, including 3-digit currency code, e.g. \"50 USD\":"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:3
+msgid "US Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:4
+msgid "UK Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:5
+msgid "European Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:6
+msgid "Australian Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:7
+msgid "Brazilian Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:8
+msgid "Chinese Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:9
+msgid "French Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:10
+msgid "German Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:11
+msgid "Italian Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:12
+msgid "Japanese Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-system.php:13
+msgid "Mexican Sizing"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-type.php:3
+msgid "Regular"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-type.php:4
+msgid "Petite"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-type.php:5
+msgid "Plus"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-type.php:6
+msgid "Big and Tall"
+msgstr ""
+
+#: templates/woo-gpf-field-row-default-size-type.php:7
+msgid "Maternity"
+msgstr ""
+
+#: templates/woo-gpf-meta-edit-intro.php:3 woocommerce-gpf-admin.php:106
+#: woocommerce-gpf-admin.php:377
+msgid "Product Feed Information"
+msgstr ""
+
+#: templates/woo-gpf-meta-edit-intro.php:4
+msgid ""
+"Only enter values here if you want to over-ride the store defaults for "
+"products in this category. You can still override the values here against "
+"individual products if you want to."
+msgstr ""
+
+#: woocommerce-gpf-admin.php:324 woocommerce-gpf-admin.php:504
+msgid "Default: "
+msgstr ""
+
+#: woocommerce-gpf-admin.php:327 woocommerce-gpf-admin.php:425
+#: woocommerce-gpf-admin.php:507 woocommerce-gpf-admin.php:635
+msgid "Use default"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:381
+msgid ""
+"Set values here if you want to override the information for this specific "
+"variation. If information should apply to all variations, then set it "
+"against the main product."
+msgstr ""
+
+#: woocommerce-gpf-admin.php:637
+msgid "No default"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:678
+msgid "Hide this product from the feed"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1102
+msgid "Product Feeds"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1170
+msgid "Use value from existing product field: "
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1205
+msgid "<em>%s</em> taxonomy"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1210
+msgid "<em>%s</em> field"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1217
+msgid "Uses value from %s if set."
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1233
+msgid "product inventory feed also available."
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1306
+msgid "<strong>%d</strong> / <strong>%d</strong> generated"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1349
+msgid "Store default: <br>"
+msgstr ""
+
+#: woocommerce-gpf-admin.php:1462
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: woocommerce-gpf-common.php:49
+msgid "Availability"
+msgstr ""
+
+#: woocommerce-gpf-common.php:50
+msgid ""
+"What status to send for in stock items. Out of stock products will always "
+"show as \"Out of stock\" irrespective of this setting."
+msgstr ""
+
+#: woocommerce-gpf-common.php:56
+msgid "Bundle indicator (is_bundle)"
+msgstr ""
+
+#: woocommerce-gpf-common.php:57
+msgid "Allows you to indicate whether a product is a \"bundle\" of products."
+msgstr ""
+
+#: woocommerce-gpf-common.php:62
+msgid "Availability date"
+msgstr ""
+
+#: woocommerce-gpf-common.php:63
+msgid ""
+"If you are accepting orders for products that are available for preorder, "
+"use this attribute to indicate when the product becomes available for "
+"delivery."
+msgstr ""
+
+#: woocommerce-gpf-common.php:68
+msgid "Condition"
+msgstr ""
+
+#: woocommerce-gpf-common.php:69
+msgid "Condition or state of items"
+msgstr ""
+
+#: woocommerce-gpf-common.php:75
+msgid "Brand"
+msgstr ""
+
+#: woocommerce-gpf-common.php:76
+msgid "Brand of the items"
+msgstr ""
+
+#: woocommerce-gpf-common.php:84
+msgid "Manufacturer Part Number (MPN)"
+msgstr ""
+
+#: woocommerce-gpf-common.php:85
+msgid "This code uniquely identifies the product to its manufacturer"
+msgstr ""
+
+#: woocommerce-gpf-common.php:92
+msgid "Product Type"
+msgstr ""
+
+#: woocommerce-gpf-common.php:93
+msgid "Your category of the items"
+msgstr ""
+
+#: woocommerce-gpf-common.php:101
+msgid "Google Product Category"
+msgstr ""
+
+#: woocommerce-gpf-common.php:102
+msgid "Google's category of the item"
+msgstr ""
+
+#: woocommerce-gpf-common.php:109
+msgid "Global Trade Item Number (GTIN)"
+msgstr ""
+
+#: woocommerce-gpf-common.php:110
+msgid ""
+"Global Trade Item Numbers (GTINs) for your items. These identifiers include "
+"UPC (in North America), EAN (in Europe), JAN (in Japan), and ISBN (for "
+"books)"
+msgstr ""
+
+#: woocommerce-gpf-common.php:117
+msgid "Gender"
+msgstr ""
+
+#: woocommerce-gpf-common.php:118
+msgid "Target gender for the item"
+msgstr ""
+
+#: woocommerce-gpf-common.php:124
+msgid "Age Group"
+msgstr ""
+
+#: woocommerce-gpf-common.php:125
+msgid "Target age group for the item"
+msgstr ""
+
+#: woocommerce-gpf-common.php:131
+msgid "Colour"
+msgstr ""
+
+#: woocommerce-gpf-common.php:132
+msgid "Item's Colour"
+msgstr ""
+
+#: woocommerce-gpf-common.php:138
+msgid "Size"
+msgstr ""
+
+#: woocommerce-gpf-common.php:139
+msgid "Size of the items"
+msgstr ""
+
+#: woocommerce-gpf-common.php:145
+msgid "Size type"
+msgstr ""
+
+#: woocommerce-gpf-common.php:146
+msgid "Size type of the items"
+msgstr ""
+
+#: woocommerce-gpf-common.php:152 woocommerce-gpf-common.php:153
+msgid "Size system"
+msgstr ""
+
+#: woocommerce-gpf-common.php:159
+msgid "Unit pricing measure"
+msgstr ""
+
+#: woocommerce-gpf-common.php:160
+msgid "Use this to define the measure and dimension of your product."
+msgstr ""
+
+#: woocommerce-gpf-common.php:167
+msgid "Unit pricing base measure"
+msgstr ""
+
+#: woocommerce-gpf-common.php:168
+msgid ""
+"Use this to include the denominator for your unit price. For example, you "
+"might be selling 150ml of perfume, but users are interested in seeing the "
+"price per 100ml."
+msgstr ""
+
+#: woocommerce-gpf-common.php:175
+msgid "Instalment"
+msgstr ""
+
+#: woocommerce-gpf-common.php:176
+msgid ""
+"Use this to tell users the details of a monthly instalment plan that you "
+"offer to pay for your product."
+msgstr ""
+
+#: woocommerce-gpf-common.php:182
+msgid "Material"
+msgstr ""
+
+#: woocommerce-gpf-common.php:183
+msgid "Item's material"
+msgstr ""
+
+#: woocommerce-gpf-common.php:189
+msgid "Pattern"
+msgstr ""
+
+#: woocommerce-gpf-common.php:190
+msgid "Item's pattern"
+msgstr ""
+
+#: woocommerce-gpf-common.php:196
+msgid "Adult content"
+msgstr ""
+
+#: woocommerce-gpf-common.php:197
+msgid "Whether the product contains nudity or sexually suggestive content"
+msgstr ""
+
+#: woocommerce-gpf-common.php:203
+msgid "Identifier exists flag"
+msgstr ""
+
+#: woocommerce-gpf-common.php:204
+msgid ""
+"Whether to include 'Identifier exists - false' when products don't have the "
+"relevant identifiers"
+msgstr ""
+
+#: woocommerce-gpf-common.php:210
+msgid "Adwords grouping filter"
+msgstr ""
+
+#: woocommerce-gpf-common.php:211
+msgid ""
+"Used to group products in an arbitrary way. It can be used for Product "
+"Filters to limit a campaign to a group of products or Product Targets, to "
+"bid differently for a group of products. This is a required field if the "
+"advertiser wants to bid differently to different sub-sets of products in "
+"the CPC or CPA % version. It can only hold one value."
+msgstr ""
+
+#: woocommerce-gpf-common.php:216
+msgid "Adwords labels"
+msgstr ""
+
+#: woocommerce-gpf-common.php:217
+msgid ""
+"Very similar to adwords_grouping, but it will only work on CPC. You can "
+"enter multiple values here, separating them with a comma (,). e.g. "
+"\"widget,box\"."
+msgstr ""
+
+#: woocommerce-gpf-common.php:224
+msgid "Bing Category"
+msgstr ""
+
+#: woocommerce-gpf-common.php:225
+msgid "Bing's category of the item"
+msgstr ""
+
+#: woocommerce-gpf-common.php:232
+msgid "Delivery label"
+msgstr ""
+
+#: woocommerce-gpf-common.php:233
+msgid ""
+"You can use this to control which shipping rules from your Merchant Centre "
+"account are applied to this product."
+msgstr ""
+
+#: woocommerce-gpf-common.php:241
+msgid "Minimum handling time"
+msgstr ""
+
+#: woocommerce-gpf-common.php:242
+msgid ""
+"The minimum handling time is the shortest amount of time (in days) between "
+"when an order is placed and when the product is dispatched."
+msgstr ""
+
+#: woocommerce-gpf-common.php:249
+msgid "Maximum handling time"
+msgstr ""
+
+#: woocommerce-gpf-common.php:250
+msgid ""
+"The maximum handling time is the longest amount of time (in days) between "
+"when an order is placed and when the product is dispatched."
+msgstr ""
+
+#: woocommerce-gpf-common.php:257
+msgid "Custom label 0"
+msgstr ""
+
+#: woocommerce-gpf-common.php:258 woocommerce-gpf-common.php:268
+#: woocommerce-gpf-common.php:278 woocommerce-gpf-common.php:288
+#: woocommerce-gpf-common.php:298
+msgid ""
+"Can be used to segment your products when setting up shopping campaigns in "
+"Adwords."
+msgstr ""
+
+#: woocommerce-gpf-common.php:267
+msgid "Custom label 1"
+msgstr ""
+
+#: woocommerce-gpf-common.php:277
+msgid "Custom label 2"
+msgstr ""
+
+#: woocommerce-gpf-common.php:287
+msgid "Custom label 3"
+msgstr ""
+
+#: woocommerce-gpf-common.php:297
+msgid "Custom label 4"
+msgstr ""
+
+#: woocommerce-gpf-common.php:307
+msgid "Promotion ID"
+msgstr ""
+
+#: woocommerce-gpf-common.php:308
+msgid "The unique ID of a promotion."
+msgstr ""
+
+#: woocommerce-gpf-common.php:315
+msgid "Bing shipping info (price only)"
+msgstr ""
+
+#: woocommerce-gpf-common.php:316
+msgid ""
+"The shipping field is required for Bing feed for Germany only. The format "
+"of the value is &quot;price&quot;, for example : 6.49"
+msgstr ""
+
+#: woocommerce-gpf-common.php:323
+msgid "Bing shipping info (country and price)"
+msgstr ""
+
+#: woocommerce-gpf-common.php:324
+msgid ""
+"The shipping field is required for Bing feed for Germany only. The format "
+"of the value is &quot;country:price&quot;, for example : DE:6.49"
+msgstr ""
+
+#: woocommerce-gpf-common.php:331
+msgid "Bing shipping info (country, service and price)"
+msgstr ""
+
+#: woocommerce-gpf-common.php:332
+msgid ""
+"The shipping field is required for Bing feed for Germany only. The format "
+"of the value is &quot;country:service:price&quot;, for example : "
+"DE:Standard:6.49"
+msgstr ""
+
+#: woocommerce-gpf-common.php:344
+msgid "Google merchant centre product feed"
+msgstr ""
+
+#: woocommerce-gpf-common.php:350
+msgid "Google merchant centre product inventory feed"
+msgstr ""
+
+#: woocommerce-gpf-common.php:356
+msgid "Bing merchant centre feed"
+msgstr ""
+
+#: woocommerce-gpf-common.php:729
+msgid "- Product fields -"
+msgstr ""
+
+#: woocommerce-gpf-common.php:745
+msgid "- Taxonomies -"
+msgstr ""
+
+#: woocommerce-gpf-import-export-integration.php:71
+#: woocommerce-gpf-rest-api.php:90
+msgid "Google product feed: %s"
+msgstr ""
+
+#: woocommerce-gpf-import-export-integration.php:74
+#: woocommerce-gpf-rest-api.php:92
+msgid "Google product feed: Hide product from feed (Y/N)"
+msgstr ""
+
+#: woocommerce-gpf-rest-api.php:22
+msgid "Google product feed data"
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:52 woocommerce-gpf-status-report.php:53
+msgid "WooCommerce Google Product Feed fields"
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:63
+msgid "Defaults to &quot;%s&quot;. "
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:67 woocommerce-gpf-status-report.php:69
+msgid "%s taxonomy"
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:73
+msgid "Pre-populates from &quot;%s&quot;."
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:97 woocommerce-gpf-status-report.php:98
+msgid "WooCommerce Google Product Feed options"
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:102 woocommerce-gpf-status-report.php:116
+msgid "Enabled"
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:110 woocommerce-gpf-status-report.php:111
+msgid "Include variations in feed"
+msgstr ""
+
+#: woocommerce-gpf-status-report.php:124 woocommerce-gpf-status-report.php:125
+msgid "Send item_group_id"
+msgstr ""
+
+#: woocommerce-gpf.php:244 woocommerce-gpf.php:248 woocommerce-gpf.php:252
+msgid "Every %d Minutes"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Google Product Feed"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.woocommerce.com/products/google-product-feed/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"WooCommerce extension that allows you to more easily populate advanced "
+"attributes into the Google Merchant Centre feed"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Lee Willis"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.leewillis.co.uk/"
+msgstr ""

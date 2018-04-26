@@ -1,0 +1,52 @@
+{
+    "require": {
+        "a5hleyrich/wp-background-processing": "dev-master",
+        "xrstf/composer-php52": "^1.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "xrstf\\Composer52\\Generator::onPostInstallCmd"
+        ],
+        "post-update-cmd": [
+            "xrstf\\Composer52\\Generator::onPostInstallCmd"
+        ],
+        "post-autoload-dump": [
+            "xrstf\\Composer52\\Generator::onPostInstallCmd"
+        ]
+    },
+    "autoload": {
+        "classmap": [
+            "./gamajo-template-loader.class.php",
+            "./woocommerce-gpf-cache.php",
+            "./woocommerce-gpf-cache-invalidator.php",
+            "./woocommerce-gpf-common.php",
+            "./woocommerce-gpf-abstract-cache-rebuild-job.php",
+            "./woocommerce-gpf-cache-rebuild-product-job.php",
+            "./woocommerce-gpf-cache-rebuild-term-job.php",
+            "./woocommerce-gpf-cache-rebuild-all-job.php",
+            "./woocommerce-gpf-feed-item.php",
+            "./woocommerce-gpf-feed.php",
+            "./woocommerce-gpf-feed-bing.php",
+            "./woocommerce-gpf-feed-google.php",
+            "./woocommerce-gpf-feed-google-inventory.php",
+            "./woocommerce-gpf-rest-api.php",
+            "./woocommerce-gpf-status-report.php",
+            "./woocommerce-gpf-template-tags.php",
+            "./woocommerce-gpf-template-loader.class.php",
+            "tests/unit/WoocommerceGpfTestAbstract.php",
+            "tests/unit/mocks/WoocommerceGpfWcMocks.php",
+            "tests/unit/mocks/WoocommerceGpfWpMocks.php",
+            "tests/unit/mocks/WoocommerceGpfMocks.php",
+            "tests/unit/mocks/MockWpPost.php",
+            "tests/unit/mocks/MockWpTaxonomy.php",
+            "tests/unit/mocks/MockWpTerm.php",
+            "tests/unit/mocks/MockWcProduct.php",
+            "tests/unit/mocks/MockWoocommerceGpfCommon.php",
+            "vendor/a5hleyrich/wp-background-processing/classes/wp-async-request.php",
+            "vendor/a5hleyrich/wp-background-processing/classes/wp-background-process.php"
+        ]
+    },
+    "require-dev": {
+        "10up/wp_mock": "dev-dev"
+    }
+}

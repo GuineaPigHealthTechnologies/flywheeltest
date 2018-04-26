@@ -1,0 +1,31 @@
+So you found my to-do list for future features in this plugin? Well, hope you enjoy the little sneak preview of what's coming. Missing some features you might like? Drop me a line at support@adtribes.io and we might just add it to the list. Thanks!
+
+TO-DO:
+- add WPML support
+- filters do not work when a filer 'include only' is being set on a category that is not the primary category (yoast)
+- do not immediatly start generating the product feed after final step of configuration as it might run into a timeout
+- attribute mapping werkt niet als er teveel attributen zijn. Pagina sneller maken!
+- attribute mapping gaat kapot wanneer rijen worden verwijderd en weer worden toegevoegd
+
+Upcoming releases:
+- Fix attribute mapping page
+- Fix too large POST requests (sites with > 200 categories)
+- Tracking & conversion
+	- dynamic dropdowns in GA / tracking page for values
+- Add support for Composite products: https://woocommerce.com/products/composite-products/
+- Add support for Bundled products: https://woocommerce.com/products/product-bundles/
+- Blinking processing  should update without refreshing
+- Add more complex rules based on more than just 1 condition (AND)
+- Support Amazon templates
+- Add possibility to copy/clone projects
+
+Later:
+- Make it possible to drag and drop filters and rules in a specific order of execution
+- Add Spinner to Bootstrap typeahead autosuggest
+- Regular expression usage in category mapping and feed rules and filter settings
+- Cron interval configurable for user (exact timing instead of just daily,twicedaily or hourly)
+- Tabbed configuration of feed
+- Add localisation (at least for nl_NL and nl_BE / fr_BE) - https://codex.wordpress.org/I18n_for_WordPress_Developers#Translating_Plugins_and_Themes
+
+DESIGN ISSUES:
+- new unique grey menu icons for wordpress

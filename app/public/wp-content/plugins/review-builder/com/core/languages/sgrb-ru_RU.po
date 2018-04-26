@@ -1,0 +1,1243 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Review Builder PRO\n"
+"POT-Creation-Date: 2017-07-06 18:48+0400\n"
+"PO-Revision-Date: 2017-07-10 13:42+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: app.php\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: com/config/autoload-free.php:18 com/config/autoload-free.php:19
+#: com/config/autoload.php:18 com/config/autoload.php:19
+msgid "All Reviews"
+msgstr "Все Обзоры"
+
+#: com/config/autoload-free.php:26 com/config/autoload.php:26
+msgid "Add/Edit Review"
+msgstr "Добавить/Изменить обзор"
+
+#: com/config/autoload-free.php:27 com/config/autoload.php:27
+msgid "Add Review"
+msgstr "Добавить Обзор"
+
+#: com/config/autoload-free.php:34 com/config/autoload-free.php:35
+#: com/config/autoload.php:34 com/config/autoload.php:35
+msgid "All Comments"
+msgstr "Все Комментарии"
+
+#: com/config/autoload-free.php:42 com/config/autoload.php:42
+msgid "Add/Edit Comment"
+msgstr "Добавить/Изменить комментарий"
+
+#: com/config/autoload-free.php:43 com/config/autoload.php:43
+msgid "Add Comment"
+msgstr "Добавить Комментарий"
+
+#: com/config/autoload-free.php:50 com/config/autoload-free.php:51
+#: com/config/autoload.php:50 com/config/autoload.php:51
+msgid "All Templates"
+msgstr "Все Шаблоны"
+
+#: com/config/autoload-free.php:58 com/config/autoload.php:58
+msgid "Add/Edit Template"
+msgstr "Добавить / Изменить Шаблон"
+
+#: com/config/autoload-free.php:59 com/config/autoload.php:59
+msgid "Add Template"
+msgstr "Добавить Шаблон"
+
+#: com/config/autoload-free.php:66 com/config/autoload-free.php:67
+#: com/config/autoload.php:66 com/config/autoload.php:67
+msgid "Comment box"
+msgstr "Окно комментариев"
+
+#: com/config/autoload-free.php:82 com/config/autoload-free.php:83
+#: com/config/autoload.php:74 com/config/autoload.php:75
+msgid "More Plugins"
+msgstr "Плагины"
+
+#: com/core/SGRB.php:180
+msgid "Add reviews"
+msgstr "Добавить обзор"
+
+#: com/core/SGRB.php:338 com/core/SGRB.php:543
+msgid "Insert review"
+msgstr "Вставить отзыв"
+
+#: com/core/SGRB.php:545
+msgid "Insert the shortcode for showing a Review"
+msgstr "Вставьте шорткод чтобы показать обзор"
+
+#: com/core/SGRB.php:549
+msgid "Insert Review"
+msgstr "вставить отзыв"
+
+#: com/core/SGRB.php:550
+msgid "Insert Widget of Reivew"
+msgstr "Вставить Виджет Обзора"
+
+#: com/core/SGRB.php:556 com/core/SGRB.php:571
+msgid "Please select..."
+msgstr "Пожалуйста выберите..."
+
+#: com/core/SGRB.php:582
+msgid "you review page url..."
+msgstr "Посетите нашу страницу Review Builder"
+
+#: com/core/SGRB.php:585
+msgid "Notice : select your review"
+msgstr "Внимание: выберите ваш обзор"
+
+#: com/core/SGRB.php:587
+msgid "Insert"
+msgstr "Вставить"
+
+#: com/core/SGRB.php:588
+msgid "Cancel"
+msgstr "Отмена"
+
+#: com/layouts/Comment/index.php:4 com/views/Review.php:31
+msgid "Comments"
+msgstr "Комментарии"
+
+#: com/layouts/Comment/index.php:5 com/layouts/Comment/save.php:7
+#: com/layouts/Review/index.php:5 com/layouts/TemplateDesign/index.php:5
+msgid "Add new"
+msgstr "Добавить новый"
+
+#: com/layouts/Comment/save.php:5
+msgid "Edit Comment"
+msgstr "Редактировать Комментарий"
+
+#: com/layouts/Comment/save.php:5
+msgid "Add New Comment"
+msgstr "Добавить Комментарий"
+
+#: com/layouts/Comment/save.php:12 com/layouts/CommentForm/edit.php:10
+#: com/layouts/Review/reviewSetting.php:12
+#: com/layouts/TemplateDesign/save.php:9
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: com/layouts/Comment/save.php:16 com/layouts/Review/edit.php:29
+#: com/layouts/TemplateDesign/save.php:13
+msgid "Enter title here"
+msgstr "Введите здесь заголовок"
+
+#: com/layouts/Comment/save.php:29
+msgid "Comment options"
+msgstr "Настройки отображения комментариев"
+
+#: com/layouts/Comment/save.php:39 com/layouts/Comment/save.php:52
+#: com/layouts/Comment/save.php:58
+msgid "Select review"
+msgstr "Выберите обзор"
+
+#: com/layouts/Comment/save.php:76 com/layouts/Comment/save.php:108
+#: com/layouts/Comment/save.php:113
+msgid "Select post category"
+msgstr "Выберите категорию поста"
+
+#: com/layouts/Comment/save.php:91 com/layouts/Comment/save.php:122
+#: com/layouts/Comment/save.php:127
+msgid "Select post"
+msgstr "Выбрать пост"
+
+#: com/layouts/Comment/save.php:139 com/layouts/Comment/save.php:142
+msgid "Name"
+msgstr "Имя"
+
+#: com/layouts/Comment/save.php:150 com/layouts/Comment/save.php:153
+msgid "Email"
+msgstr "Эл. адрес"
+
+#: com/layouts/Comment/save.php:160 com/views/Comment.php:31
+msgid "Comment"
+msgstr "Комментарий"
+
+#: com/layouts/Comment/save.php:168
+msgid "Type your text here"
+msgstr "Введите текст здесь"
+
+#: com/layouts/Comment/save.php:175
+msgid "Approved"
+msgstr "Подтверждено"
+
+#: com/layouts/Comment/save.php:180
+msgid "No"
+msgstr "Нет"
+
+#: com/layouts/Comment/save.php:181
+msgid "Yes"
+msgstr "Да"
+
+#: com/layouts/Comment/save.php:200 com/layouts/Review/edit.php:82
+msgid "Rate options"
+msgstr "Настройки оценок"
+
+#: com/layouts/Comment/save.php:211
+msgid "Category"
+msgstr "Категория"
+
+#: com/layouts/Comment/save.php:226
+msgid "Rate"
+msgstr "Оценка"
+
+#: com/layouts/CommentForm/edit.php:5 com/layouts/CommentForm/edit.php:29
+msgid "Comment box settings"
+msgstr "Настройки окна комментариев"
+
+#: com/layouts/CommentForm/edit.php:35
+msgid "Default:"
+msgstr "По умолчанию:"
+
+#: com/layouts/CommentForm/edit.php:55
+msgid "show rate"
+msgstr "Показать оценку"
+
+#: com/layouts/CommentForm/edit.php:59 com/layouts/CommentForm/edit.php:105
+#: com/layouts/CommentForm/edit.php:154 com/layouts/CommentForm/edit.php:197
+msgid "Alignment"
+msgstr "Выравнивание"
+
+#: com/layouts/CommentForm/edit.php:64 com/layouts/CommentForm/edit.php:110
+#: com/layouts/CommentForm/edit.php:202
+msgid "left"
+msgstr "слева"
+
+#: com/layouts/CommentForm/edit.php:71 com/layouts/CommentForm/edit.php:117
+#: com/layouts/CommentForm/edit.php:209
+msgid "center"
+msgstr "по центру"
+
+#: com/layouts/CommentForm/edit.php:78 com/layouts/CommentForm/edit.php:124
+#: com/layouts/CommentForm/edit.php:216
+msgid "right"
+msgstr "по правому краю"
+
+#: com/layouts/CommentForm/edit.php:101
+msgid "show title"
+msgstr "показать заголовок"
+
+#: com/layouts/CommentForm/edit.php:133
+msgid "TITLE"
+msgstr "ЗАГОЛОВОК"
+
+#: com/layouts/CommentForm/edit.php:145
+msgid "show image"
+msgstr "показать картинку"
+
+#: com/layouts/CommentForm/edit.php:150
+msgid "show text"
+msgstr "Показать текст"
+
+#: com/layouts/CommentForm/edit.php:159
+msgid "default"
+msgstr "по умолчанию"
+
+#: com/layouts/CommentForm/edit.php:166
+msgid "reverse"
+msgstr "обратная"
+
+#: com/layouts/CommentForm/edit.php:174
+msgid ""
+"comment text here ...\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tLorem Ipsum has been the industry's standard dummy "
+"text ever since the 1500s,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\twhen an unknown printer took a galley of type and "
+"scrambled it to make a type specimen book.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tIt has survived not only five centuries."
+msgstr ""
+"текст комментария здесь...\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tLorem Ipsum has been the industry's standard dummy "
+"text ever since the 1500s,\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\twhen an unknown printer took a galley of type and "
+"scrambled it to make a type specimen book.\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tIt has survived not only five centuries."
+
+#: com/layouts/CommentForm/edit.php:188
+msgid "show date"
+msgstr "Показывать дату"
+
+#: com/layouts/CommentForm/edit.php:193
+msgid "show comment by"
+msgstr "Показать комментарий от"
+
+#: com/layouts/CommentForm/edit.php:225
+msgid "comment by"
+msgstr "комментарий от"
+
+#: com/layouts/Review/banner.php:74
+msgid "helped you earn 5 stars for your reviews"
+msgstr "Помогли вам заработать 5 звезд для ваших отзывов"
+
+#: com/layouts/Review/banner.php:77
+msgid "We'll be very thankful if you"
+msgstr "Мы были бы очень рады"
+
+#: com/layouts/Review/banner.php:79
+msgid "Don't show again"
+msgstr "Больше не показывать"
+
+#: com/layouts/Review/edit.php:25
+msgid "Edit Review"
+msgstr "Изменить обзор"
+
+#: com/layouts/Review/edit.php:25
+msgid "Add New Review"
+msgstr "Добавить обзор"
+
+#: com/layouts/Review/edit.php:33
+msgid "type review title"
+msgstr "вводите заголовок обзора"
+
+#: com/layouts/Review/edit.php:40 com/layouts/Review/edit.php:223
+msgid "Previous"
+msgstr "Прошедший"
+
+#: com/layouts/Review/edit.php:41 com/layouts/Review/edit.php:224
+msgid "Skip"
+msgstr "Пропустить"
+
+#: com/layouts/Review/edit.php:44 com/layouts/Review/edit.php:227
+msgid "Save"
+msgstr "Сохранить"
+
+#: com/layouts/Review/edit.php:46 com/layouts/Review/edit.php:229
+msgid "Continue"
+msgstr "Продолжить"
+
+#: com/layouts/Review/edit.php:59
+msgid "Select Review Type"
+msgstr "Выберите тип обзорa"
+
+#: com/layouts/Review/edit.php:67
+msgid "Select Template"
+msgstr "Выбор шаблона"
+
+#: com/layouts/Review/edit.php:74 com/views/Comment.php:33
+#: com/views/TemplateDesign.php:22
+msgid "Options"
+msgstr "Настройки"
+
+#: com/layouts/Review/edit.php:89
+msgid "Localization"
+msgstr "Локализация"
+
+#: com/layouts/Review/edit.php:123
+msgid "Simple review"
+msgstr "Простой обзор"
+
+#: com/layouts/Review/edit.php:124
+msgid "Single feature to rate, text/image as a template"
+msgstr "Одна характеристика для оценки, текст / изображение в качестве шаблона"
+
+#: com/layouts/Review/edit.php:134
+msgid "Product review"
+msgstr "Обзор продукта"
+
+#: com/layouts/Review/edit.php:135
+msgid "Unlimited features to rate with a lot of templates"
+msgstr ""
+"Неограниченное количество характеристик для оценки с большим количеством "
+"шаблонов"
+
+#: com/layouts/Review/edit.php:151
+msgid "Social comments"
+msgstr "Социальные комментарии"
+
+#: com/layouts/Review/edit.php:152
+msgid "Replace our comments form with the traditional Facebook comments"
+msgstr "Замените нашу форму комментариев на традиционные комментарии Facebook"
+
+#: com/layouts/Review/edit.php:172
+msgid "Post review"
+msgstr "Пост обзор"
+
+#: com/layouts/Review/edit.php:173
+msgid "Unlimited features to rate Your post"
+msgstr "Неограниченное количество характеристик для оценки вашего поста"
+
+#: com/layouts/Review/edit.php:190
+msgid "WooCommerce review"
+msgstr "Woocommerce Обзор"
+
+#: com/layouts/Review/edit.php:191
+msgid "WooCommerce review lets You get reviews with our plugin"
+msgstr "WooCommerce Обзор позволяет получать обзоры с помощью нашего плагина"
+
+#: com/layouts/Review/edit.php:243
+#: com/layouts/Review/templateSelectSection.php:4
+msgid "Select template"
+msgstr "Выбрать шаблон"
+
+#: com/layouts/Review/generalOptions-free.php:9
+#: com/layouts/Review/generalOptions.php:5
+msgid "Comments to show"
+msgstr "Количество комментариев для отображения"
+
+#: com/layouts/Review/generalOptions-free.php:17
+#: com/layouts/Review/generalOptions.php:15
+msgid "Comments to load"
+msgstr "Количество комментариев для загрузки:"
+
+#: com/layouts/Review/generalOptions-free.php:28
+#: com/layouts/Review/generalOptions.php:28
+msgid "Notify for new comments to this email"
+msgstr "Уведомлять о новых комментариях на этот адрес"
+
+#: com/layouts/Review/generalOptions-free.php:45
+#: com/layouts/Review/generalOptions.php:47
+msgid "Require login for new comments"
+msgstr "Требовать входа в аккаунт для новых комментариев"
+
+#: com/layouts/Review/generalOptions-free.php:58
+#: com/layouts/Review/generalOptions.php:62
+msgid "Hide comment form for all users"
+msgstr "Скрыть форму комментария для всех пользователей"
+
+#: com/layouts/Review/generalOptions-free.php:73
+#: com/layouts/Review/generalOptions.php:78
+msgid "Title required"
+msgstr "Заголовок (обязательно)"
+
+#: com/layouts/Review/generalOptions-free.php:84
+#: com/layouts/Review/generalOptions.php:89
+msgid "Email required"
+msgstr "Эл. почта (обязательно)"
+
+#: com/layouts/Review/generalOptions-free.php:97
+#: com/layouts/Review/generalOptions.php:104
+msgid "Auto approve comments"
+msgstr "Автоматически утверждать отзывы"
+
+#: com/layouts/Review/generalOptions-free.php:110
+#: com/layouts/Review/generalOptions.php:117
+msgid "Detect user by PC or IP"
+msgstr "Обнаружить пользователя по ПК или IP"
+
+#: com/layouts/Review/generalOptions-free.php:124
+#: com/layouts/Review/generalOptions.php:131
+msgid "Feature to rate"
+msgstr "Характеристика для оценки"
+
+#: com/layouts/Review/generalOptions-free.php:131
+#: com/layouts/Review/generalOptions-free.php:139
+#: com/layouts/Review/generalOptions-free.php:165
+#: com/layouts/Review/generalOptions-free.php:181
+#: com/layouts/Review/generalOptions.php:138
+#: com/layouts/Review/generalOptions.php:146
+#: com/layouts/Review/generalOptions.php:171
+#: com/layouts/Review/generalOptions.php:188
+msgid "e.g. quality/speed/price of review item"
+msgstr "Например, качество/скорость/цена рассматриваемого продукта"
+
+#: com/layouts/Review/generalOptions-free.php:153
+#: com/layouts/Review/generalOptions.php:159
+msgid "Features to rate"
+msgstr "Характеристики для оценок"
+
+#: com/layouts/Review/generalOptions-free.php:160
+#: com/layouts/Review/generalOptions-free.php:174
+#: com/layouts/Review/generalOptions.php:166
+#: com/layouts/Review/generalOptions.php:181
+msgid "At least one feature is required"
+msgstr "Требуется хотя бы одна характеристика"
+
+#: com/layouts/Review/googleSearchPreviewOptions.php:17
+msgid "Show Your review in Google search"
+msgstr "Показать ваш обзор в поиске Google"
+
+#: com/layouts/Review/googleSearchPreviewOptions.php:26
+msgid "Your review title"
+msgstr "Заголовок обзора"
+
+#: com/layouts/Review/googleSearchPreviewOptions.php:29
+msgid ""
+"Your description text, if description field in Your selected template not "
+"exist, then there will be another field's text, e.g. title,subtitle"
+msgstr ""
+"Текст описания, если поле описания в выбранном вами шаблоне не будет,то "
+"будет выбран текст другого поля, например. заголовок, подзаголовок"
+
+#: com/layouts/Review/googleSearchPreviewOptions.php:37
+msgid ""
+"\n"
+"\t\t\t\tSearch Engine Optimization (SEO) is the process of making a website "
+"more visible in search engine results pages.\n"
+"\t\t\t\tThe process itself has a variety of strategies and techniques that "
+"aim to improve search engine rankings,\n"
+"\t\t\t\tand extremely increase the traffic to your website.\n"
+"\t\t\t\tThere are a number of methods to improve a certain web page for "
+"search engines"
+msgstr ""
+
+#: com/layouts/Review/googleSearchPreviewOptions.php:43
+#, php-format
+msgid ""
+"\n"
+"\t\t\t\tGoogle makes up around 75% of search engine queries.\n"
+"\t\t\t\tIt is one of the most important search engines to pursue SEO.\n"
+"\t\t\t\tUnderstanding the bases of Google SEO can help you increase organic "
+"traffic to your website.\n"
+"\t\t\t\tAnd while Google’s underlying system for ranking websites may seem "
+"like the rest,\n"
+"\t\t\t\tthere are some key differences with Google that set it apart from "
+"other search engines"
+msgstr ""
+
+#: com/layouts/Review/googleSearchPreviewOptions.php:50
+msgid ""
+"\n"
+"\t\t\t\tSearch engine optimization often refers to making small "
+"modifications in some parts of your website.\n"
+"\t\t\t\tThough when viewed individually, these changes may seem to be "
+"incremental improvements,\n"
+"\t\t\t\tbut when you combine them with other optimizations,\n"
+"\t\t\t\tthey can have a remarkable impact on your site's user experience and "
+"performance in organic search results"
+msgstr ""
+
+#: com/layouts/Review/index.php:4
+msgid "Reviews"
+msgstr "Обзоры"
+
+#: com/layouts/Review/localization.php:4
+msgid "Success post text:"
+msgstr "Текст успешного публикования:"
+
+#: com/layouts/Review/localization.php:12
+msgid "Total rating:"
+msgstr "Общий рейтинг:"
+
+#: com/layouts/Review/localization.php:20
+msgid "Add review:"
+msgstr "Добавить обзор:"
+
+#: com/layouts/Review/localization.php:28
+msgid "Edit review:"
+msgstr "Изменить обзор:"
+
+#: com/layouts/Review/localization.php:38
+msgid "Name:"
+msgstr "Имя:"
+
+#: com/layouts/Review/localization.php:46
+msgid "Name placeholder:"
+msgstr "Заполнитель поля имя:"
+
+#: com/layouts/Review/localization.php:54
+msgid "Email:"
+msgstr "Эл. адрес:"
+
+#: com/layouts/Review/localization.php:62
+msgid "Email placeholder:"
+msgstr "Заполнитель поля эл. адреса:"
+
+#: com/layouts/Review/localization.php:70
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: com/layouts/Review/localization.php:78
+msgid "Title placeholder:"
+msgstr "Заполнитель заголовка:"
+
+#: com/layouts/Review/localization.php:86
+msgid "Comment:"
+msgstr "Коментарий:"
+
+#: com/layouts/Review/localization.php:94
+msgid "Comment placeholder:"
+msgstr "Заполнитель поля комментария:"
+
+#: com/layouts/Review/localization.php:102
+msgid "Load more button:"
+msgstr "Кнопка Читать дальше:"
+
+#: com/layouts/Review/localization.php:110
+msgid "No more comments:"
+msgstr "Нет больше комментариев:"
+
+#: com/layouts/Review/localization.php:118
+msgid "Show all:"
+msgstr "Показать все:"
+
+#: com/layouts/Review/localization.php:126
+msgid "Hide:"
+msgstr "Скрыть:"
+
+#: com/layouts/Review/localization.php:136
+msgid "Post button:"
+msgstr "Кнопка публикования:"
+
+#: com/layouts/Review/localization.php:145
+msgid "Captcha regenerate:"
+msgstr "Обновление капчи:"
+
+#: com/layouts/Review/localization.php:155
+msgid "Not logged in users:"
+msgstr "Неавторизованные пользователи:"
+
+#: com/layouts/Review/localization.php:166
+msgid "No rated categories:"
+msgstr "Не оценены:"
+
+#: com/layouts/Review/localization.php:176
+msgid "Empty name:"
+msgstr "Пустое имя:"
+
+#: com/layouts/Review/localization.php:184
+msgid "Empty email:"
+msgstr "Пустая электронная почта:"
+
+#: com/layouts/Review/localization.php:192
+msgid "Empty title:"
+msgstr "Пустой заголовок:"
+
+#: com/layouts/Review/localization.php:200
+msgid "Empty comment:"
+msgstr "Пустой комментарий:"
+
+#: com/layouts/Review/localization.php:208
+msgid "Comment by:"
+msgstr "Комментарий от:"
+
+#: com/layouts/Review/localization.php:219
+msgid "Incorrect captcha:"
+msgstr "Неверное значение капчи:"
+
+#: com/layouts/Review/localization.php:227
+msgid "Widget link add review:"
+msgstr "Ссылка виджета добавить отзыв:"
+
+#: com/layouts/Review/localization.php:235
+msgid "Widget link edit review:"
+msgstr "Ссылка виджета редактировать отзыв:"
+
+#: com/layouts/Review/morePlugins.php:9
+msgid ""
+"Backup Guard for WordPress is the best backup choice for WordPress based "
+"websites or blogs"
+msgstr ""
+
+#: com/layouts/Review/morePlugins.php:13 com/layouts/Review/morePlugins.php:30
+#: com/layouts/Review/morePlugins.php:47 com/layouts/Review/morePlugins.php:64
+msgid "Compatible"
+msgstr "Совместим"
+
+#: com/layouts/Review/morePlugins.php:13 com/layouts/Review/morePlugins.php:30
+#: com/layouts/Review/morePlugins.php:47 com/layouts/Review/morePlugins.php:64
+msgid "with your version of WordPress"
+msgstr "с вашей версией WordPress"
+
+#: com/layouts/Review/morePlugins.php:26
+msgid ""
+"Breadcrumb Builder will allow you to add Breadcrumbs navigation section to "
+"your site and your visitors will know current path"
+msgstr ""
+
+#: com/layouts/Review/morePlugins.php:43
+msgid ""
+"Social plugin provides you with many social networks, effects, dozens of "
+"themes and many other awesome options to make your page more shareable"
+msgstr ""
+
+#: com/layouts/Review/morePlugins.php:60
+msgid ""
+"Popup Builder is the most complete popup plugin. Html, image, shortcode and "
+"many other popup types. Manage popup dimensions, effects, themes"
+msgstr ""
+
+#: com/layouts/Review/morePlugins.php:77
+msgid ""
+"Wp Kicker has  a definite mission, to provide WordPress users with all the "
+"necessary information they may be needing concerning the security, the aim "
+"or the instructions of usage of WordPress in general"
+msgstr ""
+
+#: com/layouts/Review/rateOptions.php:15
+msgid "Star"
+msgstr "Звезда"
+
+#: com/layouts/Review/rateOptions.php:30
+msgid "Percent"
+msgstr "Процент"
+
+#: com/layouts/Review/rateOptions.php:46
+msgid "Point"
+msgstr "Баллы"
+
+#: com/layouts/Review/rateOptions.php:64
+msgid "Reset to default"
+msgstr "Сброс по умолчанию"
+
+#: com/layouts/Review/rateOptions.php:69
+msgid "Rate Skin color"
+msgstr "Настройки цветов оценок"
+
+#: com/layouts/Review/rateOptions.php:80
+msgid "Form & content text color"
+msgstr "Цвет текста основного содержимого"
+
+#: com/layouts/Review/rateOptions.php:89
+msgid "Form & content background color"
+msgstr "Цвет фона основного содержимого"
+
+#: com/layouts/Review/rateOptions.php:98
+msgid "Transparent background"
+msgstr "Прозрачный фон"
+
+#: com/layouts/Review/rateOptions.php:110
+msgid "Show total rate"
+msgstr "Показать общую оценку"
+
+#: com/layouts/Review/rateOptions.php:123
+msgid "Show comments"
+msgstr "Показать комментарии"
+
+#: com/layouts/Review/rateOptions.php:137
+#: com/layouts/Review/rateOptions.php:146
+msgid "Include captcha"
+msgstr "Включить капчу"
+
+#: com/layouts/Review/rateOptions.php:158
+msgid "Set review wrapper width"
+msgstr "Ширина обертка обзора"
+
+#: com/layouts/Review/rateOptions.php:179
+msgid "Template customize options"
+msgstr "Настройка параметров шаблона"
+
+#: com/layouts/Review/rateOptions.php:191
+#: com/layouts/Review/templatesOptionsPro.php:4
+msgid "Background color"
+msgstr "Фоновый цвет"
+
+#: com/layouts/Review/rateOptions.php:199
+#: com/layouts/Review/templatesOptionsPro.php:12
+msgid "Text color"
+msgstr "Цвет текста"
+
+#: com/layouts/Review/rateOptions.php:207
+#: com/layouts/Review/templatesOptionsPro.php:20
+msgid "Template inner boxes shadow effect"
+msgstr "Добавить эффект тени к внутренним полям"
+
+#: com/layouts/Review/rateOptions.php:218
+msgid "Color"
+msgstr "Цвет"
+
+#: com/layouts/Review/rateOptions.php:226
+#: com/layouts/Review/templatesOptionsPro.php:40
+msgid "To Left / Right (- / +)"
+msgstr "Лево/Право (-/+)"
+
+#: com/layouts/Review/rateOptions.php:234
+#: com/layouts/Review/templatesOptionsPro.php:48
+msgid "To Top / Bottom (- / +)"
+msgstr "Вверх/вниз  (-/ +)"
+
+#: com/layouts/Review/rateOptions.php:242
+#: com/layouts/Review/templatesOptionsPro.php:56
+msgid "Blur effect"
+msgstr "Эффект размытия"
+
+#: com/layouts/Review/rateOptions.php:250
+#: com/layouts/Review/templatesOptionsPro.php:65
+msgid "Font"
+msgstr "Шрифт"
+
+#: com/layouts/Review/reviewSetting.php:11
+msgid "General settings"
+msgstr "Основные настройки"
+
+#: com/layouts/Review/reviewSetting.php:17
+msgid "Successfully saved"
+msgstr "Успешно сохранено."
+
+#: com/layouts/Review/reviewSetting.php:22
+msgid "Save review data"
+msgstr "Сохраните данные обзора:"
+
+#: com/layouts/Review/reviewSetting.php:28
+msgid "Got something to say? Need help?"
+msgstr "Есть что сказать? Нужна помощь?"
+
+#: com/layouts/Review/reviewSetting.php:31
+msgid "Contact Us"
+msgstr "Свяжитесь с нами"
+
+#: com/layouts/Review/templateSelectSection.php:3
+msgid "Change template: "
+msgstr "Изменить шаблон:"
+
+#: com/layouts/Review/templateSelectSection.php:12
+msgid "Select the subject of your review"
+msgstr "Выберите тему для вашего обзора"
+
+#: com/layouts/Review/templateSelectSection.php:18
+msgid "Empty (default)"
+msgstr "Пусто (по умолчанию)"
+
+#: com/layouts/Review/templateSelectSection.php:35
+msgid "Text/shortcode as a template"
+msgstr "Текст / Шорткод как шаблон"
+
+#: com/layouts/Review/templateSelectSection.php:52
+msgid "Image as a template"
+msgstr "Использовать изображение как шаблон"
+
+#: com/layouts/Review/templateSelectSection.php:90
+msgid "Select post category to show current review:"
+msgstr "Выберите пост категорию, чтобы показать текущий обзор:"
+
+#: com/layouts/Review/templateSelectSection.php:104
+msgid "Disable Wordpress default comments"
+msgstr "Отключить Wordpress комментарии"
+
+#: com/layouts/Review/templateSelectSection.php:115
+msgid "This review will only be shown in posts with selected category"
+msgstr "Этот обзор будет показан только в постах с выбранной категорией"
+
+#: com/layouts/Review/templateSelectSection.php:134
+msgid "Disable WooCommerce products default reviews and comments"
+msgstr "Отключить WooCommerce отзывы и комментарии"
+
+#: com/layouts/Review/templateSelectSection.php:140
+msgid ""
+"Note: if the product has more than one review, priority will be given to the "
+"review attached directly to the product."
+msgstr ""
+"Примечание: Если продукт имеет более чем один обзор, первоочередное внимание "
+"будет уделено обзору, прикреплённому непосредственно к продукту."
+
+#: com/layouts/Review/templateSelectSection.php:146
+msgid "Show review on products with selected categories"
+msgstr "Показать обзор с выбранными категориями"
+
+#: com/layouts/Review/templateSelectSection.php:169
+msgid "No product categories found"
+msgstr "Не найдены категории товаров"
+
+#: com/layouts/Review/templateSelectSection.php:217
+msgid "Show review on selected products"
+msgstr "Показать обзор в выбранных продуктах"
+
+#: com/layouts/Review/templateSelectSection.php:239
+msgid "Products to load:"
+msgstr "Продукты для загрузки:"
+
+#: com/layouts/Review/templateSelectSection.php:251
+msgid "Loading..."
+msgstr "Загрузка..."
+
+#: com/layouts/Review/templatesOptionsPro.php:32
+msgid "Shadow color"
+msgstr "Цвет тени"
+
+#: com/layouts/TemplateDesign/index.php:4
+msgid "Templates"
+msgstr "Шаблоны"
+
+#: com/layouts/TemplateDesign/save-free.php:9
+msgid "Why upgrade to the PRO version"
+msgstr "Зачем обновлять до PRO версии?"
+
+#: com/layouts/TemplateDesign/save-free.php:12
+msgid "Complete creation of a template"
+msgstr "Полное создание шаблона"
+
+#: com/layouts/TemplateDesign/save-free.php:15
+msgid ""
+"Create Your own templates with html and css code using Our short helper tags."
+msgstr ""
+"Создавайте свои собственные шаблоны с помощью html и css используя наши "
+"короткие вспомогательные теги."
+
+#: com/layouts/TemplateDesign/save-free.php:18
+msgid "Unlimited amount of reviews"
+msgstr "Неограниченное количество отзывов"
+
+#: com/layouts/TemplateDesign/save-free.php:21
+msgid ""
+"With our Review Builder plugin you can create and add unlimited reviews to "
+"your website."
+msgstr ""
+"С помощью нашего плагина Review Builder можно создать и добавить "
+"неограниченное отзывы на ваш сайт."
+
+#: com/layouts/TemplateDesign/save-free.php:24
+msgid "Totally customizable"
+msgstr "Полностью настраиваемый"
+
+#: com/layouts/TemplateDesign/save-free.php:27
+msgid ""
+"You can customize the look of your reviews and even select the rating type."
+msgstr ""
+"Вы можете настроить внешний вид ваших отзывов и даже выбрать тип рейтинга."
+
+#: com/layouts/TemplateDesign/save-free.php:30
+msgid "Control the comments"
+msgstr "Контролировать комментарии"
+
+#: com/layouts/TemplateDesign/save-free.php:33
+msgid "You can edit the comments left for your products and control spammers."
+msgstr ""
+"Вы можете редактировать комментарии, оставленные для ваших продуктов и "
+"управления спамеров."
+
+#: com/layouts/TemplateDesign/save-free.php:36
+msgid "Google SEO Integration"
+msgstr "Интеграция Google SEO"
+
+#: com/layouts/TemplateDesign/save-free.php:39
+msgid ""
+"Get more views and make your website easy to find and grow your visitors "
+"number."
+msgstr ""
+"Получить больше просмотров и сделать Ваш сайт легко находимым и повысить "
+"число посетителей."
+
+#: com/layouts/TemplateDesign/save-free.php:42
+msgid "Post Review Without A Shortcode"
+msgstr "Пост обзоры без шорткода"
+
+#: com/layouts/TemplateDesign/save-free.php:45
+msgid ""
+"You can post your reviews straight by the post categories, no shortcode "
+"needed."
+msgstr ""
+"Вы можете публиковать ваши отзывы через пост категории, без использования "
+"шорткодов"
+
+#: com/layouts/TemplateDesign/save-free.php:48
+msgid "Support Beyond Helpful"
+msgstr "Полезная и полная поддержка."
+
+#: com/layouts/TemplateDesign/save-free.php:51
+msgid ""
+"Our super supportive team is always there to help you out! You can "
+"completely rely on us and we'll make all the things right."
+msgstr ""
+"Наша команда всегда готова вам помочь. Вы можете полностью положиться на "
+"нас, и мы сделаем все чтобы помочь вам."
+
+#: com/layouts/TemplateDesign/save-free.php:54
+msgid "And that's not all, want to know more?"
+msgstr "И это не все, хотите узнать больше?"
+
+#: com/layouts/TemplateDesign/save-free.php:55
+msgid "Visit Our Review Builder page"
+msgstr "Посетите нашу страницу Review Builder"
+
+#: com/layouts/TemplateDesign/save.php:5
+msgid "Edit Template"
+msgstr "Редактировать шаблон"
+
+#: com/layouts/TemplateDesign/save.php:5
+msgid "Add New Template"
+msgstr "Добавить новый шаблон"
+
+#: com/layouts/TemplateDesign/save.php:23
+msgid "Enter Your html here"
+msgstr "Введите ваш html здесь"
+
+#: com/layouts/TemplateDesign/save.php:46
+msgid "Enter Your css here"
+msgstr "Введите свой CSS здесь"
+
+#: com/layouts/TemplateDesign/save.php:71
+msgid ""
+"All suggested <code>[tags]</code> to help You to create or edit template"
+msgstr ""
+"Все предложенные <code>[теги]</code> чтобы помочь вам создать или изменить "
+"шаблон."
+
+#: com/layouts/TemplateDesign/save.php:76
+msgid ""
+"To add the needed fields to your template, you can simply copy the selected "
+"tag and paste it into the HTML section of your template.\n"
+"\t\t\t\t\t\t\t\t\t\tOr you can simply click on \"Insert tag\" button next to "
+"it. <i style=\"color:red;\">(Note: insert button works in visual mode only)</"
+"i>"
+msgstr ""
+"Чтобы добавить необходимые поля в шаблоне, можно просто скопировать "
+"выбранный тег и вставьте его в раздел HTML шаблона.\n"
+"\t\t\t\t\t\t\t\t\t\tИли вы можете просто нажать на кнопку «Вставить тег» "
+"рядом с ним. <i style=\"color:red;\">(Примечание: кнопка работает только в "
+"визуальном режиме)</i>."
+
+#: com/layouts/TemplateDesign/save.php:79
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t\t\tYou can also add classes to available tags, to give "
+"styles directly.\n"
+"\t\t\t\t\t\t\t\t\t\tYou can simply leave space after the tag name,then the "
+"word \"<code>class</code>\",\n"
+"\t\t\t\t\t\t\t\t\t\tequal sign \"<code>=</code>\" and enter your new class "
+"name enclosed in double quotes <code>\"\"</code>"
+msgstr ""
+
+#: com/layouts/TemplateDesign/save.php:85
+msgid ""
+"<b>Important!</b> Your new class name should have the \"<code>sgrb-</code>\" "
+"prefix to avoid conflicts with other plugins"
+msgstr ""
+"<b>Важно!</b> Новое имя класса должно иметь \" <code>sgrb-</code> \" "
+"префикс, чтобы избежать конфликтов с другими плагинами."
+
+#: com/layouts/TemplateDesign/save.php:88
+#: com/layouts/TemplateDesign/save.php:94
+msgid "example"
+msgstr "пример"
+
+#: com/layouts/TemplateDesign/save.php:91
+msgid "And as a result you should have something like this"
+msgstr "И как следствие вы должны получить нечто вроде этого:"
+
+#: com/layouts/TemplateDesign/save.php:103
+msgid "image field"
+msgstr "Поле изображения"
+
+#: com/layouts/TemplateDesign/save.php:104
+#: com/layouts/TemplateDesign/save.php:114
+#: com/layouts/TemplateDesign/save.php:125
+#: com/layouts/TemplateDesign/save.php:136
+#: com/layouts/TemplateDesign/save.php:147
+#: com/layouts/TemplateDesign/save.php:158
+#: com/layouts/TemplateDesign/save.php:169
+#: com/layouts/TemplateDesign/save.php:180
+#: com/layouts/TemplateDesign/save.php:191
+msgid "Insert tag"
+msgstr "Вставить тег"
+
+#: com/layouts/TemplateDesign/save.php:113
+msgid "title field"
+msgstr "Поле Заголовок"
+
+#: com/layouts/TemplateDesign/save.php:124
+msgid "subtitle field"
+msgstr "поле субтитров"
+
+#: com/layouts/TemplateDesign/save.php:135
+msgid "short description field"
+msgstr "Краткое описание"
+
+#: com/layouts/TemplateDesign/save.php:146
+msgid "long description field"
+msgstr "длинное описание поля"
+
+#: com/layouts/TemplateDesign/save.php:157
+msgid "price field"
+msgstr "Поле цены"
+
+#: com/layouts/TemplateDesign/save.php:168
+msgid "product by field"
+msgstr "\"продукт от\" поле"
+
+#: com/layouts/TemplateDesign/save.php:179
+msgid "shipping field"
+msgstr "поле доставки"
+
+#: com/layouts/TemplateDesign/save.php:190
+msgid "url link and its title field"
+msgstr "URL-адрес и название поля"
+
+#: com/layouts/TemplateDesign/save.php:199
+msgid "Template Image (optional)"
+msgstr "Изображение шаблона (необязательно)"
+
+#: com/lib/ReviewList.php:150
+msgid "List View"
+msgstr ""
+
+#: com/lib/ReviewList.php:151
+msgid "Excerpt View"
+msgstr ""
+
+#: com/lib/ReviewList.php:320
+msgid "No items found."
+msgstr "К сожалению, ничего не найдено."
+
+#: com/lib/ReviewList.php:446
+msgid "Select bulk action"
+msgstr "Выбрать действие"
+
+#: com/lib/ReviewList.php:448
+msgid "Bulk Actions"
+msgstr "Действия"
+
+#: com/lib/ReviewList.php:458
+msgid "Apply"
+msgstr "Применить"
+
+#: com/lib/ReviewList.php:508 com/lib/ReviewList.php:1269
+msgid "Show more details"
+msgstr "Подробнее"
+
+#: com/lib/ReviewList.php:563
+msgid "Filter by date"
+msgstr "Сортировать по дате"
+
+#: com/lib/ReviewList.php:565
+msgid "All dates"
+msgstr "Все даты"
+
+#: com/lib/ReviewList.php:578
+#, php-format
+msgid "%1$s %2$d"
+msgstr ""
+
+#: com/lib/ReviewList.php:630
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: com/lib/ReviewList.php:631
+#, php-format
+msgid "%s approved comment"
+msgid_plural "%s approved comments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: com/lib/ReviewList.php:632
+#, php-format
+msgid "%s pending comment"
+msgid_plural "%s pending comments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: com/lib/ReviewList.php:637 com/lib/ReviewList.php:649
+msgid "No comments"
+msgstr "Нет коментариев"
+
+#: com/lib/ReviewList.php:649
+msgid "No approved comments"
+msgstr "Нет одобренных комментариев"
+
+#: com/lib/ReviewList.php:730 com/lib/ReviewList.php:1294
+#, php-format
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: com/lib/ReviewList.php:765
+msgid "First page"
+msgstr "Первая страница"
+
+#: com/lib/ReviewList.php:775
+msgid "Previous page"
+msgstr "Предыдущая страница"
+
+#: com/lib/ReviewList.php:782 com/lib/ReviewList.php:785
+msgid "Current Page"
+msgstr "Текущая страница"
+
+#: com/lib/ReviewList.php:791
+#, php-format
+msgctxt "paging"
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: com/lib/ReviewList.php:798
+msgid "Next page"
+msgstr "Следующая страница"
+
+#: com/lib/ReviewList.php:808
+msgid "Last page"
+msgstr "Последняя страница"
+
+#: com/lib/ReviewList.php:1018
+msgid "Select All"
+msgstr "Выбрать всё"
+
+#: com/views/Comment.php:28
+msgid "Author"
+msgstr "Автор"
+
+#: com/views/Comment.php:29
+msgid "Review"
+msgstr "Обзор"
+
+#: com/views/Comment.php:30 com/views/Review.php:28
+#: com/views/TemplateDesign-free.php:21 com/views/TemplateDesign.php:21
+msgid "Title"
+msgstr "Заголовок"
+
+#: com/views/Comment.php:32
+msgid "Date"
+msgstr "Дата"
+
+#: com/views/Comment.php:71
+msgid "Disapprove"
+msgstr "Отклонить"
+
+#: com/views/Comment.php:74
+msgid "Approve"
+msgstr "Утвердить"
+
+#: com/views/Comment.php:77 com/views/Review.php:92
+#: com/views/TemplateDesign.php:41
+msgid "Edit"
+msgstr "Изменить"
+
+#: com/views/Comment.php:78 com/views/Review.php:93
+#: com/views/TemplateDesign.php:41
+msgid "Delete"
+msgstr "Удалить"
+
+#: com/views/Review.php:29
+msgid "Review type"
+msgstr "Тип обзора"
+
+#: com/views/Review.php:30
+msgid "Total rate"
+msgstr "Общая оценка"
+
+#: com/views/Review.php:94
+msgid "Clone"
+msgstr "Дублировать"
+
+#: com/views/TemplateDesign-free.php:22 com/views/TemplateDesign.php:23
+msgid "Preview"
+msgstr "Предварительный просмотр"
+
+#. Plugin Name of the plugin/theme
+msgid "Review Builder PRO"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://review-builder.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Review Builder PRO will allow you to add reviews section to your site. Build "
+"a reviews section so customers can leave reviews for your products."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Review Builder By Sygnoos"
+msgstr ""

@@ -1,0 +1,159 @@
+ * Changelog
+ *
+ * 2.2
+ * - Added new module "Product Categories"
+ *
+ * 2.3
+ * - Fixed loop archive module not showing pagination on search
+ *
+ * 2.4
+ * - Added support for Product Tag pages
+ *
+ * 2.5
+ * - Removed PHP notice for background layout on loop module
+ *
+ * 2.6
+ * - Fixed responsive text size/line height issues
+ * - Added more configuration options in advanced design settings across all modules
+ *
+ * 2.7
+ * - Added 'no content' option for the content module to enable use of the read more button on it's own
+ * - Modded price module to NOT show when no price is returned. Helps with styling an markup
+ *
+ * 2.8
+ * - Added custom query option on loop archive module
+ * - Added licensing and auto updates
+ *
+ * 2.9
+ * - Fixed gallery thumbnail cols CSS
+ *
+ * 3.0 - 3/2/17
+ * - Loop Archive module, hide grid columns option when list mode selected
+ * - Added new rating module
+ * - Added text alignment and light/dark colour settings to content and title modules
+ * - Added "add to cart" button renaming setting
+ * - improved settings page by adding helpful links when no layouts are present
+ * - improved settings page by removing prebuilt layouts from the various layout dropdowns
+ * - Added hide reviews tabs option to tabs module
+ * - Fixed advanced design settings in Price module
+ * - Added title option in price module
+ * - Added variation price styling in add to cart module
+ * - Added/Fixed styling options in add to cart module
+ * - Added support for tags as well as the existing category overrides
+ * - Added number to show option in upsell and related items modules
+ *
+ * 3.1 - 9/2/17
+ * - Remove superfluous layouts from Woo Loop Archive module layouts list
+ * - Added settings to present all tag and category archives in their own templates
+ * - Fixed bug whereby the settings page wouldn't save if the site had hundreds of tag/cats. Disabled ability to override individual terms at 100
+ * - Fixed posts number in loop archive module
+ *
+ * 3.2 - 31/3/17
+ * - Added text alignment and colour options to the shop title module
+ *
+ * 3.3 - 5/4/17
+ * - Added basic support for Woo 3.0. Product thumbnails now correct size and location although integration needs work
+ *
+ * 3.4 - 18/4/17
+ * - Added further support for Woo 3.0. Product thumbnails now show (forced CSS)
+ * - Fixed 'missing argument 3' bug
+ *
+ * 3.5 - 14/8/17
+ * - Added global setting to remove the woocommerce hover gallery feature added in Woo3+
+ * - Added global setting to Allow you to change the placeholder image for products without imagery
+ * - Fixed Woo image module size selection
+ * - Moved Woo Layout Injector submenu below the WooCommerce heading
+ * - Fixed tag general layout selection
+ * - Renamed modules to remove ET prefix as it's not necessary. Woo is less ambiguous
+ * - Added Woo check and admin nag
+ * - Added handy "edit" buttons to the settings page to help you find the layouts more easily
+ * - Added new 'cross sell' module for use on the cart pages
+ * - Added new Woo Attributes module to allow associated attributes for products to be shown easily
+ * - Fixed layouts issue in the Loop Archive reported in the latest Divi release (~Aug 2017)
+ *
+ * 3.6 - 15/8/17
+ * - Extended attributes module to include non-taxonony attributes
+ * - Fixed some PHP Notices
+ *
+ * 3.7 - 15/9/17
+ * - Added custom ordering to the loop archive module
+ * - Added 'hide if no results' to the loop archive module
+ *
+ * 3.8 - 20/9/17
+ * - Fixed issues with custom ordering
+ * - Added Woo Read More module to allow a direct link to the product page to be added
+ *
+ * 3.9 - 29/10/17
+ * - Fixed hover zoom issues within Woo Injector. Completely rewrote the image and gallery modules. Also completely integrated a hover zoom and lightbox functionality
+ *
+ * 3.9.1 - 31/10/17
+ * - Updated thumbnail column CSS for improved cross browser compatibility
+ * - Improved support for third party plugins such as Yith based on a move to 'action' based modules rather than function based
+ * - Made all modules more usable by using a settings group to move the useful settings above the background selector default with Divi
+ *
+ * 3.9.2 - 02/11/17
+ * - Updated thumbnail CSS
+ * - Added hover zoom disable functionality
+ * - Fixed Auto Update functionality
+ *
+ * 3.9.3 - 05/11/17
+ * - Added Woo Notices module for the added to cart message placement
+ * - Fixed JS error around jQuery zoom which effected some users
+ *
+ * 4.0 - 15/11/17
+ * - Fixed Woo Content module formatting
+ * - Fixed breadcrumb module styling options and added text orientation to the settings
+ * - Fixed product image flicker on change
+ * - Fixed when using the overlay option on the product image you can now click the image to visit the product page
+ * - If Woo Notices module not used then a fallback to having the notices at the top of the page now kicks in
+ * - Updated Rating module to include better alignment options, styling optiond and an option to hide the module if there are no ratings yet
+ * - Refactored code into several files for easier management
+ * - Added option to add/remove sale banners to both archive and single pages along with the ability to define where the banners show.. over image/content/title
+ * - Added alignment options to 'add to cart' module
+ * - Added offset and limit fields to the thumbnails module to allow for the thumbnails to be split across multiple page locations as necessary
+ * - Added 'short content' module as having it as part of the 'woo content' module was confusing some users
+ * - Added global setting to allow you to enable the Divi Builder for WooCommerce Product Pages
+ * - Added new product archive module for simpler stores. Much like the Loop Archive except no sub layout is necessary. Just add the module and you're good to go
+ * - Added single product module to show any single product on any page that uses the Divi Builder. Viewable in a default layout OR using the loop item concept
+ * - Added header mini cart option. Hover to view current cart and visit cart/checkout etc
+ * - Added ability to use the page builder to create your own checkout page
+ * - Added ability to use the page builder to create your own cart page
+ * - Added ability to use the page builder to create your own my account pages
+ *
+ * 4.0 - 16/11/17
+ * - Fixed shop/category description module throwing an error when description is turned on
+ *
+ * 4.1 - 12/01/18
+ * - Added support for Yith get a quote - premium
+ * - Fixed header cart for slide in menus and centred logo options
+ * - Fixed occasional bug with Woo Title module (sale price related)
+ * - Fixed error with srcset calculation
+ * - Limited colorbox css and js to product pages as it was interfering with the modal popup plugin
+ * - Removed overlay as link code as it was causing issues with old versions of Divi and messing with related items imagery
+ * - Set the related image size to large for quality purposes
+ * - Fixed occasional bug with Woo Content module (sale price related)
+ * - Fixed occasional bug with Woo Meta module (get sku on non object)
+ * - Coupon functionality changes now only kicks in when the checkout itself it overridden rather than all the time
+ *
+ * 4.2 - 02/02/18
+ * - Better Cross Sell module options
+ *
+ * 4.3 - 12/02/18
+ * - Added shortcodes [wli_content] and [wli_hook] for general use
+ * - Added two new filters to modify the heading tag used for single and archive pages. sb_et_woo_li_single_title_tag and sb_et_woo_li_archive_title_tag
+ *
+ *
+ * next version?
+ * ***- category grid module
+ * ***- dot nav/arrows to nav between product images
+ * ***- allow for sorting options
+ * ***- test with infinite scroll/ajax filters
+ * ***- write ajax filters for archives?
+ * ***- quick view layouts
+ * ***- add sharing module
+ * ***- pagination built in?
+ * ***- styling for individual images (custom css tab on thumbnails and product image modules)
+ * ***- default css import for woo from divi
+ * ***- fix related items module columns. add better related items styling (also upsells and cross sells)
+ * ***- visually appealing variation selectors
+ *

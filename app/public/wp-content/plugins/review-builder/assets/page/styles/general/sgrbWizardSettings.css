@@ -1,0 +1,549 @@
+/* wizard part */
+.sgrb-container .sgrb-title,
+.sgrb-container .sgrb-shortdesc,
+.sgrb-container .sgrb-longdesc {
+	width: 100%;
+}
+
+.sgrb-container .nav.nav-tabs {
+	border-right: 2px solid #546678;
+	border-left: 2px solid #546678;
+	border-bottom: none;
+}
+.sgrb-container .wizard {
+	/*margin: 20px auto;*/
+	background: #fff;
+}
+
+.sgrb-container .wizard .nav-tabs {
+	position: relative;
+	/*margin: 40px auto;*/
+	margin-bottom: 0;
+	border-bottom-color: #e0e0e0;
+}
+
+.sgrb-container .wizard > div.wizard-inner {
+	position: relative;
+}
+
+.sgrb-container .connecting-line {
+	height: 2px;
+	background: #e0e0e0;
+	position: absolute;
+	width: 80%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 50%;
+	z-index: 1;
+}
+
+.sgrb-container .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+	color: #555555;
+	cursor: default;
+	border: 0;
+	border-bottom-color: transparent;
+}
+
+.sgrb-container span.round-tab i {
+	margin: 0;
+}
+
+.sgrb-container span.round-tab {
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	display: inline-block;
+	border-radius: 100px;
+	background: #fff;
+	border: 2px solid #e0e0e0;
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	text-align: center;
+	font-size: 25px;
+}
+
+.sgrb-container span.round-tab i{
+	color:#555555;
+}
+
+.sgrb-container .wizard li.active span.round-tab {
+	background: #fff;
+	border: 2px solid #546678;
+}
+
+.sgrb-container .wizard li.active span.round-tab i{
+	color: #546678;
+}
+
+.sgrb-container span.round-tab:hover {
+	color: #333;
+	border: 2px solid #333;
+}
+
+.sgrb-container .wizard .nav-tabs > li {
+	width: 16%;
+}
+
+.sgrb-container .wizard li:after {
+	content: " ";
+	position: absolute;
+	left: 46%;
+	opacity: 0;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 5px solid transparent;
+	border-bottom-color: #546678;
+	transition: 0.1s ease-in-out;
+}
+
+.sgrb-container .wizard li.active:after {
+	content: " ";
+	position: absolute;
+	left: 46%;
+	opacity: 1;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 10px solid transparent;
+	border-bottom-color: #546678;
+}
+
+.sgrb-container .wizard .nav-tabs > li a {
+	width: 70px;
+	height: 70px;
+	margin: 20px auto;
+	border-radius: 100%;
+	padding: 0;
+}
+
+.sgrb-container .wizard .nav-tabs > li a:hover {
+	background: transparent;
+}
+
+.sgrb-container .wizard .tab-pane {
+	position: relative;
+	/*padding-top: 50px;*/
+}
+
+.sgrb-container .wizard h3 {
+	margin-top: 0;
+}
+
+.sgrb-container .sgrb-require-options-fields .col-md-3 {
+	text-align: right;
+}
+
+@media( max-width : 585px ) {
+	.sgrb-container .wizard {
+		width: 90%;
+		height: auto !important;
+	}
+
+	.sgrb-container span.round-tab {
+		font-size: 16px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.sgrb-container .wizard .nav-tabs > li a {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.sgrb-container .wizard li.active:after {
+		content: " ";
+		position: absolute;
+		left: 35%;
+	}
+}
+
+.sgrb-review-type-selector:hover {
+	cursor: pointer !important;
+}
+
+.sgrb-container .tooltip-inner {
+	width: 100px;
+}
+
+.sgrb-container .navbar-default .tooltip.right .tooltip-arrow {
+	opacity: 0.8;
+	border-right-width: 7px;
+	border-right-color: #FDFDFD;
+}
+
+.sgrb-title-input + .tooltip > .tooltip-inner {
+	background-color: #FDFDFD !important;
+	opacity: 0.8;
+	color: #2C3E50;
+	padding: 0;
+	margin: 2px;
+	width: 150px;
+	font-size: 1.4em;
+}
+
+#step3 .sgrb-comments-count-to-show,
+#step3 .sgrb-email-notification,
+#step3 .sgrb-comments-count-to-load {
+	height: 25px !important;
+	width: 100%;
+	padding:0 5px;
+}
+
+#step3 .sgrb-main-review-categories-wrapper .sgrb-field-name {
+	height: 30px;
+}
+
+#step3 .sgrb-main-review-categories-wrapper .sgrb-add-field,
+#step3 .sgrb-main-review-categories-wrapper .sgrb-remove-button {
+	border-radius: 0 4px 4px 0;
+	width: 20%;
+	margin-left: -6px;
+}
+
+#step3 .sgrb-main-review-categories-wrapper .sgrb-field-name {
+	width: 80%;
+	padding: 0 5px;
+	margin: 0;
+}
+
+#step3 .sgrb-main-review-categories-wrapper .sgrb-noteditable-field-name {
+	height: 30px;
+	padding-top: 0;
+}
+
+#step4 .btn.btn-danger {
+	background-color: #ff0000;
+}
+
+#step4 .btn.btn-danger:hover {
+	background-color: #bd362f;
+}
+
+#step5 input[type=text] {
+	padding: 0 3px !important;
+	height: 25px !important;
+	font-size: 15px !important;
+}
+
+/* simple checkbox */
+.sgrb-container input[type=checkbox] {
+	visibility: hidden;
+}
+
+.sgrb-checkbox-wrapper {
+	width: 25px;
+	/*margin: 20px 100px;*/
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.sgrb-checkbox-label {
+	border-radius: 3px;
+}
+
+.sgrb-checkbox-wrapper label {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background: #f0f1ec;
+	border:1px solid #ddd;
+}
+
+.sgrb-checkbox-wrapper label:hover {
+	background-color: #1abc9c;
+}
+
+.sgrb-checkbox-wrapper label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 9px;
+	background: transparent;
+	top: 6px;
+	left: 5px;
+	border: 3px solid #2C3E50;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
+.sgrb-checkbox-wrapper label:hover::after {
+	opacity: 0.5;
+	border-color: #ffffff;
+}
+
+.sgrb-checkbox-wrapper input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+.sgrb-checkbox-wrapper input[type=radio]:checked + label:after {
+	opacity: 1;
+}
+
+/* radio button */
+.sgrb-radio-wrapper {
+	width: 20px;
+	height: 20px;
+	background: #ddd;
+	border-radius: 100%;
+	position: relative;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+
+.sgrb-radio-wrapper label {
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 100px;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	z-index: 1;
+	background: #ddd;
+	box-shadow:inset 0px 1px 2px rgba(0,0,0,0.5);
+}
+
+.sgrb-radio-wrapper input[type=checkbox]:checked + label {
+	background: #3FBF79;
+}
+
+/* on/off checkbox */
+.sgrb-on-off-checkbox-wrapper {
+	width: 100px;
+	height: 31px;
+	background: #F0F1EC;
+	/*margin: 20px 60px;*/
+
+	border-radius: 50px;
+	position: relative;
+}
+
+.sgrb-on-off-checkbox-wrapper:before {
+	content: 'Yes';
+	position: absolute;
+	top: 4px;
+	left: 11px;
+	height: 2px;
+	color: #3FBF79;
+	font-size: 15px;
+}
+
+.sgrb-on-off-checkbox-wrapper:after {
+	content: 'No';
+	position: absolute;
+	top: 4px;
+	left: 70px;
+	height: 2px;
+	color: #111;
+	font-size: 15px;
+}
+
+.sgrb-on-off-checkbox-wrapper label {
+	display: block;
+	width: 40px;
+	height: 20px;
+	border-radius: 40px;
+
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 6px;
+	z-index: 1;
+	left: 7px;
+	background: #ddd;
+}
+
+.sgrb-on-off-checkbox-wrapper input[type=checkbox]:checked + label {
+	left: 54px;
+	background: #3FBF79;
+}
+
+/* width type px or % */
+.sgrb-px-percent-checkbox-wrapper {
+	width: 100px;
+	height: 31px;
+	background: #F0F1EC;
+	/*margin: 20px 60px;*/
+
+	border-radius: 50px;
+	position: relative;
+}
+
+.sgrb-px-percent-checkbox-wrapper:before {
+	content: 'px';
+	position: absolute;
+	top: 4px;
+	left: 11px;
+	height: 2px;
+	color: #2C3E50;
+	font-size: 15px;
+}
+
+.sgrb-px-percent-checkbox-wrapper:after {
+	content: '%';
+	position: absolute;
+	top: 4px;
+	left: 70px;
+	height: 2px;
+	color: #111;
+	font-size: 15px;
+}
+
+.sgrb-px-percent-checkbox-wrapper label {
+	display: block;
+	width: 40px;
+	height: 20px;
+	border-radius: 40px;
+
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 6px;
+	z-index: 1;
+	left: 7px;
+	background: #546678;
+}
+
+.sgrb-px-percent-checkbox-wrapper input[type=checkbox]:checked + label {
+	left: 54px;
+	background: #2C3E50;
+}
+
+/* user detection by ip or pc */
+.sgrb-ip-pc-checkbox-wrapper {
+	width: 100px;
+	height: 31px;
+	background: #F0F1EC;
+	/*margin: 20px 60px;*/
+
+	border-radius: 50px;
+	position: relative;
+}
+
+.sgrb-ip-pc-checkbox-wrapper:before {
+	content: 'PC';
+	position: absolute;
+	top: 4px;
+	left: 11px;
+	height: 2px;
+	color: #2C3E50;
+	font-size: 15px;
+}
+
+.sgrb-ip-pc-checkbox-wrapper:after {
+	content: 'IP';
+	position: absolute;
+	top: 4px;
+	left: 70px;
+	height: 2px;
+	color: #111;
+	font-size: 15px;
+}
+
+.sgrb-ip-pc-checkbox-wrapper label {
+	display: block;
+	width: 40px;
+	height: 20px;
+	border-radius: 40px;
+
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 6px;
+	z-index: 1;
+	left: 7px;
+	background: #546678;
+}
+
+.sgrb-ip-pc-checkbox-wrapper input[type=checkbox]:checked + label {
+	left: 54px;
+	background: #2C3E50;
+}
+
+.sgrb-wrapper-width-input {
+	width: 100px !important;
+	height: 30px !important;
+	padding: 0 8px !important;
+	background-color: #F0F1EC !important;
+	border-radius: 15px !important;
+	border: none !important;
+}
+
+.sgrb-container .wp-color-result {
+	height: 24px;
+}
+
+.sgrb-container .wp-color-result:hover {
+	text-decoration: none !important;
+}
+
+.sgrb-container .navbar-header .tooltip.fade.right.in {
+	top:16px;
+	display: block;
+	float: right;
+	position: relative;
+}
+
+.sgrb-disable {
+	pointer-events: none;
+	opacity: 0.4;
+}
+
+.ui-widget-content {
+	background-color: #F0F1EC !important;
+	color: #1f1f1f !important;
+}
+
+.ui-widget-header {
+	background-color: #546678 !important;
+	color: #2C3E50 !important;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+	background-color: #2C3E50 !important;
+	color: #ffffff !important;
+}
+
+.sgrb-selected-review-type {
+	background-color: #1abc9c !important;
+	color: #fff !important;
+}
+
+.sgrb-sample-template-text,
+.sgrb-social-template-text {
+	width: 100% !important;
+	padding: 0 6px !important;
+	font-size: 15px !important;
+}
+
+.sgrb-simple-review-categories-wrapper .sgrb-field-name {
+	height: 25px !important;
+}
+
+.sgrb-selectbox-wrapper {
+	overflow: hidden;
+	width: 204px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-position: right;
+	border-right: 1px solid #cccccc;
+}
+
+.sgrb-selectbox-wrapper select {
+	width: 220px;
+	background: transparent !important;
+	font-size: 15px !important;
+}
+
+.sgrb-post-template-wrapper .row {
+	margin: 10px 0 !important;
+}
