@@ -472,7 +472,7 @@
 					if ( settings.use_controls )
 						$et_slider_controls.removeClass( settings.control_active_class ).eq( et_active_slide ).addClass( settings.control_active_class );
 
-					if ( settings.use_carousel )
+					if ( settings.use_carousel && $et_slider_carousel_controls )
 						$et_slider_carousel_controls.removeClass( settings.control_active_class ).eq( et_active_slide ).addClass( settings.control_active_class );
 
 					if ( ! settings.tabs_animation ) {
@@ -654,6 +654,10 @@
 				var carousel_items_width = $the_carousel_items.width(),
 					carousel_items_height = $the_carousel_items.height();
 
+				// Account for borders when needed
+				if ($the_carousel.parent().hasClass('et_pb_with_border')) {
+					carousel_items_height = $the_carousel_items.outerHeight();
+				}
 				$carousel_items.css('height', carousel_items_height + 'px' );
 			}
 
@@ -3098,7 +3102,7 @@
 				$el.css("margin-left", $video_width_negative );
 			}
 
-			window.et_fix_slider_height = function( $slider ) {
+			function et_fix_slider_height( $slider ) {
 				var $this_slider = $slider || $et_pb_slider;
 
 				if ( ! $this_slider || ! $this_slider.length ) {
@@ -3177,7 +3181,25 @@
 						.children( 'img' )
 						.addClass( 'active' );
 				} );
-			};
+			}
+			var debounced_et_fix_slider_height = {};
+
+			// This function can end up being called a lot of times and it's quite expensive in terms of cpu due to
+			// recalculating styles. Debouncing it (VB only) for performances reasons.
+			window.et_fix_slider_height = !is_frontend_builder ? et_fix_slider_height : function($slider) {
+				var $this_slider = $slider || $et_pb_slider;
+
+				if ( ! $this_slider || ! $this_slider.length ) {
+					return;
+				}
+
+				// Create a debounced function per slider
+				var address = $this_slider.data('address');
+				if (!debounced_et_fix_slider_height[address]) {
+					debounced_et_fix_slider_height[address] = window.et_pb_debounce(et_fix_slider_height, 100);
+				}
+				debounced_et_fix_slider_height[address]($slider);
+			}
 
 			/**
 			 * Add conditional class to prevent unwanted dropdown nav
@@ -4915,21 +4937,21 @@
 
 			$('.et_pb_contact_form_container').each( function() {
 				var $form = $(this);
+				var subjects_selector = 'input, textarea, select';
+				var condition_check = function() {
+					et_conditional_check( $form );
+				};
+				var debounced_condition_check = et_pb_debounce( condition_check, 250 );
 
 				// Listen for any field change
-				$form.on( 'change', 'input, textarea, select', function() {
-
-					// Get the check id of the element that is changed
-					var trigger_id = $(this).closest('[data-id]').data('id');
-
-					et_conditional_check( $form, trigger_id );
-				} );
+				$form.on( 'change', subjects_selector, condition_check );
+				$form.on( 'keydown', subjects_selector, debounced_condition_check );
 
 				// Conditions may be satisfied on default form state
 				et_conditional_check( $form );
 			} );
 
-			function et_conditional_check( $form, trigger_id ) {
+			function et_conditional_check( $form ) {
 				var $conditionals = $form.find('[data-conditional-logic]');
 
 				// Upon change loop all the fields that have conditional logic
@@ -4953,11 +4975,6 @@
 							var field_id    = $wrapper.data('id');
 							var field_type  = $wrapper.data('type');
 							var field_value;
-
-							// If the trigger ID is not present in the conditional logic rule there is no need to process further
-							if ( trigger_id && check_id !== trigger_id ) {
-								return;
-							}
 
 							/*
 								Check if the field wrapper is actually visible when including it in the rules check.
@@ -5215,7 +5232,7 @@
 		window.et_pb_init_modules();
 	}
 
-	$(document).ready(function(){
+	$(document).ready(function() {
 		( et_pb_box_shadow_elements||[] ).map(et_pb_box_shadow_apply_overlay);
 	});
 
@@ -5223,7 +5240,7 @@
 		var $body = $('body');
 		// fix Safari letter-spacing bug when styles applied in `head`
 		// Trigger styles redraw by changing body display property to differentvalue and reverting it back to original.
-		if ($body.hasClass('safari')){
+		if ($body.hasClass('safari')) {
 			var original_display_value = $body.css('display');
 			var different_display_value = 'initial' === original_display_value ? 'block' : 'initial';
 
@@ -5232,6 +5249,29 @@
 			setTimeout(function() {
 				$body.css({ 'display': original_display_value });
 			}, 0);
+
+			// Keep this script here, as it needs to be executed only if the script from above is executed
+			// As the script from above somehow affects WooCommerce single product image rendering.
+			// https://github.com/elegantthemes/Divi/issues/7454
+			if ($body.hasClass('woocommerce-page') && $body.hasClass('single-product')) {
+                var $wc = $('.woocommerce div.product div.images.woocommerce-product-gallery');
+
+                if ($wc.length === 0) {
+                    return;
+                }
+
+                // Don't use jQuery to get element opacity, as it may return an outdated value.
+                var opacity = parseInt($wc[0].style.opacity);
+
+                if (!opacity) {
+                    return;
+                }
+
+                $wc.css({opacity: opacity - .09});
+                setTimeout(function() {
+                    $wc.css({opacity: opacity});
+                }, 0);
+			}
 		}
 	});
 })(jQuery);

@@ -6436,12 +6436,6 @@
 .et_divi_builder #et_builder_outer_content .et_pb_post_slider.et_pb_bg_layout_light .post-meta a {
   color: #333 !important;
 }
-.et_divi_builder #et_builder_outer_content .et_pb_post_slider.et_pb_bg_layout_dark {
-  background-color: #2ea3f2;
-}
-.et_divi_builder #et_builder_outer_content .et_pb_post_slider.et_pb_bg_layout_light {
-  background-color: #f5f5f5;
-}
 .et_divi_builder #et_builder_outer_content .et_pb_post_slider .et_pb_slide.et-pb-active-slide .et_pb_slide_description,
 .et_divi_builder #et_builder_outer_content .et_pb_post_slider .et_pb_slide.et-pb-active-slide .et_pb_slide_image {
   opacity: 0;
