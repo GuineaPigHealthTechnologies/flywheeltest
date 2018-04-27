@@ -1,4 +1,4 @@
 <?php
 
-// Note, this will be updated automatically during grunt release task3.0.102
-$ET_CORE_VERSION = '3.0.102';
+// Note, this will be updated automatically during grunt release task3.2
+$ET_CORE_VERSION = '3.2';

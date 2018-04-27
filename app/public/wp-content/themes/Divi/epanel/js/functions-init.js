@@ -5,6 +5,9 @@
 		var editors = [];
 
 		function addEditorInstance(codeEditor, $element, config) {
+			if (!$element || $element.length === 0) {
+				return;
+			}
 			var instance = codeEditor.initialize( $element , {
 				codemirror: config,
 			} );
@@ -24,11 +27,22 @@
 			var configHTML = $.extend({}, configCSS, {
 				mode: 'htmlmixed',
 			});
-			addEditorInstance(codeEditor, $('#divi_custom_css'), configCSS);
-			addEditorInstance(codeEditor, $('#divi_integration_head'), configHTML);
-			addEditorInstance(codeEditor, $('#divi_integration_body'), configHTML);
-			addEditorInstance(codeEditor, $('#divi_integration_single_top'), configHTML);
-			addEditorInstance(codeEditor, $('#divi_integration_single_bottom'), configHTML);
+
+			if ($('#divi_custom_css').length > 0) {
+				// Divi Theme
+				addEditorInstance(codeEditor, $('#divi_custom_css'), configCSS);
+				addEditorInstance(codeEditor, $('#divi_integration_head'), configHTML);
+				addEditorInstance(codeEditor, $('#divi_integration_body'), configHTML);
+				addEditorInstance(codeEditor, $('#divi_integration_single_top'), configHTML);
+				addEditorInstance(codeEditor, $('#divi_integration_single_bottom'), configHTML);
+			} else if ($('#extra_custom_css').length > 0) {
+				// Extra Theme
+				addEditorInstance(codeEditor, $('#extra_custom_css'), configCSS);
+				addEditorInstance(codeEditor, $('#extra_integration_head'), configHTML);
+				addEditorInstance(codeEditor, $('#extra_integration_body'), configHTML);
+				addEditorInstance(codeEditor, $('#extra_integration_single_top'), configHTML);
+				addEditorInstance(codeEditor, $('#extra_integration_single_bottom'), configHTML);
+			}
 		}
 
 		var $palette_inputs = $( '.et_color_palette_main_input' );

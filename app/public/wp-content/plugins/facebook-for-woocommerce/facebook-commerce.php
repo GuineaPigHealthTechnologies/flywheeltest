@@ -239,6 +239,12 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
           1    // Args passed to on_product_publish (should be 'id')
         );
 
+        add_action('woocommerce_process_product_meta_bundle',
+          array($this, 'on_product_publish'),
+          10,  // Action priority
+          1    // Args passed to on_product_publish (should be 'id')
+        );
+
         add_action(
           'woocommerce_product_quick_edit_save',
           array($this, 'on_quick_and_bulk_edit_save'),
@@ -286,6 +292,14 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
 
         add_filter('woocommerce_duplicate_product_exclude_meta',
           array($this, 'fb_duplicate_product_reset_meta'));
+
+        add_action('pmxi_after_xml_import',
+          array($this, 'wp_all_import_compat'));
+
+        if (defined('ICL_LANGUAGE_CODE')) {
+          include_once('includes/fbwpml.php');
+          new WC_Facebook_WPML_Injector();
+        }
 
       }
       $this->load_background_sync_process();
@@ -619,6 +633,11 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
 
   function on_product_delete($wp_id) {
     $woo_product = new WC_Facebook_Product($wp_id);
+    if (!$woo_product->exists()) {
+      // This happens when the wp_id is not a product or it's already
+      // been deleted.
+      return;
+    }
     $fb_product_group_id = $this->get_product_fbid(
       self::FB_PRODUCT_GROUP_ID,
       $wp_id,
@@ -630,17 +649,14 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
     if (! ($fb_product_group_id || $fb_product_item_id ) ) {
       return;  // No synced product, no-op.
     }
-
     $products = array($wp_id);
     if (WC_Facebookcommerce_Utils::is_variable_type($woo_product->get_type())) {
       $children = $woo_product->get_children();
       $products = array_merge($products, $children);
     }
-
     foreach ($products as $item_id) {
-      $this->delete_product_item ($item_id);
+      $this->delete_product_item($item_id);
     }
-
     if ($fb_product_group_id) {
       $pg_result = $this->fbgraph->delete_product_group($fb_product_group_id);
       WC_Facebookcommerce_Utils::log($pg_result);
@@ -1214,24 +1230,6 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
   }
 
   /**
-   *  Specific handling for Error #10800 (duplicate retailer_id)
-   **/
-  function display_duplicate_retailer_id_message($result) {
-    $msg = __('We\'ve detected duplicate SKUs in your shop. This can happen
-      for a few reasons, including the effects of other plugins. <br/>
-      Some of your products may not have been synced to Facebook.
-      Please <a href="' . WOOCOMMERCE_FACEBOOK_PLUGIN_SETTINGS_URL . '">
-      delete your settings via the "Advanced" tab and try setup again.</a><br/>
-
-      If this error persists, or you have a use-case for duplicated SKUs,
-      <a href="mailto:ads_extension_woocommerce@fb.com">please contact us.</a>',
-    'facebook-for-woocommerce');
-    WC_Facebookcommerce_Utils::log($msg);
-    set_transient('facebook_plugin_api_error', $msg,
-      self::FB_MESSAGE_DISPLAY_TIME);
-  }
-
-  /**
    * Deal with FB API responses, display error if FB API returns error
    *
    * @return result if response is 200, null otherwise
@@ -1252,16 +1250,12 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
         $error_data = $body->error->error_data; // error_data may contain FBIDs
         if ($error_data && $wpid) {
           $existing_id = $this->get_existing_fbid($error_data, $wpid);
-          if (!$existing_id) {
-            $this->display_duplicate_retailer_id_message($result);
-          } else {
+          if ($existing_id) {
             // Add "existing_id" ID to result
             $body->id = $existing_id;
             $result['body'] = json_encode($body);
             return $result;
           }
-        } else {
-          $this->display_duplicate_retailer_id_message($result);
         }
       } else {
         $this->display_error_message_from_result($result);
@@ -1279,6 +1273,18 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
       return null;
     }
     return $result;
+  }
+
+  function wp_all_import_compat($import_id) {
+    $import = new PMXI_Import_Record();
+    $import->getById($import_id);
+    if (!$import->isEmpty() && in_array($import->options['custom_type'], array('product', 'product_variation'))) {
+      $this->display_sticky_message(
+        sprintf(
+          'Products may be out of Sync with Facebook due to your recent import.'.
+          ' <a href="%s&fb_force_resync=true">Re-Sync them with FB.</a>',
+          WOOCOMMERCE_FACEBOOK_PLUGIN_SETTINGS_URL));
+    }
   }
 
   /**
@@ -1886,24 +1892,7 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
       <div class="wrapper">
         <header></header>
         <div class="content">
-          <div style="white-space: nowrap; font-size: 12.5px"}>
-            <?php $now = new DateTime(current_time('mysql'));
-            // check if pixel_install_date has been set or cleared before
-            // DateInterveral::diff: difference in days
-            $diff = !$this->pixel_install_time
-              ? null
-              : $now->diff(new DateTime($this->pixel_install_time))
-                ->format('%a');
-              if ($redirect_uri !== '' &&
-                is_numeric($diff) && (int)$diff > self::FB_SHOW_REDIRECT) {
-                  echo sprintf(__('<strong> Good News! You can now optimize your
-                    Facebook Ads, based on data from your pixel.<br>
-                    <a href='. $redirect_uri. ' target="_blank">'
-                    .'Get More Sales</a></strong>',
-                    'facebook-for-woocommerce'));
-              }
-              ?>
-          </div>
+          <table width="100%"><tr><td>
           <h1><?php _e('Grow your business on Facebook',
           'facebook-for-woocommerce'); ?></h1>
           <p><?php _e('Use this official plugin to help sell more of your
@@ -1944,14 +1933,6 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
                 }
                 echo '</p>';
 
-                echo '<p id="resync_button"><a href="#"
-                    class="btn" onclick="sync_confirm()" id="resync_products" ';
-
-                if (($connected && $currently_syncing) || !$connected) {
-                  echo 'style="display:none;" ';
-                }
-                echo '>Force Product Resync</a><p/>';
-
                 echo '<p id ="configure_button"><a href="#"
                   class="btn" onclick="facebookConfig()" id="set_dia" ';
                 if ($currently_syncing) {
@@ -1962,21 +1943,44 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
                 echo '<p id="sync_status">';
                 if ($connected && $currently_syncing) {
                   echo sprintf(__('<strong>Facebook product sync in progress!
-                    <br/>LEAVE THIS PAGE OPEN TO KEEP SYNCING!</strong></br>',
+                    </strong></br>',
                     'facebook-for-woocommerce'));
                 }
                 if ($connected && !$currently_syncing) {
                   echo '<strong>Status: </strong>' .
                   'Products are synced to Facebook.';
+                  echo '<br/><a href="#"
+                      class="resync" onclick="sync_confirm()" id="resync_products" ';
+                  echo '>Force Resync</a>';
                 }
                 echo '</p>';
-
                 echo '<p id="sync_progress"></p>';
 
               }
             }
           ?>
+          </td>
+          <td width="250px" align="center">
+            <div class="create_ad">
+            <?php
+              if (!empty($this->settings['fb_page_id']) &&
+                !empty($this->settings['fb_api_key']) &&
+                $this->external_merchant_settings_id) {
+                  $redirect_uri =
+                    'https://www.facebook.com/ads/dia/redirect/?settings_id='
+                    . $this->external_merchant_settings_id;
+                echo '<p id="create_ad" class="btn2">';
+                echo '<a href='.$redirect_uri.'>Create Ad</a>';
+                echo '</p>';
+              }
+            ?>
+            </div>
+          </td>
+
+          </tr>
+          </table>
         </div>
+
       </div>
     </div>
     <br/><hr/><br/>
@@ -1994,10 +1998,9 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
   }
 
   function delete_product_item($wp_id) {
-    $fb_product_item_id = get_post_meta(
-      $wp_id,
-      self::FB_PRODUCT_ITEM_ID,
-      true);
+    $fb_product_item_id = $this->get_product_fbid(
+        self::FB_PRODUCT_ITEM_ID,
+        $wp_id);
     if ($fb_product_item_id) {
       $pi_result =
         $this->fbgraph->delete_product_item($fb_product_item_id);
@@ -2025,14 +2028,22 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
    */
   function update_fb_visibility($wp_id, $visibility) {
     $woo_product = new WC_Facebook_Product($wp_id);
+    if (!$woo_product->exists()) {
+      // This function can be called for non-woo products.
+      return;
+    }
+
     $products = WC_Facebookcommerce_Utils::get_product_array($woo_product);
     foreach ($products as $item_id) {
-      $fb_product_item_id = get_post_meta(
-        $item_id,
-        self::FB_PRODUCT_ITEM_ID,
-        true);
-      // Product never publish to FB new status is not publish, or no post id.
+      $fb_product_item_id = $this->get_product_fbid(
+          self::FB_PRODUCT_ITEM_ID,
+          $item_id);
+
       if (!$fb_product_item_id) {
+        WC_Facebookcommerce_Utils::fblog(
+          $fb_product_item_id." doesn't exist but underwent a visibility transform.",
+          array(),
+          true);
         continue;
       }
       $result = $this->check_api_result(
@@ -2075,8 +2086,14 @@ class WC_Facebookcommerce_Integration extends WC_Integration {
       $woo_product = new WC_Facebook_Product($wp_id);
     }
     $products = WC_Facebookcommerce_Utils::get_product_array($woo_product);
-    $fb_retailer_id = WC_Facebookcommerce_Utils::get_fb_retailer_id(
-      new WC_Facebook_Product(current($products)));
+    $woo_product = new WC_Facebook_Product(current($products));
+    // This is a generalized function used elsewhere
+    // Cannot call is_hidden for VC_Product_Variable Object
+    if ($woo_product->is_hidden()) {
+      return null;
+    }
+    $fb_retailer_id =
+      WC_Facebookcommerce_Utils::get_fb_retailer_id($woo_product);
 
     $product_fbid_result = $this->fbgraph->get_facebook_id(
       $this->product_catalog_id,

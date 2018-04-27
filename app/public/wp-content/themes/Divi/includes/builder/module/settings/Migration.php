@@ -18,7 +18,7 @@ abstract class ET_Builder_Module_Settings_Migration {
 
 	public static $last_hook_checked;
 	public static $last_hook_check_decision;
-	public static $max_version = '3.0.102';
+	public static $max_version = '3.2';
 	public static $migrated    = array();
 	public static $migrations  = array(
 		'3.0.48' => 'BackgroundUI',
@@ -31,6 +31,7 @@ abstract class ET_Builder_Module_Settings_Migration {
 		'3.0.94' => 'DropShadowToBoxShadow',
 		'3.0.99' => 'InnerShadowToBoxShadow',
 		'3.0.102' => 'FullwidthHeader2',
+		'3.2'  => 'UIImprovements',
 	);
 
 	public static $migrations_by_version = array();
@@ -122,7 +123,6 @@ abstract class ET_Builder_Module_Settings_Migration {
 	public static function init() {
 		$class = 'ET_Builder_Module_Settings_Migration';
 
-		add_filter( 'et_pb_module_whitelisted_fields', array( $class, 'maybe_override_whitelisted_fields' ), 10, 2 );
 		add_filter( 'et_pb_module_processed_fields', array( $class, 'maybe_override_processed_fields' ), 10, 2 );
 		add_filter( 'et_pb_module_shortcode_attributes', array( $class, 'maybe_override_shortcode_attributes' ), 10, 4 );
 	}
@@ -148,7 +148,7 @@ abstract class ET_Builder_Module_Settings_Migration {
 			$attrs['_builder_version'] = '3.0.47';
 		}
 
-		if ( ! self::_should_handle_shortcode_callback( $module_slug ) ) {
+		if ( ! self::_should_handle_render( $module_slug ) ) {
 			return $attrs;
 		}
 
@@ -191,41 +191,9 @@ abstract class ET_Builder_Module_Settings_Migration {
 		return $attrs;
 	}
 
-	public static function maybe_override_whitelisted_fields( $fields, $module_slug ) {
-		if ( ! self::_should_handle_shortcode_callback( $module_slug ) ) {
-			return $fields;
-		}
-
-		$migrations = self::get_migrations( 'all' );
-
-		foreach ( $migrations as $migration ) {
-			if ( in_array( $module_slug, $migration->modules ) ) {
-				$fields = $migration->override_whitelisted_fields( $fields, $module_slug );
-			}
-		}
-
-		return $fields;
-	}
-
 	abstract public function migrate( $field_name, $current_value, $module_slug, $saved_value, $saved_field_name, $attrs );
 
-	public function override_whitelisted_fields( $fields, $module_slug ) {
-		foreach ( $this->fields as $field_name => $field_info ) {
-			foreach ( $field_info['affected_fields'] as $affected_field => $affected_modules ) {
-				if ( ! in_array( $module_slug, $affected_modules ) ) {
-					continue;
-				}
-
-				if ( in_array( $field_name, $fields ) && ! in_array( $affected_field, $fields ) ) {
-					$fields[] = $affected_field;
-				}
-			}
-		}
-
-		return $fields;
-	}
-
-	public static function _should_handle_shortcode_callback( $slug ) {
+	public static function _should_handle_render( $slug ) {
 		if ( false === strpos( $slug, 'et_pb' ) ) {
 			return false;
 		}

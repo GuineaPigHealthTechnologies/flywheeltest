@@ -198,23 +198,14 @@ class ET_Builder_Module_Gallery extends ET_Builder_Module {
 
 	function get_fields() {
 		$fields = array(
-			'src' => array(
-				'label'           => esc_html__( 'Gallery Images', 'et_builder' ),
-				'type'            => 'upload_gallery',
-				'option_category' => 'basic_option',
-				'overwrite'       => array(
-					'ids'         => 'gallery_ids',
-					'orderby'     => 'gallery_orderby',
-					'captions'    => 'gallery_captions',
-				),
-				'toggle_slug'     => 'main_content',
-			),
 			'gallery_ids' => array(
-				'type'  => 'hidden',
-				'class' => array( 'et-pb-gallery-ids-field' ),
-				'computed_affects'   => array(
+				'label'            => esc_html__( 'Gallery Images', 'et_builder' ),
+				'type'             => 'upload-gallery',
+				'computed_affects' => array(
 					'__gallery',
 				),
+				'option_category'  => 'basic_option',
+				'toggle_slug'      => 'main_content',
 			),
 			'gallery_orderby' => array(
 				'label' => esc_html__( 'Gallery Images', 'et_builder' ),

@@ -49,6 +49,10 @@ class WC_Facebook_Product {
     }
   }
 
+  public function exists() {
+    return ($this->woo_product !== null && $this->woo_product !== false);
+  }
+
   // Fall back to calling method on $woo_product
   public function __call($function, $args) {
     if ($this->woo_product) {
@@ -393,9 +397,9 @@ class WC_Facebook_Product {
       '&',
       html_entity_decode($this->get_permalink()));
 
-    // Use product_url for external product setting.
-    if ($this->get_type() == 'external') {
-      $checkout_url = $this->get_product_url();
+    // Use product_url for external/bundle product setting.
+    if ($this->get_type() == 'external' || $this->get_type() == 'woosb') {
+      $checkout_url = $product_url;
     } else if (wc_get_cart_url()) {
       $char = '?';
       // Some merchant cart pages are actually a querystring
@@ -434,6 +438,8 @@ class WC_Facebook_Product {
     }
     $categories =
       WC_Facebookcommerce_Utils::get_product_categories($id);
+    $brand = WC_Facebookcommerce_Utils::clean_string(
+      get_the_term_list($this->ID, 'product_brand', '', ', '));
 
     $product_data = array(
       'name' => WC_Facebookcommerce_Utils::clean_string(
@@ -443,7 +449,7 @@ class WC_Facebook_Product {
       'additional_image_urls' => array_filter($image_urls),
       'url'=> $product_url,
       'category' => $categories['categories'],
-      'brand' => WC_Facebookcommerce_Utils::get_store_name(),
+      'brand' => $brand ?: WC_Facebookcommerce_Utils::get_store_name(),
       'retailer_id' => $retailer_id,
       'price' => $this->get_fb_price(),
       'currency' => get_woocommerce_currency(),
@@ -464,12 +470,7 @@ class WC_Facebook_Product {
     // IF using WPML, set the product to staging unless it is in the
     // default language. WPML >= 3.2 Supported.
     if (defined('ICL_LANGUAGE_CODE')) {
-      if (!$this->default_lang) {
-        $this->default_lang = apply_filters('wpml_default_language', null);
-      }
-      $product_lang = apply_filters('wpml_post_language_details', null, $id);
-      if ($product_lang &&
-          $product_lang['language_code'] != $this->default_lang) {
+      if (class_exists('WC_Facebook_WPML_Injector') && WC_Facebook_WPML_Injector::should_hide($id)) {
         $product_data['visibility'] = 'staging';
       }
     }
