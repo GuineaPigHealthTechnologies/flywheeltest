@@ -8,10 +8,12 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
         $this->slug = 'et_pb_woo_loop_archive';
 
         $this->whitelisted_fields = array(
+            'title',
             'loop_layout',
             'fullwidth',
             'show_pagination',
             'columns',
+            'show_ordering',
             'new_query',
             'posts_number',
             'offset_number',
@@ -42,20 +44,59 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
             //'offset_number'     => array( 0, 'only_default_setting' ),
         );
 
+        $this->custom_css_options = array(
+            'module_title' => array(
+                'label' => esc_html__('Title', 'et_builder'),
+                'selector' => 'h2.module_title',
+            ),
+            'post_title' => array(
+                'label' => esc_html__('Post Titles', 'et_builder'),
+                'selector' => '.et_pb_post h2',
+            ),
+            'post_meta' => array(
+                'label' => esc_html__('Post Meta', 'et_builder'),
+                'selector' => '.et_pb_post .post-meta',
+            ),
+            'pagenavi' => array(
+                'label' => esc_html__('Pagenavi', 'et_builder'),
+                'selector' => '.wp_pagenavi',
+            ),
+            'ordering_row' => array(
+                'label' => esc_html__('Ordering Options (row)', 'et_builder'),
+                'selector' => '.wli_before_shop_loop',
+            ),
+            'rc' => array(
+                'label' => esc_html__('Ordering Options (result count)', 'et_builder'),
+                'selector' => '.wli_before_shop_loop p.woocommerce-result-count',
+            ),
+            'ordering' => array(
+                'label' => esc_html__('Ordering Options (ordering form)', 'et_builder'),
+                'selector' => '.wli_before_shop_loop form.woocommerce-ordering',
+            ),
+            'featured_image' => array(
+                'label' => esc_html__('Featured Image', 'et_builder'),
+                'selector' => '.et_pb_image_container',
+            ),
+            'read_more' => array(
+                'label' => esc_html__('Read More Button', 'et_builder'),
+                'selector' => '.et_pb_post .more-link',
+            ),
+        );
+
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+                'cntnt' => array(
+                    'label' => esc_html__('Content', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} p",
                     ),
                     'font_size' => array('default' => '14px'),
                     'line_height' => array('default' => '1.5em'),
                 ),
-                'headings' => array(
-                    'label' => esc_html__('Headings', 'et_builder'),
+                'title' => array(
+                    'label' => esc_html__('Title', 'et_builder'),
                     'css' => array(
-                        'main' => "{$this->main_css_element} h1, {$this->main_css_element} h2, {$this->main_css_element} h3, {$this->main_css_element} h4",
+                        'main' => "{$this->main_css_element} h2.module-title",
                     ),
                     'font_size' => array('default' => '30px'),
                     'line_height' => array('default' => '1.5em'),
@@ -82,7 +123,8 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
         $options = $orderby = $order = array();
 
         $orderby = array(
-            'date' => 'Order by date'
+            'menu_order' => 'Custom Order (Menu Order)'
+        , 'date' => 'Order by date'
         , 'ID' => 'Order by post id'
         , 'author' => 'Order by author'
         , 'title' => 'Order by title'
@@ -113,7 +155,26 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
             }
         }
 
+        $cols = array(
+            2 => esc_html__('Two', 'et_builder'),
+            3 => esc_html__('Three', 'et_builder'),
+            4 => esc_html__('Four', 'et_builder'),
+        );
+
+        if (function_exists('sb_dcl_col_templates')) {
+            $cols[5] = esc_html__('Five', 'et_builder');
+            $cols[6] = esc_html__('Six', 'et_builder');
+            $cols[7] = esc_html__('Seven', 'et_builder');
+            $cols[8] = esc_html__('Eight', 'et_builder');
+        }
+
         $fields = array(
+            'title' => array(
+                'label' => __('Title', 'et_builder'),
+                'type' => 'text',
+                'toggle_slug' => 'main_settings',
+                'description' => __('If you want a title to show above the module then enter it here', 'et_builder'),
+            ),
             'loop_layout' => array(
                 'label' => esc_html__('Loop Layout', 'et_builder'),
                 'type' => 'select',
@@ -141,15 +202,9 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
                 'type' => 'select',
                 'option_category' => 'layout',
                 'toggle_slug' => 'main_settings',
-                'options' => array(
-                    2 => esc_html__('Two', 'et_builder'),
-                    3 => esc_html__('Three', 'et_builder'),
-                    4 => esc_html__('Four', 'et_builder'),
-                    //5 => esc_html__( 'Five', 'et_builder' ),
-                    //6 => esc_html__( 'Six', 'et_builder' ),
-                ),
+                'options' => $cols,
                 'depends_show_if' => 'off',
-                'description' => esc_html__('When in grid mode please select the number of columns you\'d like to see.', 'et_builder'),
+                'description' => esc_html__('When in grid mode please select the number of columns you\'d like to see. For more than 4 cols please add the FREE Divi Extended Columns Layouts plugin', 'et_builder'),
             ),
             'show_pagination' => array(
                 'label' => esc_html__('Show Pagination', 'et_builder'),
@@ -178,6 +233,7 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
                 , '#et_pb_include_tax_terms'
                 , '#et_pb_order_by'
                 , '#et_pb_order'
+                , '#et_pb_show_ordering'
                 ),
                 'description' => esc_html__('When used on an archive page turn this off. If you want to use on a normal WP page then select "ON" here and complete the settings below.', 'et_builder'),
             ),
@@ -214,6 +270,7 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
                 'type' => 'select',
                 'toggle_slug' => 'main_settings',
                 'options' => $orderby,
+                'depends_show_if' => 'on',
                 'description' => esc_html__('Choose how you\'d like the results to be ordered.. title, date, etc...', 'et_builder'),
                 'toggle_slug' => 'main_settings',
             ),
@@ -222,8 +279,21 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
                 'type' => 'select',
                 'options' => $order,
                 'toggle_slug' => 'main_settings',
+                'depends_show_if' => 'on',
                 'description' => esc_html__('Choose the order of the results.. Ascending or Descending.', 'et_builder'),
                 'toggle_slug' => 'main_settings',
+            ),
+            'show_ordering' => array(
+                'label' => esc_html__('Show Ordering Options', 'et_builder'),
+                'type' => 'yes_no_button',
+                'toggle_slug' => 'main_settings',
+                'option_category' => 'configuration',
+                'depends_show_if' => 'off',
+                'options' => array(
+                    'on' => esc_html__('Yes', 'et_builder'),
+                    'off' => esc_html__('No', 'et_builder'),
+                ),
+                'description' => 'When turned on will show the Ordering dropdown and the num results info above the loop.',
             ),
             'hide_if_no_data' => array(
                 'label' => esc_html__('Hide if no Results', 'et_builder'),
@@ -261,11 +331,12 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        //if (get_post_type() != 'product') {
-        //return;
-        //}
+        if (is_admin()) {
+            return;
+        }
 
         $background_layout = '';
+        $title = $this->shortcode_atts['title'];
         $loop_layout = $this->shortcode_atts['loop_layout'];
         $cols = $this->shortcode_atts['columns'];
         $module_id = $this->shortcode_atts['module_id'];
@@ -279,7 +350,12 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
         $posts_number = $this->shortcode_atts['posts_number'];
         $order_by = $this->shortcode_atts['order_by'];
         $order = $this->shortcode_atts['order'];
+        $show_ordering = $this->shortcode_atts['show_ordering'];
         $hide_if_no_data = ($this->shortcode_atts['hide_if_no_data'] ? $this->shortcode_atts['hide_if_no_data'] : 'no');
+
+        if (!is_archive() && $custom_query == 'off') {
+            return '<div class="wli_error">You can not use this module (' . $this->slug . ') on this page without using the "custom query" option.</div>';
+        }
 
         global $paged;
 
@@ -367,11 +443,25 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
 
         $hide = false;
         ob_start();
+        global $wp_query;
 
         if (have_posts()) {
+
+            if ($show_ordering == 'on' && $custom_query != 'on') {
+                echo '<div class="et_pb_row wli_before_shop_loop">';
+                do_action('woocommerce_before_shop_loop');
+                //add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+                echo '</div>';
+            }
+
             $shortcodes = '';
 
             $i = 0;
+            $j = 0;
+
+            if ($title) {
+                echo '<h2 class="module-title">' . $title . '</h2>';
+            }
 
             if ($fullwidth == 'off') { //grid
                 echo '<div class="et_pb_row et_pb_row_woo">';
@@ -391,8 +481,9 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
                 }
 
                 $i++;
+                $j++;
 
-                if ($i == $cols && ($fullwidth == 'off')) {
+                if ($i == $cols && ($fullwidth == 'off') && $j != get_query_var('posts_per_page')) {
                     $i = 0;
 
                     echo '</div>';
@@ -409,15 +500,7 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
 
                 $container_is_closed = true;
 
-                if (function_exists('wp_pagenavi')) {
-                    wp_pagenavi();
-                } else {
-                    if (et_is_builder_plugin_active()) {
-                        include(ET_BUILDER_PLUGIN_DIR . 'includes/navigation.php');
-                    } else {
-                        get_template_part('includes/navigation', 'index');
-                    }
-                }
+                sb_et_woo_li_pagination();
             }
 
             wp_reset_query();
@@ -453,9 +536,9 @@ class sb_et_woo_li_loop_archive extends ET_Builder_Module
         );
 
         if ('off' == $fullwidth) {
-            $output = sprintf('<div class="et_pb_blog_grid_wrapper">%1$s</div>', $output);
+            $output = sprintf('<div class="woocommerce et_pb_blog_grid_wrapper">%1$s</div>', $output);
         } else if ('list' == $fullwidth) {
-            $output = sprintf('<div class="et_pb_woo_list_wrapper">%1$s</div>', $output);
+            $output = sprintf('<div class="woocommerce et_pb_woo_list_wrapper">%1$s</div>', $output);
         }
 
         if ($hide) { //hide as no results

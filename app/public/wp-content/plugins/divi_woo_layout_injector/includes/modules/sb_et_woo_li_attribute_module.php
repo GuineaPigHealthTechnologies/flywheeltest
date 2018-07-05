@@ -9,7 +9,9 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
 
         $this->whitelisted_fields = array(
             'title',
+            'background_layout',
             'attribute',
+            'show_list',
             'separator',
             'module_id',
             'module_class',
@@ -44,7 +46,7 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
+                'cntnt' => array(
                     'label' => esc_html__('Attribute Text', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} .term-item",
@@ -101,6 +103,17 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
                 'toggle_slug' => 'main_settings',
                 'description' => __('If you want to include a title then use this setting and a heading will be added above the list of attributes', 'et_builder'),
             ),
+            'background_layout' => array(
+                'label' => esc_html__('Text Color', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'light' => esc_html__('Dark', 'et_builder'),
+                    'dark' => esc_html__('Light', 'et_builder'),
+                ),
+                'toggle_slug' => 'main_settings',
+                'description' => esc_html__('Here you can choose the colour of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'et_builder'),
+            ),
             'prefix' => array(
                 'label' => __('Prefix', 'et_builder'),
                 'type' => 'text',
@@ -116,10 +129,24 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
                 'toggle_slug' => 'main_settings',
                 'description' => 'Which attribute should the system show? This will display a list of attributes if the product has them. If not the module wiull be hidden'
             ),
+            'show_list' => array(
+                'label' => __('Show as Bullet List?', 'et_builder'),
+                'type' => 'yes_no_button',
+                'toggle_slug' => 'main_settings',
+                'options' => array(
+                    'off' => __('No', 'et_builder'),
+                    'on' => __('Yes', 'et_builder'),
+                ),
+                'affects' => array(
+                    '#et_pb_separator'
+                ),
+                'description' => __('Should the attributes for this product be presented as a bullet point list?', 'et_builder'),
+            ),
             'separator' => array(
                 'label' => esc_html__('Separator', 'et_builder'),
                 'type' => 'text',
                 'option_category' => 'layout',
+                'depends_show_if' => 'off',
                 'toggle_slug' => 'main_settings',
                 'description' => 'When there is more than one term to display what should separate them. Eg | or ,',
             ),
@@ -146,16 +173,18 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
 
     function shortcode_callback($atts, $content = null, $function_name)
     {
-        //if (is_admin()) {
-        //return;
-        //}
+        if (is_admin()) {
+            return;
+        }
 
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
         $title = $this->shortcode_atts['title'];
+        $show_list = $this->shortcode_atts['show_list'];
         $prefix = $this->shortcode_atts['prefix'];
         $attribute = $this->shortcode_atts['attribute'];
         $separator = $this->shortcode_atts['separator'];
+        $background_layout = $this->shortcode_atts['background_layout'];
         $output = $content = '';
         $module_class = ET_Builder_Element::add_module_order_class($module_class, $function_name);
 
@@ -167,7 +196,7 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
         if (!empty($product_terms)) {
             if (!is_wp_error($product_terms)) {
                 foreach ($product_terms as $term) {
-                    $term_array[] = '<span class="term-item">' . $term->name . '</span>';
+                    $term_array[] = ($show_list == 'on' ? '<li>':'') . '<span class="term-item ' . $term->slug . '">' . $term->name . '</span>' . ($show_list == 'on' ? '</li>':'');
                 }
 
             }
@@ -177,7 +206,8 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
 
                 if (isset($attr2[$no_pa]['value'])) {
                     if ($attr3 = $attr2[$no_pa]['value']) {
-                        $term_array[] = '<span class="term-item">' . $attr3 . '</span>';
+
+                        $term_array[] = ($show_list == 'on' ? '<li>':'') . '<span class="term-item">' . $attr3 . '</span>' . ($show_list == 'on' ? '</li>':'');
                     }
                 }
             }
@@ -196,7 +226,12 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
                 $content .= '<span class="term-prefix">' . $prefix . '</span>';
             }
 
-            $content .= implode($separator, $term_array);
+            if ($show_list == 'on') {
+                $content = '<ul class="wli_bullet_list wli_attribute_list">' . implode("\n", $term_array) . '</ul>';
+            } else {
+                $content .= wpautop(implode($separator, $term_array));
+            }
+
             $content .= '</span>';
         }
 
@@ -204,7 +239,7 @@ class sb_et_woo_li_attribute_module extends ET_Builder_Module
 
         if ($content) {
             $output = sprintf(
-                '<div%5$s class="et_pb_woo_attribute %1$s%3$s%6$s">
+                '<div%5$s class="et_pb_woo_attribute et_pb_bg_layout_' . $background_layout . ' %1$s%3$s%6$s">
 																								%2$s
 																						%4$s',
                 'clearfix ',

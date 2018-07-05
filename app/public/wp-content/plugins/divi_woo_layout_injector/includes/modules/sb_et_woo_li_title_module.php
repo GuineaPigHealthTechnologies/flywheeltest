@@ -123,7 +123,7 @@ class sb_et_woo_li_title_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (is_admin()) {
+        if (is_admin() || get_post_type() != 'product') {
             return;
         }
 

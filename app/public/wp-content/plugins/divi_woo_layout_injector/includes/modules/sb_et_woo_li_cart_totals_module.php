@@ -9,7 +9,7 @@ class sb_et_woo_li_cart_totals_module extends ET_Builder_Module
 
         $this->whitelisted_fields = array(
             'title',
-            //'remove_thumbs',
+            'remove_borders',
             'admin_label',
             'module_id',
             'module_class',
@@ -45,12 +45,25 @@ class sb_et_woo_li_cart_totals_module extends ET_Builder_Module
                     'line_height' => array('default' => '1.4em'),
                 ),
             ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__('Button', 'et_builder'),
+                    'css' => array(
+                        'main' => $this->main_css_element . ' .checkout-button.button',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
+                ),
+            ),
             'background' => array(
                 'settings' => array(
                     'color' => 'alpha',
                 ),
             ),
-            'border' => array(),
+            'border' => array(
+                'css' => array(
+                    'important' => 'all',
+                ),
+            ),
             'custom_margin_padding' => array(
                 'css' => array(
                     'important' => 'all',
@@ -70,16 +83,16 @@ class sb_et_woo_li_cart_totals_module extends ET_Builder_Module
                 'toggle_slug' => 'main_settings',
                 'description' => __('If you want a title on the module then use this box and an H3 will be added above the module content.', 'et_builder'),
             ),
-            /*'remove_thumbs' => array(
-                'label' => esc_html__('Remove Product Image?', 'et_builder'),
+            'remove_borders' => array(
+                'label' => esc_html__('Remove Borders?', 'et_builder'),
                 'type' => 'yes_no_button',
                 'toggle_slug' => 'main_settings',
-                'options'         => array(
-                    'off' => esc_html__( 'No', 'et_builder' ),
-                    'on'  => esc_html__( 'Yes', 'et_builder' ),
+                'options' => array(
+                    'off' => esc_html__('No', 'et_builder'),
+                    'on' => esc_html__('Yes', 'et_builder'),
                 ),
-                'description' => 'Should the product image field be removed from the table?',
-            ),*/
+                'description' => 'Should the borders on the table be removed?',
+            ),
             /*'background_layout' => array(
                 'label' => esc_html__('Text Color', 'et_builder'),
                 'type' => 'select',
@@ -162,13 +175,14 @@ class sb_et_woo_li_cart_totals_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (is_admin()) {
+        if (is_admin() || !is_cart()) {
             return;
         }
 
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
         $title = $this->shortcode_atts['title'];
+        $remove_borders = $this->shortcode_atts['remove_borders'];
         //$remove_thumbs = $this->shortcode_atts['remove_thumbs'];
         /*$background_layout = $this->shortcode_atts['background_layout'];
         $text_orientation = $this->shortcode_atts['text_orientation'];
@@ -211,7 +225,7 @@ class sb_et_woo_li_cart_totals_module extends ET_Builder_Module
         //////////////////////////////////////////////////////////////////////
 
         if ($content) {
-            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="' . $module_class . ' clearfix ' . ($title ? 'has_title':'') . ' et_pb_module et_pb_woo_cart_totals">' . $content . '</div>';
+            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="' . $module_class . ' clearfix ' . ($title ? 'has_title':'') . ($remove_borders == 'on' ? ' hide-borders ' : '') . 'et_pb_module et_pb_woo_cart_totals">' . $content . '</div>';
         }
 
         return $output;

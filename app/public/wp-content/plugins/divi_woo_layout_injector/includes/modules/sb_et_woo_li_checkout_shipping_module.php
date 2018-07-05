@@ -28,6 +28,14 @@ class sb_et_woo_li_checkout_shipping_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
+                'ctnt' => array(
+                    'label' => esc_html__('Labels/Info', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} p, {$this->main_css_element} label, {$this->main_css_element} a, {$this->main_css_element} td, {$this->main_css_element} th",
+                    ),
+                    'font_size' => array('default' => '14px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
                 'headings' => array(
                     'label' => esc_html__('Title', 'et_builder'),
                     'css' => array(
@@ -154,7 +162,7 @@ class sb_et_woo_li_checkout_shipping_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (is_admin()) {
+        if (is_admin() || !is_checkout()) {
             return;
         }
 

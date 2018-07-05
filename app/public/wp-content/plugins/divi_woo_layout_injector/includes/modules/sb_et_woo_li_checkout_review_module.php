@@ -9,6 +9,7 @@ class sb_et_woo_li_checkout_review_module extends ET_Builder_Module
 
         $this->whitelisted_fields = array(
             'title',
+            'remove_borders',
             'admin_label',
             'module_id',
             'module_class',
@@ -27,6 +28,14 @@ class sb_et_woo_li_checkout_review_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
+                'ctnt' => array(
+                    'label' => esc_html__('Labels/Info', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} p, {$this->main_css_element} label, {$this->main_css_element} a, {$this->main_css_element} td, {$this->main_css_element} th",
+                    ),
+                    'font_size' => array('default' => '14px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
                 'headings' => array(
                     'label' => esc_html__('Title', 'et_builder'),
                     'css' => array(
@@ -61,27 +70,8 @@ class sb_et_woo_li_checkout_review_module extends ET_Builder_Module
                 'toggle_slug' => 'main_settings',
                 'description' => __('If you want a title on the module then use this box and an H3 will be added above the module content.', 'et_builder'),
             ),
-            /*'background_layout' => array(
-                'label' => esc_html__('Text Color', 'et_builder'),
-                'type' => 'select',
-                'option_category' => 'configuration',
-                'options' => array(
-                    'light' => esc_html__('Dark', 'et_builder'),
-                    'dark' => esc_html__('Light', 'et_builder'),
-                ),
-                'toggle_slug' => 'main_settings',
-                'description' => esc_html__('Here you can choose the value of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'et_builder'),
-            ),
-            'text_orientation' => array(
-                'label' => esc_html__('Text Orientation', 'et_builder'),
-                'type' => 'select',
-                'option_category' => 'layout',
-                'toggle_slug' => 'main_settings',
-                'options' => et_builder_get_text_orientation_options(),
-                'description' => esc_html__('This controls the how your text is aligned within the module.', 'et_builder'),
-            ),
-            'show_read_more' => array(
-                'label' => __('Show Read More?', 'et_builder'),
+            'remove_borders' => array(
+                'label' => __('Remove Borders?', 'et_builder'),
                 'type' => 'yes_no_button',
                 'option_category' => 'configuration',
                 'options' => array(
@@ -89,33 +79,8 @@ class sb_et_woo_li_checkout_review_module extends ET_Builder_Module
                     'on' => __('Yes', 'et_builder'),
                 ),
                 'toggle_slug' => 'main_settings',
-                'affects' => array('#et_pb_read_more_label'),
-                'description' => __('Should a read more button be shown below the content?', 'et_builder'),
+                'description' => __('By default the WooCommerce review table has a light grey border around it. This setting will remove them.', 'et_builder'),
             ),
-            'read_more_label' => array(
-                'label' => __('Read More Label', 'et_builder'),
-                'type' => 'text',
-                'depends_show_if' => 'on',
-                'toggle_slug' => 'main_settings',
-                'description' => __('What should the read more button be labelled as? Defaults to "Read More".', 'et_builder'),
-            ),
-            'max_width' => array(
-                'label' => esc_html__('Max Width', 'et_builder'),
-                'type' => 'text',
-                'option_category' => 'layout',
-                'mobile_options' => true,
-                'tab_slug' => 'advanced',
-                'toggle_slug' => 'main_settings',
-                'validate_unit' => true,
-            ),
-            'max_width_tablet' => array(
-                'type' => 'skip',
-                'tab_slug' => 'advanced',
-            ),
-            'max_width_phone' => array(
-                'type' => 'skip',
-                'tab_slug' => 'advanced',
-            ),*/
             'admin_label' => array(
                 'label' => __('Admin Label', 'et_builder'),
                 'type' => 'text',
@@ -143,13 +108,18 @@ class sb_et_woo_li_checkout_review_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (is_admin()) {
+        if (is_admin() || !is_checkout()) {
             return;
         }
 
         $title = $this->shortcode_atts['title'];
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
+        $remove_borders = $this->shortcode_atts['remove_borders'];
+
+        if ($remove_borders == 'on') {
+            $module_class .= ' remove_borders';
+        }
         /*$show_read_more = $this->shortcode_atts['show_read_more'];
         $read_more_label = $this->shortcode_atts['read_more_label'];
         $background_layout = $this->shortcode_atts['background_layout'];

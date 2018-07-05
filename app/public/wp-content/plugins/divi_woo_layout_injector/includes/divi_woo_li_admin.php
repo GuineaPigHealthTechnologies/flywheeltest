@@ -1,5 +1,13 @@
 <?php
 
+function sb_et_woo_li_admin_enqueue()
+{
+    $file = dirname(__FILE__);
+
+    wp_enqueue_style('sb_et_woo_li_spectrum', plugins_url('/includes/css/spectrum.css', $file));
+    wp_enqueue_script('sb_et_woo_li_spectrum_js', plugins_url('/includes/js/spectrum.js', $file));
+    wp_enqueue_script('sb_et_woo_li_admin_js', plugins_url('/includes/js/admin.js', $file));
+}
 
 function sb_et_woo_li_enqueue()
 {
@@ -15,7 +23,7 @@ function sb_et_woo_li_enqueue()
         remove_theme_support('wc-product-gallery-slider');
     }
 
-    if (get_post_type() == 'product') {
+    if (get_post_type() == 'product' || is_checkout() || is_cart()) {
         wp_enqueue_style('sb_et_woo_li_cbox', plugins_url('/includes/js/example3/colorbox.css', $file));
         wp_enqueue_script('sb_et_woo_li_cbox', plugins_url('/includes/js/jquery.colorbox-min.js', $file));
     }
@@ -31,10 +39,11 @@ function sb_et_woo_li_admin_head()
 
         $prop_to_remove = array(
             //'et_pb_templates_et_pb_woo_loop_archive'
-        'et_pb_templates_et_pb_woo_archive'
+            'et_pb_templates_et_pb_woo_archive'
         , 'et_pb_templates_et_pb_woo_checkout_billing'
         , 'et_pb_templates_et_pb_woo_checkout_shipping'
         , 'et_pb_templates_et_pb_woo_checkout_payment'
+        , 'et_pb_templates_et_pb_woo_checkout_coupon'
         , 'et_pb_templates_et_pb_woo_checkout_review'
         , 'et_pb_templates_et_pb_woo_cart_products'
         , 'et_pb_templates_et_pb_woo_cart_totals'
@@ -87,53 +96,73 @@ function sb_et_woo_li_theme_setup()
 
         $modules_path = trailingslashit(dirname(__FILE__)) . 'modules/';
 
-        //checkout
-        require_once($modules_path . 'sb_et_woo_li_checkout_billing_module.php');
-        require_once($modules_path . 'sb_et_woo_li_checkout_shipping_module.php');
-        require_once($modules_path . 'sb_et_woo_li_checkout_review_module.php');
-        require_once($modules_path . 'sb_et_woo_li_checkout_payment_module.php');
+        $is_layout = $is_woo = false;
 
-        //cart
-        require_once($modules_path . 'sb_et_woo_li_cart_products_module.php');
-        require_once($modules_path . 'sb_et_woo_li_cart_totals_module.php');
+        //if (isset($_GET['post'])) {
+        //$pt = get_post_type($_GET['post']);
 
-        //account
-        require_once($modules_path . 'sb_et_woo_li_account_page_module.php');
-        require_once($modules_path . 'sb_et_woo_li_account_nav_module.php');
-        require_once($modules_path . 'sb_et_woo_li_account_downloads_module.php');
-        require_once($modules_path . 'sb_et_woo_li_account_orders_module.php');
-        require_once($modules_path . 'sb_et_woo_li_account_details_module.php');
-        require_once($modules_path . 'sb_et_woo_li_account_addresses_module.php');
+        //if (substr($pt, 0, 5) == 'et_pb') {
+        //$is_layout = true;
+        //} else if ($pt == 'product') {
+        //$is_woo = true;
+        //}
+        //}
 
-        //general
-        require_once($modules_path . 'sb_et_woo_li_content_module.php');
-        require_once($modules_path . 'sb_et_woo_li_notices_module.php');
-        require_once($modules_path . 'sb_et_woo_li_short_content_module.php');
+        if (1 || $is_woo || $is_layout || !is_admin()) {
+
+            if (1 || $is_layout || !is_admin()) { //checkout, cart, account modules designed to be used from the library only
+
+                //checkout
+                require_once($modules_path . 'sb_et_woo_li_checkout_billing_module.php');
+                require_once($modules_path . 'sb_et_woo_li_checkout_shipping_module.php');
+                require_once($modules_path . 'sb_et_woo_li_checkout_review_module.php');
+                require_once($modules_path . 'sb_et_woo_li_checkout_payment_module.php');
+                require_once($modules_path . 'sb_et_woo_li_checkout_coupon_module.php');
+
+                //cart
+                require_once($modules_path . 'sb_et_woo_li_cart_products_module.php');
+                require_once($modules_path . 'sb_et_woo_li_cart_totals_module.php');
+
+                //account
+                require_once($modules_path . 'sb_et_woo_li_account_page_module.php');
+                require_once($modules_path . 'sb_et_woo_li_account_nav_module.php');
+                require_once($modules_path . 'sb_et_woo_li_account_downloads_module.php');
+                require_once($modules_path . 'sb_et_woo_li_account_orders_module.php');
+                require_once($modules_path . 'sb_et_woo_li_account_details_module.php');
+                require_once($modules_path . 'sb_et_woo_li_account_addresses_module.php');
+            }
+
+            //general
+            require_once($modules_path . 'sb_et_woo_li_content_module.php');
+            require_once($modules_path . 'sb_et_woo_li_short_content_module.php');
+            require_once($modules_path . 'sb_et_woo_li_notices_module.php');
+            require_once($modules_path . 'sb_et_woo_li_gallery_module.php');
+            require_once($modules_path . 'sb_et_woo_li_title_module.php');
+            require_once($modules_path . 'sb_et_woo_li_info_tab_module.php');
+            require_once($modules_path . 'sb_et_woo_li_attribute_module.php');
+            require_once($modules_path . 'sb_et_woo_li_reviews_module.php');
+            require_once($modules_path . 'sb_et_woo_li_rating_module.php');
+            require_once($modules_path . 'sb_et_woo_li_meta_module.php');
+            require_once($modules_path . 'sb_et_woo_li_price_module.php');
+            require_once($modules_path . 'sb_et_woo_li_atc_module.php');
+            require_once($modules_path . 'sb_et_woo_li_general_module.php');
+            require_once($modules_path . 'sb_et_woo_li_thumbnail_module.php');
+            require_once($modules_path . 'sb_et_woo_li_tabs_module.php');
+            require_once($modules_path . 'sb_et_woo_li_product_category_module.php');
+            require_once($modules_path . 'sb_et_woo_li_related_module.php');
+            require_once($modules_path . 'sb_et_woo_li_upsell_module.php');
+            require_once($modules_path . 'sb_et_woo_li_cross_sell_module.php');
+            require_once($modules_path . 'sb_et_woo_li_breadcrumb_module.php');
+            require_once($modules_path . 'sb_et_woo_li_read_more_module.php');
+            require_once($modules_path . 'sb_et_woo_li_shop_cat_title_module.php');
+
+            //loops
+            require_once($modules_path . 'sb_et_woo_li_loop_archive_module.php');
+            require_once($modules_path . 'sb_et_woo_li_archive_module.php');
+            require_once($modules_path . 'sb_et_woo_li_category_archive_module.php');
+        }
+
         require_once($modules_path . 'sb_et_woo_li_single_product_module.php');
-        require_once($modules_path . 'sb_et_woo_li_gallery_module.php');
-        require_once($modules_path . 'sb_et_woo_li_title_module.php');
-        require_once($modules_path . 'sb_et_woo_li_info_tab_module.php');
-        require_once($modules_path . 'sb_et_woo_li_attribute_module.php');
-        require_once($modules_path . 'sb_et_woo_li_reviews_module.php');
-        require_once($modules_path . 'sb_et_woo_li_rating_module.php');
-        require_once($modules_path . 'sb_et_woo_li_meta_module.php');
-        require_once($modules_path . 'sb_et_woo_li_price_module.php');
-        require_once($modules_path . 'sb_et_woo_li_atc_module.php');
-        require_once($modules_path . 'sb_et_woo_li_general_module.php');
-        require_once($modules_path . 'sb_et_woo_li_thumbnail_module.php');
-        require_once($modules_path . 'sb_et_woo_li_tabs_module.php');
-        require_once($modules_path . 'sb_et_woo_li_product_category_module.php');
-        require_once($modules_path . 'sb_et_woo_li_related_module.php');
-        require_once($modules_path . 'sb_et_woo_li_upsell_module.php');
-        require_once($modules_path . 'sb_et_woo_li_cross_sell_module.php');
-        require_once($modules_path . 'sb_et_woo_li_breadcrumb_module.php');
-        require_once($modules_path . 'sb_et_woo_li_shop_cat_title_module.php');
-        require_once($modules_path . 'sb_et_woo_li_read_more_module.php');
-
-        //loops
-        require_once($modules_path . 'sb_et_woo_li_loop_archive_module.php');
-        require_once($modules_path . 'sb_et_woo_li_archive_module.php');
-        //require_once($modules_path . 'sb_et_woo_li_category_archive_module.php');
     }
 }
 
@@ -147,6 +176,14 @@ function sb_et_woo_li_submenu()
         'manage_options',
         'sb_et_woo_li',
         'sb_et_woo_li_submenu_cb');
+
+    add_submenu_page(
+        'woocommerce',
+        'Woo Injector Tabs',
+        'Woo Injector Tabs',
+        'manage_options',
+        'sb_et_woo_li_tabs',
+        'sb_et_woo_li_submenu_tabs');
 }
 
 function sb_et_woo_li_box_start($title, $width = false, $float = 'left')
@@ -179,10 +216,10 @@ function sb_et_woo_li_submenu_cb()
         'hide_empty' => false,
     ));
     $sale_locations = array(
-        'none'=>'None'
-        , 'image'=>'Over Product Image (top left)'
-        , 'title'=>'Over Product Title (top right)'
-        , 'content'=>'Over Product Description (top right)'
+        'none' => 'None'
+    , 'image' => 'Over Product Image (top left)'
+    , 'title' => 'Over Product Title (top right)'
+    , 'content' => 'Over Product Description (top right)'
     );
 
     if (isset($_POST['sb_et_woo_li_edit_submit'])) {
@@ -195,6 +232,8 @@ function sb_et_woo_li_submenu_cb()
         update_option('sb_et_woo_li_sale_loop_location', @$_POST['sb_et_woo_li_sale_loop_location']);
         update_option('sb_et_woo_li_sale_single_location', @$_POST['sb_et_woo_li_sale_single_location']);
         update_option('sb_et_woo_li_sale_label', @$_POST['sb_et_woo_li_sale_label']);
+        update_option('sb_et_woo_li_sale_bg_colour', @$_POST['sb_et_woo_li_sale_bg_colour']);
+        update_option('sb_et_woo_li_sale_colour', @$_POST['sb_et_woo_li_sale_colour']);
 
         //update_option('sb_et_woo_li_acc_nav_page', @$_POST['sb_et_woo_li_acc_nav_page']);
         update_option('sb_et_woo_li_acc_page_page', @$_POST['sb_et_woo_li_acc_page_page']);
@@ -295,7 +334,7 @@ function sb_et_woo_li_submenu_cb()
 
         $sale_loc = get_option('sb_et_woo_li_sale_loop_location', 'none');
 
-        foreach ($sale_locations as $sale_location=>$sale_loc_label) {
+        foreach ($sale_locations as $sale_location => $sale_loc_label) {
             echo '<option ' . selected($sale_location, $sale_loc, false) . ' value="' . $sale_location . '">' . $sale_loc_label . '</option>';
         }
 
@@ -309,7 +348,7 @@ function sb_et_woo_li_submenu_cb()
         echo '<select style="width: 250px;" name="sb_et_woo_li_sale_single_location">';
         $sale_loc = get_option('sb_et_woo_li_sale_single_location', 'none');
 
-        foreach ($sale_locations as $sale_location=>$sale_loc_label) {
+        foreach ($sale_locations as $sale_location => $sale_loc_label) {
             echo '<option ' . selected($sale_location, $sale_loc, false) . ' value="' . $sale_location . '">' . $sale_loc_label . '</option>';
         }
 
@@ -320,6 +359,16 @@ function sb_et_woo_li_submenu_cb()
         echo '<p>
                 <label>Sale badge label<br /><input type="text" style="width: 300px;" name="sb_et_woo_li_sale_label" value="' . get_option('sb_et_woo_li_sale_label') . '" /></label>
                 <br /><small>If you\'d like to change the text on the sale label then enter it here. Defaults to "Sale!" if left empty.</small>
+            </p>';
+
+        echo '<p>
+                <label>Sale Badge Background Colour<br /><input type="text" name="sb_et_woo_li_sale_bg_colour" value="' . get_option('sb_et_woo_li_sale_bg_colour') . '" class="wli_colorpicker" /></label>
+                <br /><small>If you\'d like to change the background colour of the sale badge choose it here.</small>
+            </p>';
+
+        echo '<p>
+                <label>Sale Badge Text Colour<br /><input type="text" name="sb_et_woo_li_sale_colour" value="' . get_option('sb_et_woo_li_sale_colour') . '" class="wli_colorpicker" /></label>
+                <br /><small>If you\'d like to change the text colour of the sale badge choose it here.</small>
             </p>';
 
         ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -363,7 +412,7 @@ function sb_et_woo_li_submenu_cb()
 
             echo '<h2>Categories</h2>';
 
-            if (count($terms) <= 100) {
+            if (count($terms) <= apply_filters('wli_term_count_limit', 100)) {
 
                 echo '<table style="width: 100%;" class="widefat">';
 
@@ -401,7 +450,7 @@ function sb_et_woo_li_submenu_cb()
             if ($tterms) {
                 echo '<h2>Tags</h2>';
 
-                if (count($tterms) <= 100) {
+                if (count($tterms) <= apply_filters('wli_term_count_limit', 100)) {
                     echo '<table style="width: 100%;" class="widefat">';
 
                     foreach ($tterms as $term) {
@@ -521,7 +570,7 @@ function sb_et_woo_li_submenu_cb()
 
             echo '<h2>Categories</h2>';
 
-            if (count($terms) <= 100) {
+            if (count($terms) <= apply_filters('wli_term_count_limit', 100)) {
                 echo '<table style="width: 100%;" class="widefat">';
 
                 foreach ($terms as $term) {
@@ -555,7 +604,7 @@ function sb_et_woo_li_submenu_cb()
             }
 
             if ($tterms) {
-                if (count($tterms) <= 100) {
+                if (count($tterms) <= apply_filters('wli_term_count_limit', 100)) {
                     echo '<h2>Tags</h2>';
 
                     echo '<table style="width: 100%;" class="widefat">';
@@ -744,6 +793,7 @@ function sb_et_woo_li_meta_box_content()
     echo '<p>Use this setting to override the layout of the product page using the Woo Layout Injector plugin. Simply choose a layout and publish/update the page and the layout will be set.</p>';
 
     $overrides = get_post_meta(sb_et_woo_li_get_id(), "sb_et_woo_li_layout_overrides", true);
+    $selected = false;
     $layout_query = array(
         'post_type' => 'et_pb_layout'
     , 'posts_per_page' => -1
@@ -761,10 +811,18 @@ function sb_et_woo_li_meta_box_content()
         echo '<option value="0" ' . selected($overrides, 0, false) . '>-- Default --</option>';
 
         foreach ($layouts as $layout) {
+            if ($layout->ID == $overrides) {
+                $selected = $layout;
+            }
+
             echo '<option  ' . selected($overrides, $layout->ID, false) . ' value="' . $layout->ID . '">' . $layout->post_title . '</option>';
         }
 
         echo '</select></p>';
+
+        if ($selected) {
+            echo '<p><a class="button-secondary" target="_blank" href="' . admin_url('post.php?post=' . $overrides . '&action=edit') . '">Click to edit "' . $selected->post_title . '"</a></p>';
+        }
     }
 
 }
@@ -789,6 +847,7 @@ function sb_et_woo_li_meta_box_save($post_id, $post, $update)
 function sb_et_woo_li_meta_box()
 {
     add_meta_box('sb_et_woo_li_meta_box', 'Woo Layout Injector', 'sb_et_woo_li_meta_box_content', 'product', 'side');
+    add_meta_box('sb_et_woo_li_sectionid', __('Additional Product Tabs', 'sb_awt'), 'sb_et_woo_li_meta_box_tab_content', 'product');
 }
 
 ?>

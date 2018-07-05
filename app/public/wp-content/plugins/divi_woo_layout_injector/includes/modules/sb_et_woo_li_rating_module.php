@@ -28,7 +28,7 @@ class sb_et_woo_li_ratings_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
+                'cntnt' => array(
                     'label' => esc_html__('Heading', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} h2.module_title",
@@ -113,7 +113,7 @@ class sb_et_woo_li_ratings_module extends ET_Builder_Module
 
     function shortcode_callback($atts, $content = null, $function_name)
     {
-        if (get_post_type() != 'product') {
+        if (get_post_type() != 'product' || is_admin()) {
             return;
         }
 

@@ -10,6 +10,7 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
         $this->whitelisted_fields = array(
             'title',
             'product',
+            'image_size',
             'use_loop_layout',
             'loop_layout',
             'show_atc',
@@ -37,26 +38,10 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
-                /*'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
-                    'css' => array(
-                        'main' => "{$this->main_css_element} p",
-                    ),
-                    'font_size' => array('default' => '14px'),
-                    'line_height' => array('default' => '1.5em'),
-                ),*/
                 'price' => array(
                     'label' => esc_html__('Price', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} .price .woocommerce-Price-amount.amount",
-                    ),
-                    'font_size' => array('default' => '14px'),
-                    'line_height' => array('default' => '1.5em'),
-                ),
-                'buttons' => array(
-                    'label' => esc_html__('Read More', 'et_builder'),
-                    'css' => array(
-                        'main' => "{$this->main_css_element} .et_pb_button.woo_li_read_more",
                     ),
                     'font_size' => array('default' => '14px'),
                     'line_height' => array('default' => '1.5em'),
@@ -76,6 +61,16 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
                     ),
                     'font_size' => array('default' => '30px'),
                     'line_height' => array('default' => '1.5em'),
+                ),
+            ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__('Buttons', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} .et_pb_button, {$this->main_css_element} .button",
+                        'plugin_main' => "{$this->main_css_element}",
+                        'important' => 'all',
+                    ),
                 ),
             ),
             'background' => array(
@@ -122,6 +117,15 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
             }
         }
 
+        $img_options = array();
+        $sizes = get_intermediate_image_sizes();
+
+        $img_options[0] = '- Default -';
+
+        foreach ($sizes as $size) {
+            $img_options[$size] = $size;
+        }
+
         $fields = array(
             'title' => array(
                 'label' => __('Title', 'et_builder'),
@@ -135,6 +139,13 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
                 'toggle_slug' => 'main_settings',
                 'options' => $products,
                 'description' => esc_html__('Which product should be shown?', 'et_builder'),
+            ),
+            'image_size' => array(
+                'label' => __('Image Size', 'et_builder'),
+                'type' => 'select',
+                'options' => $img_options,
+                'toggle_slug' => 'main_settings',
+                'description' => __('Pick a size for the product image from the list. Leave blank for default.', 'et_builder'),
             ),
             'use_loop_layout' => array(
                 'label' => esc_html__('Use Loop Layout', 'et_builder'),
@@ -250,6 +261,7 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
 
         $use_loop_layout = $this->shortcode_atts['use_loop_layout'];
         $loop_layout = $this->shortcode_atts['loop_layout'];
+        $image_size = $this->shortcode_atts['image_size'];
         $title = $this->shortcode_atts['title'];
         $the_product = $this->shortcode_atts['product'];
         $show_atc = $this->shortcode_atts['show_atc'];
@@ -271,6 +283,12 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
 
         //'woocommerce_shortcode_before_product_loop'
 
+        if ($image_size) {
+            global $sb_et_woo_li_loop_image;
+            $sb_et_woo_li_loop_image = $image_size;
+            add_filter('single_product_archive_thumbnail_size', 'sb_et_woo_li_loop_image', 99, 99);
+        }
+
         if ($the_product) {
 
             if ($use_loop_layout == 'on') {
@@ -285,10 +303,10 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
                     add_action('woocommerce_shortcode_after_product_loop', 'woocommerce_template_single_add_to_cart', 10); //add atc
                 }
                 if ($show_img == 'no') {
-                    remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+                    remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
                 }
                 if ($show_title == 'no') {
-                    remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+                    remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
                 }
                 if ($show_price == 'no') {
                     remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10); //remove price
@@ -300,10 +318,10 @@ class sb_et_woo_li_single_product extends ET_Builder_Module
                     $content .= '<a class="et_pb_button woo_li_read_more" href="' . get_permalink($the_product->ID) . '">' . __($rm_label, 'woo_li') . '</a>';
                 }
                 if ($show_img == 'no') {
-                    add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+                    add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
                 }
                 if ($show_title == 'no') {
-                    add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+                    add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
                 }
                 if ($show_price == 'no') {
                     add_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10); //add price again

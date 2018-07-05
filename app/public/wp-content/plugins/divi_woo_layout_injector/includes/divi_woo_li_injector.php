@@ -37,6 +37,34 @@ function sb_et_woo_li_get_layout()
     return $product_layout;
 }
 
+function sb_et_woo_li_pagination()
+{
+    if (function_exists('wp_pagenavi')) {
+        wp_pagenavi();
+    } else {
+        global $wp_query;
+        $total = $wp_query->max_num_pages;
+        $current = get_query_var('paged');
+        $base = isset($base) ? $base : esc_url_raw(str_replace(999999999, '%#%', remove_query_arg('add-to-cart', get_pagenum_link(999999999, false))));
+        $format = isset($format) ? $format : '';
+
+        echo '<nav class="woocommerce-pagination">';
+        echo paginate_links(apply_filters('woocommerce_pagination_args', array( // WPCS: XSS ok.
+            'base' => $base,
+            'format' => $format,
+            'add_args' => false,
+            'current' => max(1, $current),
+            'total' => $total,
+            'prev_text' => '&larr;',
+            'next_text' => '&rarr;',
+            'type' => 'list',
+            'end_size' => 3,
+            'mid_size' => 3,
+        )));
+        echo '</nav>';
+    }
+}
+
 function sb_et_woo_li_get_cart_layout()
 {
     return get_option('sb_et_woo_li_cart_page', 0);
@@ -97,8 +125,22 @@ function sb_et_woo_li_get_archive_layout()
     return $product_layout;
 }
 
-function sb_et_woo_li_remove_actions($remove_only = false)
+function sb_et_woo_li_remove_actions($remove_only = false, $product_layout = false)
 {
+    global $post;
+
+    //if the legacy module is enabled then don't turn off these actions
+    if ($product_layout) {
+        $layout = get_post($product_layout);
+        if (stripos($layout->post_content, 'et_pb_woo_general') !== false) {
+            return false;
+        }
+    } else {
+        if (stripos($post->post_content, 'et_pb_woo_general') !== false) {
+            return false;
+        }
+    }
+
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
@@ -106,7 +148,7 @@ function sb_et_woo_li_remove_actions($remove_only = false)
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
 
-    remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10 );
+    remove_action('woocommerce_before_single_product', 'wc_print_notices', 10);
 
     remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
     remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
@@ -129,7 +171,7 @@ function sb_et_woo_li_template_include($template)
 
         if (!$admin_mode || ($admin_mode && $is_admin)) {
             if ($product_layout || $is_page_builder_used) {
-                sb_et_woo_li_remove_actions(); //only when we have a layout should we remove the actions
+                sb_et_woo_li_remove_actions(null, $product_layout); //only when we have a layout should we remove the actions
 
                 $template = dirname(__FILE__) . '/empty.php'; //stops woo from taking over the layout
             }
@@ -141,7 +183,7 @@ function sb_et_woo_li_template_include($template)
 
         if (!$admin_mode || ($admin_mode && $is_admin)) {
             if ($product_layout) {
-                sb_et_woo_li_remove_actions(); //only when we have a layout should we remove the actions
+                sb_et_woo_li_remove_actions(null, $product_layout); //only when we have a layout should we remove the actions
 
                 $template = dirname(__FILE__) . '/empty.php'; //stops woo from taking over the layout
             }
@@ -197,7 +239,6 @@ function sb_et_woo_li_template()
         }
 
         get_footer('shop');
-
     }
 }
 
@@ -252,26 +293,6 @@ function sb_et_woo_li_get_layout_html($layout_id)
     return $content;
 }
 
-function sb_et_woo_li_coupon_js()
-{
-    wc_enqueue_js('jQuery( ".et_pb_section.woocommerce_after_checkout_form" ).hide();
-		
-                                jQuery( "body" ).bind( "updated_checkout", function() {
-                                    jQuery( "#show-coupon-form" ).click( function() {
-                                        jQuery( ".et_pb_section.woocommerce_after_checkout_form" ).show();
-                                        jQuery( ".checkout_coupon" ).show();
-                                        jQuery( "html, body" ).animate( { scrollTop: jQuery(".sb_et_woo_li_coupon_form").offset().top }, "slow" );
-                                        return false;
-                                    } );
-                                } );
-	        ');
-}
-
-function sb_et_woo_li_coupon_link()
-{
-    echo '<p class="sb_et_woo_li_coupon_cta"> Have a coupon? <a href="#" id="show-coupon-form">Click here to enter your code</a></p>';
-}
-
 function sb_et_woo_li_content_filter($content)
 {
     global $sb_et_woo_li_requested;
@@ -292,10 +313,6 @@ function sb_et_woo_li_content_filter($content)
             //moves coupon fields below the form
             add_action('woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form', 10);
             remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form');
-
-            //adds coupon link near the payment boxes
-            add_action('woocommerce_before_checkout_form', 'sb_et_woo_li_coupon_js');
-            add_action('woocommerce_checkout_order_review', 'sb_et_woo_li_coupon_link');
 
             //attach actions to their respective modules instead of being together
             remove_action('woocommerce_checkout_order_review', 'woocommerce_order_review', 10);
@@ -319,10 +336,12 @@ function sb_et_woo_li_content_filter($content)
 
                 ob_start();
                 wc_print_notices(); // Show non-cart errors
+
                 echo '<div class="woocommerce">';
                 do_action('woocommerce_before_checkout_form', $checkout); //for the coupon form etc.
                 echo '<form name="checkout" method="post" class="checkout woocommerce-checkout" action="' . esc_url(wc_get_checkout_url()) . '" enctype="multipart/form-data">';
                 echo do_shortcode('[shop_messages]');
+
                 $form_start = ob_get_clean();
 
                 ////////////////////////////////////////////////////////////
@@ -339,6 +358,8 @@ function sb_et_woo_li_content_filter($content)
 			            </div>
 			        </div>';
                 }
+
+                //$after_checkout .= '</div></div></div>'; // to end the containing element
 
                 ////////////////////////////////////////////////////////////
 
@@ -391,15 +412,16 @@ function sb_et_woo_li_add_builder($post_types)
     return $post_types;
 }
 
-function sb_et_woo_li_get_current_account_page() {
+function sb_et_woo_li_get_current_account_page()
+{
     global $wp;
 
     $name = 'dashboard';
 
-    if ( ! empty( $wp->query_vars ) ) {
-        foreach ( $wp->query_vars as $key => $value ) {
+    if (!empty($wp->query_vars)) {
+        foreach ($wp->query_vars as $key => $value) {
             // Ignore pagename param.
-            if ( 'pagename' === $key ) {
+            if ('pagename' === $key) {
                 continue;
             }
             $name = $key;

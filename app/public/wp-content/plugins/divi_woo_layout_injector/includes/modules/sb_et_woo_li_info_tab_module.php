@@ -8,6 +8,7 @@ class sb_et_woo_li_info_tab_module extends ET_Builder_Module
         $this->slug = 'et_pb_woo_info_meta';
 
         $this->whitelisted_fields = array(
+            'title',
             'module_id',
             'module_class',
         );
@@ -24,8 +25,8 @@ class sb_et_woo_li_info_tab_module extends ET_Builder_Module
         $this->main_css_element = '.et_pb_woo_info_meta';
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+                'cntnt' => array(
+                    'label' => esc_html__('Content', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} p",
                     ),
@@ -59,6 +60,12 @@ class sb_et_woo_li_info_tab_module extends ET_Builder_Module
     function get_fields()
     {
         $fields = array(
+            'title' => array(
+                'label' => __('Title', 'et_builder'),
+                'type' => 'text',
+                'toggle_slug' => 'main_settings',
+                'description' => __('If you want a title to the module then use this box and an H2 will be added above the content.', 'et_builder'),
+            ),
             'admin_label' => array(
                 'label' => __('Admin Label', 'et_builder'),
                 'type' => 'text',
@@ -86,10 +93,12 @@ class sb_et_woo_li_info_tab_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (get_post_type() != 'product') {
+        if (get_post_type() != 'product' || is_admin()) {
             return;
         }
 
+        $output = '';
+        $title = $this->shortcode_atts['title'];
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
 
@@ -99,21 +108,26 @@ class sb_et_woo_li_info_tab_module extends ET_Builder_Module
 
         ob_start();
         woocommerce_product_additional_information_tab();
-        $content = ob_get_clean();
+        if ($content = ob_get_clean()) {
 
-        //////////////////////////////////////////////////////////////////////
+            if ($title) {
+                $content = '<h2 class="module-title">' . $title . '</h2>' . $content; //prepend title
+            }
 
-        $output = sprintf(
-            '<div%5$s class="%1$s%3$s%6$s">
+            //////////////////////////////////////////////////////////////////////
+
+            $output = sprintf(
+                '<div%5$s class="%1$s%3$s%6$s">
                                         %2$s
                                     %4$s',
-            'clearfix ',
-            $content,
-            esc_attr('et_pb_module'),
-            '</div>',
-            ('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
-            ('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : '')
-        );
+                'clearfix ',
+                $content,
+                esc_attr('et_pb_module'),
+                '</div>',
+                ('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
+                ('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : '')
+            );
+        }
 
         return $output;
     }

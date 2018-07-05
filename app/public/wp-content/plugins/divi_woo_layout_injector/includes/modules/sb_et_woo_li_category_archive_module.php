@@ -8,27 +8,38 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
         $this->slug = 'et_pb_woo_category_archive';
 
         $whitelisted_fields = array(
+            'title',
             'fullwidth',
             'columns',
-            'show_content',
+            'image_size',
+            'show_description',
             'show_more',
             'read_more_label',
+            'show_products_in_cat',
+            'hide_empty_cats',
+            'show_only_children',
+            'show_siblings',
             'background_layout',
             'admin_label',
             'module_id',
             'module_class',
+            'use_overlay',
             'overlay_icon_color',
             'hover_overlay_color',
+            'hover_icon',
         );
 
         $this->whitelisted_fields = apply_filters('sb_et_divi_woo_category_archive_module_whitelisted_fields', $whitelisted_fields);
 
         $this->fields_defaults = array(
             'fullwidth' => array('on'),
+            'show_only_children' => array('on'),
+            'image_size' => array('medium_large'),
+            'hide_empty_cats' => array('off'),
+            'columns' => array(3),
             'posts_number' => array(10, 'add_default_setting'),
-            'show_content' => array('off'),
+            'show_description' => array('off'),
             'show_more' => array('off'),
-            'show_pagination' => array('on'),
             'offset_number' => array(0, 'only_default_setting'),
             'background_layout' => array('light'),
         );
@@ -37,29 +48,46 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+                'cntnt' => array(
+                    'label' => esc_html__('Description', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} p",
                     ),
                     'font_size' => array('default' => '14px'),
                     'line_height' => array('default' => '1.5em'),
                 ),
-                'headings' => array(
-                    'label' => esc_html__('Headings', 'et_builder'),
+                'title' => array(
+                    'label' => esc_html__('Title', 'et_builder'),
                     'css' => array(
-                        'main' => "{$this->main_css_element} h1, {$this->main_css_element} h2, {$this->main_css_element} h1 a, {$this->main_css_element} h2 a, {$this->main_css_element} h3, {$this->main_css_element} h4",
+                        'main' => "{$this->main_css_element} h2.module-title, {$this->main_css_element} h2.module-title a",
                     ),
                     'font_size' => array('default' => '30px'),
                     'line_height' => array('default' => '1.5em'),
                 ),
-                'read_more' => array(
-                    'label' => esc_html__('Read More Button', 'et_builder'),
+                'headings' => array(
+                    'label' => esc_html__('Category Headings', 'et_builder'),
                     'css' => array(
-                        'main' => "{$this->main_css_element} .et_pb_button.more-link",
+                        'main' => "{$this->main_css_element} h2.category-title, {$this->main_css_element} h2.category-title a",
                     ),
-                    'font_size' => array('default' => '14px'),
+                    'font_size' => array('default' => '24px'),
                     'line_height' => array('default' => '1.5em'),
+                ),
+                'headings_current' => array(
+                    'label' => esc_html__('Current Category Heading', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} .current_category h2.category-title, {$this->main_css_element} .current_category h2.category-title a",
+                    ),
+                    'font_size' => array('default' => '24px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
+            ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__( 'Button', 'et_builder' ),
+                    'css' => array(
+                        'main' => $this->main_css_element . ' .et_pb_button.more-link',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
                 ),
             ),
             'background' => array(
@@ -94,7 +122,7 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
             ),
             'featured_image' => array(
                 'label' => esc_html__('Featured Image', 'et_builder'),
-                'selector' => '.et_pb_image_container',
+                'selector' => '.wli_image_container',
             ),
             'read_more' => array(
                 'label' => esc_html__('Read More Button', 'et_builder'),
@@ -105,7 +133,7 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
 
     function get_fields()
     {
-        $orderby = array(
+        /*$orderby = array(
             'date' => 'Order by date'
         , 'ID' => 'Order by post id'
         , 'author' => 'Order by author'
@@ -118,7 +146,7 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
         $order = array(
             'desc' => 'Descending'
         , 'asc' => 'Ascending'
-        );
+        );*/
 
         $image_options = array();
         $sizes = get_intermediate_image_sizes();
@@ -127,7 +155,26 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
             $image_options[$size] = $size;
         }
 
+        $cols = array(
+            2 => esc_html__('Two', 'et_builder'),
+            3 => esc_html__('Three', 'et_builder'),
+            4 => esc_html__('Four', 'et_builder'),
+        );
+
+        if (function_exists('sb_dcl_col_templates')) {
+            $cols[5] = esc_html__('Five', 'et_builder');
+            $cols[6] = esc_html__('Six', 'et_builder');
+            $cols[7] = esc_html__('Seven', 'et_builder');
+            $cols[8] = esc_html__('Eight', 'et_builder');
+        }
+
         $fields = array(
+            'title' => array(
+                'label' => __('Title', 'et_builder'),
+                'type' => 'text',
+                'toggle_slug' => 'main_settings',
+                'description' => __('If you want a title to show above the module then enter it here', 'et_builder'),
+            ),
             'fullwidth' => array(
                 'label' => esc_html__('Layout', 'et_builder'),
                 'type' => 'select',
@@ -137,7 +184,7 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
                     'list' => esc_html__('List', 'et_builder'),
                     'on' => esc_html__('Fullwidth', 'et_builder'),
                 ),
-                'description' => esc_html__('Toggle between the various blog layout types.', 'et_builder'),
+                'description' => esc_html__('Toggle between the various layout types.', 'et_builder'),
                 'affects' => array(
                     '#et_pb_columns'
                 ),
@@ -148,24 +195,74 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
                 'type' => 'select',
                 'option_category' => 'layout',
                 'depends_show_if' => 'off',
-                'options' => array(
-                    2 => esc_html__('Two', 'et_builder'),
-                    3 => esc_html__('Three', 'et_builder'),
-                    4 => esc_html__('Four', 'et_builder'),
-                ),
-                'description' => esc_html__('When in grid mode please select the number of columns you\'d like to see.', 'et_builder'),
+                'options' => $cols,
+                'description' => esc_html__('When in grid mode please select the number of columns you\'d like to see. For more than 4 cols please add the FREE Divi Extended Columns Layouts plugin', 'et_builder'),
                 'toggle_slug' => 'main_settings',
             ),
-            'show_content' => array(
-                'label' => esc_html__('Content', 'et_builder'),
+            'image_size' => array(
+                'label' => __('Image Size', 'et_builder'),
+                'type' => 'select',
+                'options' => $image_options,
+                'toggle_slug' => 'main_settings',
+                'description' => __('Pick a size for the category image from the list. Leave blank for default.', 'et_builder'),
+            ),
+            'show_description' => array(
+                'label' => esc_html__('Show Description', 'et_builder'),
                 'type' => 'select',
                 'option_category' => 'configuration',
                 'options' => array(
-                    'off' => esc_html__('Show Excerpt', 'et_builder'),
-                    'on' => esc_html__('Show Content', 'et_builder'),
-                    'none' => esc_html__('Show None', 'et_builder'),
+                    'off' => esc_html__('No', 'et_builder'),
+                    'on' => esc_html__('Yes', 'et_builder'),
                 ),
-                'description' => esc_html__('Showing the full content will not truncate your posts on the index page. Showing the excerpt will only display your excerpt text.', 'et_builder'),
+                'description' => esc_html__('Show the description that may have been added against the category', 'et_builder'),
+                'toggle_slug' => 'main_settings',
+            ),
+            'show_products_in_cat' => array(
+                'label' => esc_html__('Show Num Products', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'off' => esc_html__('No', 'et_builder'),
+                    'on' => esc_html__('Yes', 'et_builder'),
+                ),
+                'description' => esc_html__('Show how many products are in the category', 'et_builder'),
+                'toggle_slug' => 'main_settings',
+            ),
+            'hide_empty_cats' => array(
+                'label' => esc_html__('Hide Empty Categories', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'off' => esc_html__('No', 'et_builder'),
+                    'on' => esc_html__('Yes', 'et_builder'),
+                ),
+                'description' => esc_html__('Should empty categories be hidden?', 'et_builder'),
+                'toggle_slug' => 'main_settings',
+            ),
+            'show_only_children' => array(
+                'label' => esc_html__('Show only child categories?', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'on' => esc_html__('Yes', 'et_builder'),
+                    'off' => esc_html__('No', 'et_builder'),
+                ),
+                'affects' => array(
+                    '#et_pb_show_siblings'
+                ),
+                'description' => esc_html__('If set to yes then only categories related to the current page will show. If set to no then all top level categories will show.', 'et_builder'),
+                'toggle_slug' => 'main_settings',
+            ),
+            'show_siblings' => array(
+                'label' => esc_html__('Show Sibling Categories?', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'off' => esc_html__('No', 'et_builder'),
+                    'on' => esc_html__('Yes', 'et_builder'),
+                ),
+                'depends_show_if' => 'on',
+                'description' => esc_html__('If there are no child categories to show then should sibling categories be shown? If set to No then the module will be hidden when there are no child categories to show.', 'et_builder'),
                 'toggle_slug' => 'main_settings',
             ),
             'show_more' => array(
@@ -190,11 +287,29 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
                 'description' => esc_html__('The wording for the read more button. Defaults to "Read more"', 'et_builder'),
                 'toggle_slug' => 'main_settings',
             ),
+            'use_overlay' => array(
+                'label' => esc_html__('Image Overlay on Hover', 'et_builder'),
+                'type' => 'yes_no_button',
+                'option_category' => 'layout',
+                'toggle_slug' => 'main_settings',
+                'options' => array(
+                    'off' => esc_html__('Off', 'et_builder'),
+                    'on' => esc_html__('On', 'et_builder'),
+                ),
+                'affects' => array(
+                    '#et_pb_overlay_icon_color',
+                    '#et_pb_hover_overlay_color',
+                    '#et_pb_hover_icon',
+                ),
+                'description' => esc_html__('If enabled, an overlay color and icon will be displayed when a visitors hovers over the featured image of a post.', 'et_builder'),
+                'toggle_slug' => 'main_settings',
+            ),
             'overlay_icon_color' => array(
                 'label' => esc_html__('Overlay Icon Color', 'et_builder'),
                 'type' => 'color',
                 'custom_color' => true,
                 'depends_show_if' => 'on',
+                'toggle_slug' => 'main_settings',
                 'description' => esc_html__('Here you can define a custom color for the overlay icon', 'et_builder'),
                 'toggle_slug' => 'main_settings',
             ),
@@ -203,7 +318,20 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
                 'type' => 'color-alpha',
                 'custom_color' => true,
                 'depends_show_if' => 'on',
+                'toggle_slug' => 'main_settings',
                 'description' => esc_html__('Here you can define a custom color for the overlay', 'et_builder'),
+                'toggle_slug' => 'main_settings',
+            ),
+            'hover_icon' => array(
+                'label' => esc_html__('Hover Icon Picker', 'et_builder'),
+                'type' => 'text',
+                'option_category' => 'configuration',
+                'class' => array('et-pb-font-icon'),
+                'renderer' => 'et_pb_get_font_icon_list',
+                'renderer_with_field' => true,
+                'depends_show_if' => 'on',
+                'toggle_slug' => 'main_settings',
+                'description' => esc_html__('Here you can define a custom icon for the overlay', 'et_builder'),
                 'toggle_slug' => 'main_settings',
             ),
             'background_layout' => array(
@@ -251,37 +379,48 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
             ),
         );
 
-        $fields = apply_filters('sb_et_divi_woo_archive_module_fields', $fields);
+        $fields = apply_filters('sb_et_divi_woo_category_archive_module_fields', $fields);
 
         return $fields;
     }
 
     function shortcode_callback($atts, $content = null, $function_name)
     {
+        if (is_admin()) {
+            return;
+        }
 
         $this->shortcode_atts = apply_filters('sb_et_divi_woo_archive_module_shortcode_atts', $this->shortcode_atts);
 
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
+        $title = $this->shortcode_atts['title'];
         $fullwidth = $this->shortcode_atts['fullwidth'];
-        $show_content = $this->shortcode_atts['show_content'];
+        $show_description = $this->shortcode_atts['show_description'];
+        $show_products_in_cat = $this->shortcode_atts['show_products_in_cat'];
+        $hide_empty_cats = $this->shortcode_atts['hide_empty_cats'];
+        $show_only_children = $this->shortcode_atts['show_only_children'];
+        $show_siblings = $this->shortcode_atts['show_siblings'];
         $background_layout = $this->shortcode_atts['background_layout'];
         $show_more = $this->shortcode_atts['show_more'];
         if (!$read_more_label = $this->shortcode_atts['read_more_label']) {
             $read_more_label = 'Read more';
         }
+        if (!$image_size = $this->shortcode_atts['image_size']) {
+            $image_size = 'medium_large';
+        }
+
         $overlay_icon_color = $this->shortcode_atts['overlay_icon_color'];
         $hover_overlay_color = $this->shortcode_atts['hover_overlay_color'];
+        $hover_icon = $this->shortcode_atts['hover_icon'];
+        $use_overlay = $this->shortcode_atts['use_overlay'];
+
 
         if (!$cols = @$this->shortcode_atts['columns']) {
             $cols = 4;
         }
 
-        global $paged;
-
         $module_class = ET_Builder_Element::add_module_order_class($module_class, $function_name);
-
-        $container_is_closed = false;
 
         if ('' !== $overlay_icon_color) {
             ET_Builder_Element::set_style($function_name, array(
@@ -303,78 +442,128 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
             ));
         }
 
+        $data_icon = ($hover_icon ? ' data-icon="' . esc_attr(et_pb_process_font_icon($hover_icon)) . '"' : '');
+        $overlay_class = ('on' == $use_overlay ? ' et_pb_has_overlay' : '');
+
         if ($fullwidth == 'list') {
             $module_class .= ' et_pb_woo_archive_list';
         }
 
+        $parent = 0;
+        $current = '';
+
+        if ($show_only_children == 'on') {
+            if (is_tax('product_cat')) {
+                $parent = get_queried_object()->term_id;
+                $current = get_queried_object()->slug;
+
+                if ($show_siblings == 'on') {
+                        //$parent = get_queried_object()->term_id;
+                        if ($term_parent = get_term($parent)) {
+                            if (!is_wp_error($term_parent)) {
+                                $parent = $term_parent->parent;
+                            }
+                        }
+                }
+            }
+
+            //echo get_query_var('taxonomy') . '<br />';
+            //echo get_query_var('term') . '<br />';
+        }
+
+        $args = array(
+            'taxonomy' => 'product_cat',
+            'hide_empty' => ($hide_empty_cats == 'on' ? '1' : '0'),
+            'parent' => $parent,
+        );
+
+        $terms = get_terms($args);
+
         ob_start();
 
-        //add_action('sb_et_woo_li_archive_image', 'woocommerce_template_loop_product_thumbnail', 10);
-        //remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+        //echo '<pre>';
+        //print_r($args);
+        //print_r($terms);
+        //echo '</pre>';
 
-        //get categories here!
-
-        if (have_posts()) {
+        if ($terms) {
 
             $i = 0;
+            $j = 0;
+
+            if ($title) {
+                echo '<h2 class="module-title">' . $title . '</h2>';
+            }
 
             if ($fullwidth == 'off') { //grid
                 echo '<div class="et_pb_row">';
             }
 
-            while (have_posts()) {
-                the_post();
+            foreach ($terms as $term) {
 
-                $pb_used = et_pb_is_pagebuilder_used(get_the_ID());
-
-                if ($fullwidth == 'off') { //grid
-                    echo '<div class="et_woo_container_column et_pb_column et_pb_column_1_' . $cols . '  et_pb_column_' . $i . ' ' . implode(' ', get_post_class('et_pb_post_type et_pb_post_type_product et_pb_post')) . '">';
-                } else {
-                    echo '<div class="et_pb_row ' . implode(' ', get_post_class('et_pb_post_type et_pb_post_type_product et_pb_post')) . '">';
+                if ($term->slug == 'uncategorized') {
+                    continue; //no one uses this so let's skip it to save the support tickets!
                 }
 
-                do_action('sb_et_woo_li_category_archive_start', get_the_ID());
+                $cont_classes = implode(' ', get_post_class('et_pb_post_type et_pb_post_type_product et_pb_post'));
+
+                if ($term->slug && $term->slug == $current) {
+                    $cont_classes .= ' current_category';
+                }
+
+                if ($fullwidth == 'off') { //grid
+                    echo '<div class="et_woo_container_column et_pb_column et_pb_column_1_' . $cols . '  et_pb_column_' . $i . ' ' . $cont_classes . '">';
+                } else {
+                    echo '<div class="et_pb_row ' . $cont_classes . '">';
+                }
+
+                do_action('sb_et_woo_li_category_archive_start', $term->term_id);
                 do_action('woocommerce_before_shop_loop_item');
 
                 echo '<div class="et_pb_column">';
 
-                do_action('sb_et_woo_li_archive_image');
+                do_action('sb_et_woo_li_category_archive_image');
 
                 if ($fullwidth == 'list') {
                     echo '<div class="woo_content_column">';
                 }
 
-                do_action('woocommerce_before_shop_loop_item_title');
-                echo '<h2 class="entry-title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
-                do_action('woocommerce_after_shop_loop_item_title');
+                if ($thumb_id = get_term_meta($term->term_id, 'thumbnail_id', true)) {
+                    $url = get_term_link($term);
 
-                if ('none' !== $show_content) {
+                    echo '<div class="et_pb_module wli_image_container ' . $overlay_class . '">';
+
+                    if ('on' === $use_overlay) {
+                        echo '<a href="' . $url . '" class="et_overlay ' . ($hover_icon ? 'et_pb_inline_icon' : '') . '"' . $data_icon . '></a>';
+                    }
+
+                    echo '<a href="' . $url . '">';
+
+                    echo wp_get_attachment_image($thumb_id, $image_size);
+
+                    echo '</a>';
+                    echo '</div>';
+                }
+
+                echo '<h2 class="entry-title category-title"><a href="' . get_term_link($term) . '">' . $term->name . ($show_products_in_cat == 'on' ? ' <span class="wli_prods_in_cat">(' . $term->count . ')</span>' : '') . '</a></h2>';
+
+                if ('none' !== $show_description && $term->description) {
                     // do not display the content if it contains Blog, Post Slider, Fullwidth Post Slider, or Portfolio modules to avoid infinite loops
-                    if ('on' === $show_content && !$pb_used) {
-                        echo wpautop(do_shortcode(get_the_content(esc_html__('read more...', 'et_builder'))));
-                    } else {
-                        if (has_excerpt()) {
-                            echo wpautop(get_the_excerpt());
-                        } else {
-                            echo wpautop(truncate_post(270, apply_filters('excerpt_more', ''), false));
-                        }
+                    if ('on' === $show_description) {
+                        echo wpautop(do_shortcode($term->description));
                     }
 
                 }
 
                 if ('on' == $show_more) {
-                    echo '<p><a href="' . esc_url(get_permalink()) . '" class="et_pb_button more-link" >' . esc_html__($read_more_label, 'et_builder') . '</a></p>';
+                    echo '<p><a href="' . esc_url(get_term_link($term)) . '" class="et_pb_button more-link" >' . esc_html__($read_more_label, 'et_builder') . '</a></p>';
                 }
-
-                echo '<p>';
-                do_action('woocommerce_after_shop_loop_item');
-                echo '</p>';
 
                 if ($fullwidth == 'list') {
                     echo '</div>';
                 }
 
-                do_action('sb_et_woo_li_category_archive_end', get_the_ID());
+                do_action('sb_et_woo_li_category_archive_end', $term->term_id);
 
                 echo '</div>';
                 //</article> <!-- .et_pb_post -->
@@ -386,8 +575,9 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
                 }
 
                 $i++;
+                $j++;
 
-                if ($i == $cols && ($fullwidth == 'off')) {
+                if ($i == $cols && ($fullwidth == 'off') && $j != count($terms)) {
                     $i = 0;
 
                     echo '</div>';
@@ -399,28 +589,14 @@ class sb_et_woo_li_category_archive extends ET_Builder_Module
             if ($fullwidth == 'off') { //grid
                 echo '</div>';
             }
-
-            wp_reset_query();
         }
 
         $posts = ob_get_contents();
-
         ob_end_clean();
 
-        $class = " et_pb_module et_pb_bg_layout_{$background_layout}";
+        $class = ' et_pb_module et_pb_bg_layout_' . $background_layout;
 
-        $output = sprintf(
-            '<div%5$s class="%1$s%3$s%6$s"%7$s>
-				%2$s
-			%4$s',
-            ('on' == $fullwidth || $fullwidth == 'list' ? 'et_pb_fullwidth_' . $fullwidth . ' clearfix' : 'et_pb_woo_category_archive_grid clearfix'),
-            $posts,
-            esc_attr($class),
-            (!$container_is_closed ? '</div> <!-- .et_pb_posts -->' : ''),
-            ('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
-            ('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : ''),
-            ('on' !== $fullwidth ? ' data-columns' : '')
-        );
+        $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="' . ('on' == $fullwidth || $fullwidth == 'list' ? 'et_pb_fullwidth_' . $fullwidth . ' clearfix' : 'et_pb_woo_category_archive_grid clearfix') . ' ' . esc_attr($class . $module_class) . '" ' . ('on' !== $fullwidth ? ' data-columns' : '') . '>' . $posts . '</div> <!-- .et_pb_posts -->';
 
         if ('off' == $fullwidth) {
             $output = sprintf('<div class="et_pb_blog_grid_wrapper et_pb_woo_archive et_pb_blog_grid_woo_archive_wrapper">%1$s</div>', $output);

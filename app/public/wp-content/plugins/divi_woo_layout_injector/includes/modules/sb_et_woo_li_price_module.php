@@ -26,7 +26,7 @@ class sb_et_woo_li_price_module extends ET_Builder_Module
         $this->main_css_element = '%%order_class%%';
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
+                'cntnt' => array(
                     'label' => esc_html__('Price', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} p.price, {$this->main_css_element} p.price span, {$this->main_css_element} p.price span.woocommerce-Price-amount.amount",

@@ -9,8 +9,10 @@ class sb_et_woo_li_breadcrumb_module extends ET_Builder_Module
 
         $this->whitelisted_fields = array(
             'text_orientation',
+            'background_layout',
             'module_id',
             'module_class',
+            'delimiter',
         );
 
         $this->options_toggles = array(
@@ -25,10 +27,18 @@ class sb_et_woo_li_breadcrumb_module extends ET_Builder_Module
         $this->fields_defaults = array();
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
+                'cntnt' => array(
                     'label' => esc_html__('Link', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} .woocommerce-breadcrumb, {$this->main_css_element} .woocommerce-breadcrumb a",
+                    ),
+                    'font_size' => array('default' => '14px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
+                'cntnt_hover' => array(
+                    'label' => esc_html__('Link (hover_', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} .woocommerce-breadcrumb a:hover",
                     ),
                     'font_size' => array('default' => '14px'),
                     'line_height' => array('default' => '1.5em'),
@@ -60,6 +70,23 @@ class sb_et_woo_li_breadcrumb_module extends ET_Builder_Module
                 'options' => et_builder_get_text_orientation_options(),
                 'description' => esc_html__('This controls the how your text is aligned within the module.', 'et_builder'),
             ),
+            'background_layout' => array(
+                'label' => esc_html__('Text Color', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'light' => esc_html__('Dark', 'et_builder'),
+                    'dark' => esc_html__('Light', 'et_builder'),
+                ),
+                'toggle_slug' => 'main_settings',
+                'description' => esc_html__('Here you can choose the colour of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'et_builder'),
+            ),
+            'delimiter' => array(
+                'label' => __('Delimiter', 'et_builder'),
+                'type' => 'text',
+                'toggle_slug' => 'main_settings',
+                'description' => __('The divider between each breadcrumb. Defaults to / if left blank. HTML character codes preferred. HTML itself may be stripped out by the Divi Builder', 'et_builder'),
+            ),
             'admin_label' => array(
                 'label' => __('Admin Label', 'et_builder'),
                 'type' => 'text',
@@ -87,13 +114,20 @@ class sb_et_woo_li_breadcrumb_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (get_post_type() != 'product') {
+        if (get_post_type() != 'product' || is_admin()) {
             return;
         }
 
         $text_orientation = $this->shortcode_atts['text_orientation'];
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
+        $background_layout = $this->shortcode_atts['background_layout'];
+
+        if ($delimiter = $this->shortcode_atts['delimiter']) {
+            $delimiter = '&nbsp;' . trim($delimiter) . '&nbsp;';
+        } else {
+            $delimiter = ' / ';
+        }
 
         if (is_rtl() && 'left' === $text_orientation) {
             $text_orientation = 'right';
@@ -103,13 +137,17 @@ class sb_et_woo_li_breadcrumb_module extends ET_Builder_Module
 
         //////////////////////////////////////////////////////////////////////
 
+        $args = array(
+            'delimiter'   => $delimiter
+        );
+
         ob_start();
-        woocommerce_breadcrumb();
+        woocommerce_breadcrumb($args);
         $content = ob_get_clean();
 
         //////////////////////////////////////////////////////////////////////
 
-        $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"':'') . ' class="clearfix et_pb_module et_pb_woo_breadcrumb ' . $module_class . ' et_pb_text_align_' . $text_orientation . '">' . $content . '</div>';
+        $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"':'') . ' class="clearfix et_pb_module et_pb_woo_breadcrumb ' . $module_class . ' et_pb_text_align_' . $text_orientation . ' et_pb_bg_layout_' . $background_layout . '">' . $content . '</div>';
 
         return $output;
     }

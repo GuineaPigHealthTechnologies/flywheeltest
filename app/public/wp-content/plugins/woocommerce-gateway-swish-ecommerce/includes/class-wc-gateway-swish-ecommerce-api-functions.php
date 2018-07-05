@@ -1,6 +1,6 @@
 <?php
  define('CONTENT_TYPE', 'application/json');
- define('ENDPOINT', 'https://swicpc.bankgirot.se/swish-cpcapi/api/v1/');
+ define('ENDPOINT', 'https://cpc.getswish.net/swish-cpcapi/api/v1/');
 function apiCall ($requestMethod, $entity, $body = null) { 
  $curl = curl_init(ENDPOINT . $entity);
  $options = array(
@@ -9,7 +9,6 @@ function apiCall ($requestMethod, $entity, $body = null) {
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); 
   curl_setopt($curl, CURLOPT_HTTPHEADER, $options);
   curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $requestMethod);
-  curl_setopt($curl, CURLOPT_CAINFO, dirname(__DIR__) . "/certificates/SwishTLS.pem");
   curl_setopt($curl, CURLOPT_SSLCERT, SWISH_SSL_PATH);  
   curl_setopt($curl, CURLOPT_HEADER, true);
  if ($requestMethod == 'POST' || $requestMethod == 'PUT') {

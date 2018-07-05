@@ -9,9 +9,11 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
 
         $this->whitelisted_fields = array(
             'title',
+            'image_size',
             'remove_link',
             'remove_thumbs',
             'remove_coupon',
+            'remove_borders',
             'admin_label',
             'module_id',
             'module_class',
@@ -47,12 +49,32 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
                     'line_height' => array('default' => '1.4em'),
                 ),
             ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__('Button', 'et_builder'),
+                    'css' => array(
+                        'main' => $this->main_css_element . ' input[type="submit"], ' . $this->main_css_element . ' .et_pb_button.button',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
+                ),
+                'buttond' => array(
+                    'label' => esc_html__('Button (disabled)', 'et_builder'),
+                    'css' => array(
+                        'main' => $this->main_css_element . ' input[type="submit"]:disabled',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
+                ),
+            ),
             'background' => array(
                 'settings' => array(
                     'color' => 'alpha',
                 ),
             ),
-            'border' => array(),
+            'border' => array(
+                'css' => array(
+                    'important' => 'all',
+                ),
+            ),
             'custom_margin_padding' => array(
                 'css' => array(
                     'important' => 'all',
@@ -80,7 +102,24 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
                     'off' => esc_html__('No', 'et_builder'),
                     'on' => esc_html__('Yes', 'et_builder'),
                 ),
+                'affects' => array(
+                    '#et_pb_image_size'
+                ),
                 'description' => 'Should the product image field be removed from the table?',
+            ),
+            'image_size' => array(
+                'label' => esc_html__('Image Size', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'original' => esc_html__('-- Default --', 'et_builder'),
+                    'small' => esc_html__('Small', 'et_builder'),
+                    'medium' => esc_html__('Medium', 'et_builder'),
+                    'large' => esc_html__('large', 'et_builder'),
+                ),
+                'depends_show_if' => 'off',
+                'toggle_slug' => 'main_settings',
+                'description' => esc_html__('Here you can choose the colour of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'et_builder'),
             ),
             'remove_link' => array(
                 'label' => esc_html__('Remove Product Links?', 'et_builder'),
@@ -101,6 +140,16 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
                     'on' => esc_html__('Yes', 'et_builder'),
                 ),
                 'description' => 'Should the coupon form be removed from the table?',
+            ),
+            'remove_borders' => array(
+                'label' => esc_html__('Remove Borders?', 'et_builder'),
+                'type' => 'yes_no_button',
+                'toggle_slug' => 'main_settings',
+                'options' => array(
+                    'off' => esc_html__('No', 'et_builder'),
+                    'on' => esc_html__('Yes', 'et_builder'),
+                ),
+                'description' => 'Should the borders on the table be removed?',
             ),
             /*'remove_company' => array(
                 'label' => esc_html__('Remove Company Field?', 'et_builder'),
@@ -194,7 +243,7 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (is_admin()) {
+        if (is_admin() || !is_cart()) {
             return;
         }
 
@@ -204,6 +253,8 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
         $remove_thumbs = $this->shortcode_atts['remove_thumbs'];
         $remove_link = $this->shortcode_atts['remove_link'];
         $remove_coupon = $this->shortcode_atts['remove_coupon'];
+        $remove_borders = $this->shortcode_atts['remove_borders'];
+        $image_size = $this->shortcode_atts['image_size'];
         //$remove_company = $this->shortcode_atts['remove_company'];
         /*$background_layout = $this->shortcode_atts['background_layout'];
         $text_orientation = $this->shortcode_atts['text_orientation'];
@@ -241,7 +292,7 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
             echo '<h3 class="module_title">' . $title . '</h3>';
         }
 
-        echo '<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+        echo '<table class="woocommerce shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
                     <thead>
                     <tr>
                         <th class="product-remove">&nbsp;</th>';
@@ -297,7 +348,11 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
                 }
 
                 // Meta data
-                echo WC()->cart->get_item_data($cart_item);
+                if (function_exists('wc_get_formatted_cart_item_data')) {
+                    echo wc_get_formatted_cart_item_data($cart_item);
+                } else {
+                    echo WC()->cart->get_item_data($cart_item);
+                }
 
                 // Backorder notification
                 if ($_product->backorders_require_notification() && $_product->is_on_backorder($cart_item['quantity'])) {
@@ -362,7 +417,7 @@ class sb_et_woo_li_cart_products_module extends ET_Builder_Module
         //////////////////////////////////////////////////////////////////////
 
         if ($content) {
-            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="' . $module_class . ' clearfix ' . ($title ? 'has_title' : '') . ' et_pb_module et_pb_woo_cart_products">' . $content . '</div>';
+            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="' . $module_class . ' clearfix ' . ($title ? 'has_title' : '') . ($image_size ? ' image_size_' . $image_size : '') . ($remove_borders == 'on' ? ' hide-borders ' : '') . ' et_pb_module et_pb_woo_cart_products">' . $content . '</div>';
         }
 
         return $output;

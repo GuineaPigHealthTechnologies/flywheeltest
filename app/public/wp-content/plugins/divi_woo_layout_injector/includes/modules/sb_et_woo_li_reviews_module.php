@@ -8,6 +8,8 @@ class sb_et_woo_li_reviews_module extends ET_Builder_Module
         $this->slug = 'et_pb_woo_reviews';
 
         $this->whitelisted_fields = array(
+            'background_layout',
+            'text_orientation',
             'module_id',
             'module_class',
         );
@@ -24,8 +26,8 @@ class sb_et_woo_li_reviews_module extends ET_Builder_Module
         $this->main_css_element = '%%order_class%%';
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+                'cntnt' => array(
+                    'label' => esc_html__('Content', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} p",
                     ),
@@ -46,6 +48,16 @@ class sb_et_woo_li_reviews_module extends ET_Builder_Module
                     'color' => 'alpha',
                 ),
             ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__('Buttons', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} input[type=\"submit\"]",
+                        'plugin_main' => "{$this->main_css_element}",
+                        'important' => 'all',
+                    ),
+                ),
+            ),
             'border' => array(),
             'custom_margin_padding' => array(
                 'css' => array(
@@ -59,6 +71,25 @@ class sb_et_woo_li_reviews_module extends ET_Builder_Module
     function get_fields()
     {
         $fields = array(
+            'background_layout' => array(
+                'label' => esc_html__('Text Color', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'light' => esc_html__('Dark', 'et_builder'),
+                    'dark' => esc_html__('Light', 'et_builder'),
+                ),
+                'toggle_slug' => 'main_settings',
+                'description' => esc_html__('Here you can choose the colour of your text. If you are working with a dark background, then your text should be set to light. If you are working with a light background, then your text should be dark.', 'et_builder'),
+            ),
+            'text_orientation' => array(
+                'label' => esc_html__('Text Orientation', 'et_builder'),
+                'type' => 'select',
+                'option_category' => 'layout',
+                'toggle_slug' => 'main_settings',
+                'options' => et_builder_get_text_orientation_options(),
+                'description' => esc_html__('This controls the how your text is aligned within the module.', 'et_builder'),
+            ),
             'admin_label' => array(
                 'label' => __('Admin Label', 'et_builder'),
                 'type' => 'text',
@@ -86,10 +117,12 @@ class sb_et_woo_li_reviews_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (get_post_type() != 'product') {
+        if (get_post_type() != 'product' || is_admin()) {
             return;
         }
 
+        $background_layout = $this->shortcode_atts['background_layout'];
+        $text_orientation = $this->shortcode_atts['text_orientation'];
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
 
@@ -109,7 +142,7 @@ class sb_et_woo_li_reviews_module extends ET_Builder_Module
                                     %4$s',
             'clearfix ',
             $content,
-            esc_attr('et_pb_module'),
+            esc_attr('et_pb_module et_pb_woo_reviews et_pb_bg_layout_' . $background_layout . ' et_pb_text_align_' . $text_orientation),
             '</div>',
             ('' !== $module_id ? sprintf(' id="%1$s"', esc_attr($module_id)) : ''),
             ('' !== $module_class ? sprintf(' %1$s', esc_attr($module_class)) : '')

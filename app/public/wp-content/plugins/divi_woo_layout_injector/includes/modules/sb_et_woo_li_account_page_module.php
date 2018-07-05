@@ -10,6 +10,7 @@ class sb_et_woo_li_account_page_module extends ET_Builder_Module
         $this->whitelisted_fields = array(
             'title',
             'admin_label',
+            'text_orientation',
             'orders_layout',
             'downloads_layout',
             'address_layout',
@@ -31,10 +32,18 @@ class sb_et_woo_li_account_page_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
+                'ctnt' => array(
+                    'label' => esc_html__('Labels/Info', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} address, {$this->main_css_element} legend, {$this->main_css_element} p, {$this->main_css_element} p label, {$this->main_css_element} label, {$this->main_css_element} td, {$this->main_css_element} th",
+                    ),
+                    'font_size' => array('default' => '14px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
                 'headings' => array(
                     'label' => esc_html__('Title', 'et_builder'),
                     'css' => array(
-                        'main' => "{$this->main_css_element} h2.module_title",
+                        'main' => "{$this->main_css_element} h2, {$this->main_css_element} h3",
                     ),
                     'font_size' => array('default' => '30px'),
                     'line_height' => array('default' => '1.5em'),
@@ -46,6 +55,15 @@ class sb_et_woo_li_account_page_module extends ET_Builder_Module
                     ),
                     'font_size' => array('default' => '14px'),
                     'line_height' => array('default' => '1.4em'),
+                ),
+            ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__('Button', 'et_builder'),
+                    'css' => array(
+                        'main' => $this->main_css_element . ' .et_pb_button,' . $this->main_css_element . ' .button',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
                 ),
             ),
             'background' => array(
@@ -90,6 +108,14 @@ class sb_et_woo_li_account_page_module extends ET_Builder_Module
                 'type' => 'text',
                 'toggle_slug' => 'main_settings',
                 'description' => __('If you want a title on the module then use this box and an H3 will be added above the module content.', 'et_builder'),
+            ),
+            'text_orientation' => array(
+                'label' => esc_html__('Text Orientation', 'et_builder'),
+                'type' => 'select',
+                'toggle_slug' => 'main_settings',
+                'option_category' => 'layout',
+                'options' => et_builder_get_text_orientation_options(),
+                'description' => esc_html__('This controls the how your text is aligned within the module.', 'et_builder'),
             ),
             'orders_layout' => array(
                 'label' => esc_html__('Orders Layout', 'et_builder'),
@@ -136,17 +162,7 @@ class sb_et_woo_li_account_page_module extends ET_Builder_Module
             return;
         }
 
-        //add_action( 'woocommerce_account_navigation', 'woocommerce_account_navigation' );
-        //add_action( 'woocommerce_account_content', 'woocommerce_account_content' );
-        //add_action( 'woocommerce_account_orders_endpoint', 'woocommerce_account_orders' );
-        //add_action( 'woocommerce_account_view-order_endpoint', 'woocommerce_account_view_order' );
-        //add_action( 'woocommerce_account_downloads_endpoint', 'woocommerce_account_downloads' );
-        //add_action( 'woocommerce_account_edit-address_endpoint', 'woocommerce_account_edit_address' );
-        //add_action( 'woocommerce_account_payment-methods_endpoint', 'woocommerce_account_payment_methods' );
-        //add_action( 'woocommerce_account_add-payment-method_endpoint', 'woocommerce_account_add_payment_method' );
-        //add_action( 'woocommerce_account_edit-account_endpoint', 'woocommerce_account_edit_account' );
-
-
+        $text_orientation = $this->shortcode_atts['text_orientation'];
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
         $title = $this->shortcode_atts['title'];
@@ -197,7 +213,7 @@ class sb_et_woo_li_account_page_module extends ET_Builder_Module
         //////////////////////////////////////////////////////////////////////
 
         if ($content) {
-            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="' . $module_class . ' clearfix ' . ($title ? 'has_title' : '') . ' et_pb_module et_pb_woo_account_page">' . $content . '</div>';
+            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="' . $module_class . ' clearfix ' . ($title ? 'has_title' : '') . ' et_pb_text_align_' . $text_orientation . ' et_pb_module et_pb_woo_account_page">' . $content . '</div>';
         }
 
         return $output;

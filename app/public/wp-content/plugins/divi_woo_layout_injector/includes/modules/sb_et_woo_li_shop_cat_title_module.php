@@ -31,8 +31,8 @@ class sb_et_woo_li_shop_cat_title_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+                'cntnt' => array(
+                    'label' => esc_html__('Content', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} p",
                     ),

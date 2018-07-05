@@ -27,10 +27,18 @@ class sb_et_woo_li_account_downloads_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
+                'ctnt' => array(
+                    'label' => esc_html__('Labels/Info', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} p, {$this->main_css_element} p label, {$this->main_css_element} label, {$this->main_css_element} td, {$this->main_css_element} th",
+                    ),
+                    'font_size' => array('default' => '14px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
                 'headings' => array(
                     'label' => esc_html__('Title', 'et_builder'),
                     'css' => array(
-                        'main' => "{$this->main_css_element} h2.module_title",
+                        'main' => "{$this->main_css_element} h2, {$this->main_css_element} h3",
                     ),
                     'font_size' => array('default' => '30px'),
                     'line_height' => array('default' => '1.5em'),

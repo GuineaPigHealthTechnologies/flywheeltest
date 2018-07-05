@@ -15,6 +15,9 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
             'thumb_image_size',
             'thumb_columns',
             'hide_thumbnails',
+            'disable_zoom',
+            'disable_lightbox',
+            'image_class',
             'link_images_to_product',
             'use_overlay',
             'overlay_icon_color',
@@ -117,7 +120,35 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
                     'off' => __('No', 'et_builder'),
                     'on' => __('Yes', 'et_builder'),
                 ),
+                'affects' => array(
+                    '#et_pb_disable_zoom'
+                    , '#et_pb_disable_lightbox'
+                ),
                 'description' => __('Should the images link to the product page or stay default?', 'et_builder'),
+            ),
+            'disable_zoom' => array(
+                'label' => __('Disable Zoom?', 'et_builder'),
+                'type' => 'yes_no_button',
+                'option_category' => 'configuration',
+                'depends_show_if'=>'off',
+                'options' => array(
+                    'off' => __('No', 'et_builder'),
+                    'on' => __('Yes', 'et_builder'),
+                ),
+                'toggle_slug' => 'main_settings',
+                'description' => __('If you would like to disable the zoom on this module select yes. You can also do this sitewide in the WLI settings. Doing so will override this setting though.', 'et_builder'),
+            ),
+            'disable_lightbox' => array(
+                'label' => __('Disable Lightbox?', 'et_builder'),
+                'type' => 'yes_no_button',
+                'depends_show_if'=>'off',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'off' => __('No', 'et_builder'),
+                    'on' => __('Yes', 'et_builder'),
+                ),
+                'toggle_slug' => 'main_settings',
+                'description' => __('If you would like to disable the WLI lightbox on this module select yes.', 'et_builder'),
             ),
             'use_overlay' => array(
                 'label' => esc_html__('Featured Image Overlay', 'et_builder'),
@@ -185,6 +216,14 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
                 'tab_slug' => 'custom_css',
                 'option_class' => 'et_pb_custom_css_regular',
             ),
+            'image_class' => array(
+                'label' => esc_html__('Image CSS Class', 'et_builder'),
+                'type' => 'text',
+                'option_category' => 'configuration',
+                'tab_slug' => 'custom_css',
+                'option_class' => 'et_pb_custom_css_regular',
+                'description'=>'Much like CSS class but this is added directly onto the image rather than the module. Good for lightbox plugins'
+            ),
         );
 
         return $fields;
@@ -201,10 +240,13 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
 
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
+        $image_class = $this->shortcode_atts['image_class'];
         $overlay_icon_color = $this->shortcode_atts['overlay_icon_color'];
         $hover_overlay_color = $this->shortcode_atts['hover_overlay_color'];
         $hover_icon = $this->shortcode_atts['hover_icon'];
         $use_overlay = $this->shortcode_atts['use_overlay'];
+        $disable_zoom = $this->shortcode_atts['disable_zoom'];
+        $disable_lightbox = $this->shortcode_atts['disable_lightbox'];
         $thumb_image_size = $this->shortcode_atts['thumb_image_size'];
 
         if (!$image_size = $this->shortcode_atts['image_size']) {
@@ -261,8 +303,20 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
 
         $gallery = get_post_meta(sb_et_woo_li_get_id(), '_product_image_gallery', true); //just so we can add the class to the container
 
+        if (!$site_disable_zoom = get_option('sb_et_woo_li_disable_zoom', 0)) {
+            if ($disable_zoom) {
+                if ($disable_zoom == 'on') {
+                    $site_disable_zoom = true;
+                }
+            }
+        }
+
+        if ($this->shortcode_atts['link_images_to_product'] == 'on') {
+            $site_disable_zoom = $disable_lightbox = true;
+        }
+
         if ($url = sb_woo_get_product_image($product_id, $image_size)) {
-            $images .= '<div class="sb_woo_product_image ' . (get_option('sb_et_woo_li_disable_zoom', 0) ? 'sb_woo_image_disable_zoom':'') . ' ' . ($this->shortcode_atts['hide_thumbnails'] != 'on' && $gallery ? 'sb_woo_product_image_has_gallery' : '') . '">';
+            $images .= '<div class="sb_woo_product_image ' . ($site_disable_zoom ? 'sb_woo_image_disable_zoom':'') . ' ' . ($disable_lightbox ? 'sb_woo_image_disable_lightbox':'') . ' ' . ($this->shortcode_atts['hide_thumbnails'] != 'on' && $gallery ? 'sb_woo_product_image_has_gallery' : '') . '">';
 
             $large_url = get_the_post_thumbnail_url($product_id, 'full');
 
@@ -270,7 +324,7 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
                 $images .= '<a class="sb-woo-images" rel="sb-woo-images" href="' . get_permalink($product_id) . '">';
             }
 
-            $images .= '<img data-large_img="' . $large_url . '" src="' . $url . '" />';
+            $images .= '<img class="' . $image_class . '" data-large_img="' . $large_url . '" src="' . $url . '" />';
 
             if ($this->shortcode_atts['link_images_to_product'] == 'on') {
                 $images .= '</a>';
@@ -288,6 +342,8 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
             }
             $images .= ob_get_clean();
 
+            $images = apply_filters( 'woocommerce_single_product_image_html', $images, get_the_ID());
+
             $images .= '</div>';
         }
 
@@ -300,7 +356,7 @@ class sb_et_woo_li_gallery_module extends ET_Builder_Module
         //////////////////////////////////////////////////////////////////////
 
         if ($images) {
-            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="clearfix et_pb_module ' . $overlay_class . ' ' . $module_class . '">' . $images . '</div>';
+            $output = '<div ' . ($module_id ? 'id="' . esc_attr($module_id) . '"' : '') . ' class="clearfix et_pb_module sb_woo_product_image_container ' . $overlay_class . ' ' . $module_class . '">' . $images . '</div>';
         }
 
         return $output;

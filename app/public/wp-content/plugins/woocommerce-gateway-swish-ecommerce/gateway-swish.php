@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: WooCommerce Swish Ecommerce Gateway
  * Plugin URI: https://redlight.se/swish
  * Description: Extends WooCommerce. Provides a <a href="https://www.getswish.se/" target="_blank">Swish Handel</a> gateway for WooCommerce.
- * Version: 2.1.3
+ * Version: 3.0.1
  * Author: Redlight Media
  * Author URI: https://redlight.se/
  * Developer: Christopher Hedqvist
@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Text Domain: woocommerce-gateway-swish-ecommerce
  * Domain Path: /languages
  * WC requires at least: 3.0.0
- * WC tested up to: 3.3.1
+ * WC tested up to: 3.3.5
  *
- * Copyright: © 2015 Redlight.
+ * Copyright: © 2018 Redlight.
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
@@ -49,7 +49,7 @@ function init_wc_gateway_swish_ecommerce() {
 		$license_key = $license['redlight_license_key'];
 		// setup the updater
 		$edd_updater = new EDD_SL_Plugin_Updater( REDLIGHT_SA_STORE_URL, __FILE__, array(
-				'version' 	=> '2.1.3', 				// current version number
+				'version' 	=> '3.0.1', 				// current version number
 				'license' 	=> $license_key, 		// license key (used get_option above to retrieve from DB)
 				'item_name' => REDLIGHT_SA_ITEM_NAME, 	// name of this plugin
 				'author' 	=> 'Redlight Media'  // author of this plugin

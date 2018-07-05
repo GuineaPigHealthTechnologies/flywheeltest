@@ -16,33 +16,36 @@ class WC_Gateway_Swish_Ecommerce_Popup{
 	}
 
 	function wpdocs_enqueue_script() {
+		if ( is_checkout() ){
+			wp_enqueue_style( 'swish-checkout', plugins_url('/woocommerce-gateway-swish-ecommerce/assets/css/checkout.css' ) );
 
-		wp_enqueue_style( 'swish-checkout', plugins_url('/woocommerce-gateway-swish-ecommerce/assets/css/checkout.css' ) );
+			wp_enqueue_script( 
+				'redlight-swish_ecommerce-checkout', 
+				plugins_url('/woocommerce-gateway-swish-ecommerce/assets/js/checkout.js' ),
+				array( 'jquery', 'woocommerce', 'wc-country-select', 'wc-address-i18n' ),
+				WC_VERSION 
+			);
 
-		wp_enqueue_script( 
-			'redlight-swish_ecommerce-checkout', 
-			plugins_url('/woocommerce-gateway-swish-ecommerce/assets/js/checkout.js' ),
-			array( 'jquery', 'woocommerce', 'wc-country-select', 'wc-address-i18n' ),
-			WC_VERSION 
-		);
+			if(isset($_GET['swish_order_id']) ){
+				$swish_order_id = $_GET['swish_order_id'];
+			}else{
+				$swish_order_id = 0;
+			}
 
-		if(isset($_GET['swish_order_id']) ){
-			$swish_order_id = $_GET['swish_order_id'];
-		}else{
-			$swish_order_id = 0;
+			wp_localize_script('redlight-swish_ecommerce-checkout', 'redlight_script_vars', array(
+				'swish_ajax' => admin_url( 'admin-ajax.php' ),
+				'swish_shop_url' => get_permalink( wc_get_page_id( 'checkout' ) ),
+				'swish_order_id' => $swish_order_id,
+				'redirect_message' => __('We will redirect you in', 'woocommerce-gateway-swish-ecommerce'),
+				'seconds' => __('seconds', 'woocommerce-gateway-swish-ecommerce'),
+				'payment_failed' => __('Payment failed', 'woocommerce-gateway-swish-ecommerce'),
+				'return_to_checkout' => __('Return to checkout', 'woocommerce-gateway-swish-ecommerce'),
+				'payment_succesful' => __('We have recived your payment', 'woocommerce-gateway-swish-ecommerce'),
+				'succesful_payment_redirect_message' => __('We will take you to the order-conformation page, hang tight', 'woocommerce-gateway-swish-ecommerce')
+			));
 		}
 
-		wp_localize_script('redlight-swish_ecommerce-checkout', 'redlight_script_vars', array(
-			'swish_ajax' => admin_url( 'admin-ajax.php' ),
-			'swish_shop_url' => get_permalink( wc_get_page_id( 'checkout' ) ),
-			'swish_order_id' => $swish_order_id,
-			'redirect_message' => __('We will redirect you in', 'woocommerce-gateway-swish-ecommerce'),
-			'seconds' => __('seconds', 'woocommerce-gateway-swish-ecommerce'),
-			'payment_failed' => __('Payment failed', 'woocommerce-gateway-swish-ecommerce'),
-			'return_to_checkout' => __('Return to checkout', 'woocommerce-gateway-swish-ecommerce'),
-			'payment_succesful' => __('We have recived your payment', 'woocommerce-gateway-swish-ecommerce'),
-			'succesful_payment_redirect_message' => __('We will take you to the order-conformation page, hang tight', 'woocommerce-gateway-swish-ecommerce')
-		));
+		
 
 
 

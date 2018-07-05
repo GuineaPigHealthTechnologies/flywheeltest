@@ -22,13 +22,13 @@ class sb_et_woo_li_meta_module extends ET_Builder_Module
         );
 
         $this->fields_defaults = array();
-        $this->main_css_element = '.et_pb_woo_thumbs';
+        $this->main_css_element = '%%order_class%%';
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+                'cntnt' => array(
+                    'label' => esc_html__('Content', 'et_builder'),
                     'css' => array(
-                        'main' => "{$this->main_css_element} p",
+                        'main' => "{$this->main_css_element} .product_meta span a, {$this->main_css_element} .product_meta, {$this->main_css_element} .product_meta span",
                     ),
                     'font_size' => array('default' => '14px'),
                     'line_height' => array('default' => '1.5em'),
@@ -93,8 +93,7 @@ class sb_et_woo_li_meta_module extends ET_Builder_Module
         }
 
         $module_id = $this->shortcode_atts['module_id'];
-        $module_class = $this->shortcode_atts['module_class'];
-
+        $module_class = $this->shortcode_atts['module_class'] . ' et_pb_woo_meta';
         $module_class = ET_Builder_Element::add_module_order_class($module_class, $function_name);
 
         //////////////////////////////////////////////////////////////////////

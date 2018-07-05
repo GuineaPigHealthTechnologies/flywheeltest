@@ -9,6 +9,7 @@ class sb_et_woo_li_checkout_payment_module extends ET_Builder_Module
 
         $this->whitelisted_fields = array(
             'title',
+            'remove_default_styling',
             'admin_label',
             'module_id',
             'module_class',
@@ -27,6 +28,14 @@ class sb_et_woo_li_checkout_payment_module extends ET_Builder_Module
 
         $this->advanced_options = array(
             'fonts' => array(
+                'ctnt' => array(
+                    'label' => esc_html__('Labels/Info', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} p, {$this->main_css_element} label, {$this->main_css_element} a",
+                    ),
+                    'font_size' => array('default' => '14px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
                 'headings' => array(
                     'label' => esc_html__('Title', 'et_builder'),
                     'css' => array(
@@ -39,6 +48,15 @@ class sb_et_woo_li_checkout_payment_module extends ET_Builder_Module
             'background' => array(
                 'settings' => array(
                     'color' => 'alpha',
+                ),
+            ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__( 'Button', 'et_builder' ),
+                    'css' => array(
+                        'main' => $this->main_css_element . '.et_pb_woo_checkout_payment .woocommerce-checkout-payment #place_order',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
                 ),
             ),
             'border' => array(),
@@ -60,6 +78,17 @@ class sb_et_woo_li_checkout_payment_module extends ET_Builder_Module
                 'type' => 'text',
                 'toggle_slug' => 'main_settings',
                 'description' => __('If you want a title on the module then use this box and an H2 will be added above the module content.', 'et_builder'),
+            ),
+            'remove_default_styling' => array(
+                'label' => __('Remove default styling?', 'et_builder'),
+                'type' => 'yes_no_button',
+                'option_category' => 'configuration',
+                'options' => array(
+                    'off' => __('No', 'et_builder'),
+                    'on' => __('Yes', 'et_builder'),
+                ),
+                'toggle_slug' => 'main_settings',
+                'description' => __('By default the WooCommerce payment box has a grey background and slightly rounded corners. This looks ok but may conflict with other styling options you intend to make for the module. This will remove the grey background and rounded corners for a better and more fluid integration into your site.', 'et_builder'),
             ),
             /*'background_layout' => array(
                 'label' => esc_html__('Text Color', 'et_builder'),
@@ -143,13 +172,19 @@ class sb_et_woo_li_checkout_payment_module extends ET_Builder_Module
     function shortcode_callback($atts, $content = null, $function_name)
     {
 
-        if (is_admin()) {
+        if (is_admin() || !is_checkout()) {
             return;
         }
 
         $title = $this->shortcode_atts['title'];
+        $remove_default_styling = $this->shortcode_atts['remove_default_styling'];
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
+
+        if ($remove_default_styling == 'on') {
+            $module_class .= ' remove_core_styling';
+        }
+
         /*$show_read_more = $this->shortcode_atts['show_read_more'];
         $read_more_label = $this->shortcode_atts['read_more_label'];
         $background_layout = $this->shortcode_atts['background_layout'];

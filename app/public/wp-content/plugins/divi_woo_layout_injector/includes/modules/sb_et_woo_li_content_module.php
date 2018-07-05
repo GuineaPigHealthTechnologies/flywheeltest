@@ -8,6 +8,7 @@ class sb_et_woo_li_content_module extends ET_Builder_Module
         $this->slug = 'et_pb_woo_text';
 
         $this->whitelisted_fields = array(
+            'title',
             'background_layout',
             'text_orientation',
             'excerpt_only',
@@ -30,13 +31,12 @@ class sb_et_woo_li_content_module extends ET_Builder_Module
         );
 
         $this->fields_defaults = array();
-        //$this->main_css_element = '.et_pb_woo_text';
         $this->main_css_element = '%%order_class%%';
 
         $this->advanced_options = array(
             'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+                'cntnt' => array(
+                    'label' => esc_html__('Content', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} p",
                     ),
@@ -51,13 +51,14 @@ class sb_et_woo_li_content_module extends ET_Builder_Module
                     'font_size' => array('default' => '30px'),
                     'line_height' => array('default' => '1.5em'),
                 ),
-                'buttons' => array(
-                    'label' => esc_html__('Read More Button', 'et_builder'),
+            ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__('Button', 'et_builder'),
                     'css' => array(
-                        'main' => "{$this->main_css_element} .et_pb_more_button",
+                        'main' => $this->main_css_element . ' .et_pb_button.et_pb_more_button',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
                     ),
-                    'font_size' => array('default' => '30px'),
-                    'line_height' => array('default' => '1.5em'),
                 ),
             ),
             'background' => array(
@@ -78,6 +79,12 @@ class sb_et_woo_li_content_module extends ET_Builder_Module
     function get_fields()
     {
         $fields = array(
+            'title' => array(
+                'label' => __('Title', 'et_builder'),
+                'type' => 'text',
+                'toggle_slug' => 'main_settings',
+                'description' => __('If you want a title to the module then use this box and an H2 will be added above the module.', 'et_builder'),
+            ),
             'background_layout' => array(
                 'label' => esc_html__('Text Color', 'et_builder'),
                 'type' => 'select',
@@ -175,6 +182,7 @@ class sb_et_woo_li_content_module extends ET_Builder_Module
             return;
         }
 
+        $title = $this->shortcode_atts['title'];
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
         $excerpt_only = $this->shortcode_atts['excerpt_only'];
@@ -233,11 +241,16 @@ class sb_et_woo_li_content_module extends ET_Builder_Module
 
         if ($show_read_more == 'on') {
             if (function_exists('get_permalink')) {
-                $content .= '<p><a class="button et_pb_more_button" href="' . get_permalink(sb_et_woo_li_get_id()) . '">' . $read_more_label . '</a></p>';
+                $content .= '<p><a class="button et_pb_button et_pb_more_button" href="' . get_permalink(sb_et_woo_li_get_id()) . '">' . $read_more_label . '</a></p>';
             }
         }
 
+        if ($content) {
+            $content = ($title ? '<h2 class="module-title">' . $title . '</h2>' : '') . $content;
+        }
+
         ob_start();
+
         if (is_single()) {
             do_action('sb_et_woo_li_after_content');
         } else {

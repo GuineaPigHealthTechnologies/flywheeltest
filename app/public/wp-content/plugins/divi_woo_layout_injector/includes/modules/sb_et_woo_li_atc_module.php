@@ -10,6 +10,7 @@ class sb_et_woo_li_atc_module extends ET_Builder_Module
         $this->whitelisted_fields = array(
             'title',
             'text_orientation',
+            'display_type',
             'module_id',
             'module_class',
         );
@@ -51,7 +52,15 @@ class sb_et_woo_li_atc_module extends ET_Builder_Module
                     'font_size' => array('default' => '30px'),
                     'line_height' => array('default' => '1.5em'),
                 ),
-                'buttons' => array(
+                'variation_text' => array(
+                    'label' => esc_html__('Variation Description', 'et_builder'),
+                    'css' => array(
+                        'main' => "{$this->main_css_element} .woocommerce-variation-description p",
+                    ),
+                    'font_size' => array('default' => '14px'),
+                    'line_height' => array('default' => '1.5em'),
+                ),
+                /*'buttons' => array(
                     'label' => esc_html__('Add to Cart Button', 'et_builder'),
                     'css' => array(
                         'main' => "{$this->main_css_element} .single_add_to_cart_button, {$this->main_css_element} button",
@@ -68,6 +77,22 @@ class sb_et_woo_li_atc_module extends ET_Builder_Module
                     ),
                     'font_size' => array('default' => '20px'),
                     'line_height' => array('default' => '1.5em'),
+                ),*/
+            ),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__( 'Button', 'et_builder' ),
+                    'css' => array(
+                        'main' => $this->main_css_element . ' .single_add_to_cart_button, ' . $this->main_css_element . ' .button.wc-variation-selection-needed',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
+                ),
+                'buttond' => array(
+                    'label' => esc_html__( 'Button (disabled)', 'et_builder' ),
+                    'css' => array(
+                        'main' => $this->main_css_element . ' .single_add_to_cart_button.disabled',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
+                    ),
                 ),
             ),
             'background' => array(
@@ -102,6 +127,17 @@ class sb_et_woo_li_atc_module extends ET_Builder_Module
                 'options' => et_builder_get_text_orientation_options(),
                 'description' => esc_html__('This controls the how your text is aligned within the module.', 'et_builder'),
             ),
+            'display_type' => array(
+                'label' => esc_html__('Display Type (advanced)', 'et_builder'),
+                'type' => 'select',
+                'toggle_slug' => 'main_settings',
+                'options' => array(
+                                'auto'=>'Auto (recommended)'
+                                , 'single'=>'Single Product'
+                                , 'archive'=>'Archive'
+                            ),
+                'description' => esc_html__('This effects which context the add to cart button is shown as. For instance variable products and external products may show different things based on whether you are looking at a single product page or an archive page. The system can work out which page type it is on but you may wish to override this using this setting', 'et_builder'),
+            ),
             'admin_label' => array(
                 'label' => __('Admin Label', 'et_builder'),
                 'type' => 'text',
@@ -133,9 +169,15 @@ class sb_et_woo_li_atc_module extends ET_Builder_Module
             return;
         }
 
+        sb_et_woo_li_remove_actions(); //we are using some standard hooks here so we want to avoid having more info than we need with this
+
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
         $title = $this->shortcode_atts['title'];
+        if (!$display_type = @$this->shortcode_atts['display_type']) {
+            $display_type = 'auto';
+        }
+
         $text_orientation = $this->shortcode_atts['text_orientation'];
 
         $module_class = ET_Builder_Element::add_module_order_class($module_class, $function_name);
@@ -146,20 +188,31 @@ class sb_et_woo_li_atc_module extends ET_Builder_Module
 
         //////////////////////////////////////////////////////////////////////
 
+        $single = is_single();
+        $is_page = is_page();
+
+        if ($display_type == 'single') {
+            $single = true;
+        } else if ($display_type == 'archive') {
+            $single = $page = false;
+        }
+
         ob_start();
 
         //woocommerce_template_single_add_to_cart(); //calls directly but doesn't allow people to turn things off etc.
         //moving to an action based approach
-        if (is_single()) {
 
+        if ($single) {
             do_action('woocommerce_before_single_product'); //for add to cart buttons
             do_action('woocommerce_single_product_summary'); //for add to cart buttons
-        } else if (is_page()) { //for pages
-            sb_et_woo_li_get_id(); //refresh the product object.. you know...just in case Woo hates me!
 
+        } else if ($is_page) { //for pages
+            sb_et_woo_li_get_id(); //refresh the product object.. you know...just in case Woo hates me!
             do_action('woocommerce_single_product_summary'); //for add to cart buttons
+
         } else { //for archive pages
             do_action('woocommerce_after_shop_loop_item'); //for add to cart buttons
+
         }
 
         $content = ob_get_clean();

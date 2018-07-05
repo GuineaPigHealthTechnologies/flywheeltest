@@ -34,14 +34,13 @@ class sb_et_woo_li_read_more_module extends ET_Builder_Module
         $this->main_css_element = '%%order_class%%';
 
         $this->advanced_options = array(
-            'fonts' => array(
-                'text' => array(
-                    'label' => esc_html__('Text', 'et_builder'),
+            'button' => array(
+                'button' => array(
+                    'label' => esc_html__( 'Button', 'et_builder' ),
                     'css' => array(
-                        'main' => "{$this->main_css_element}.et_woo_read_more.et_pb_button",
+                        'main' => $this->main_css_element . ' .et_pb_button.et_woo_read_more',
+                        'plugin_main' => "{$this->main_css_element}.et_pb_module",
                     ),
-                    'font_size' => array('default' => '14px'),
-                    'line_height' => array('default' => '1.5em'),
                 ),
             ),
             'background' => array(
@@ -130,6 +129,10 @@ class sb_et_woo_li_read_more_module extends ET_Builder_Module
 
     function shortcode_callback($atts, $content = null, $function_name)
     {
+
+        if (is_admin()) {
+            return;
+        }
 
         $module_id = $this->shortcode_atts['module_id'];
         $module_class = $this->shortcode_atts['module_class'];
