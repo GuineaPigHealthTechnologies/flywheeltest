@@ -93,6 +93,8 @@ function et_setup_theme() {
 
 	// Load unminified styles based on selected theme options field
 	add_filter( 'et_load_unminified_styles', 'et_divi_load_unminified_styles' );
+
+	et_divi_version_rollback()->enable();
 }
 add_action( 'after_setup_theme', 'et_setup_theme' );
 
@@ -138,6 +140,10 @@ add_action( 'admin_notices', 'et_theme_epanel_reminder' );
 
 if ( ! function_exists( 'et_divi_fonts_url' ) ) :
 function et_divi_fonts_url() {
+	if ( ! et_core_use_google_fonts() ) {
+		return '';
+	}
+
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
@@ -8750,7 +8756,7 @@ function et_divi_output_content_wrapper_end() {
 	if (
 		( is_product() && 'et_full_width_page' !== get_post_meta( get_the_ID(), '_et_pb_page_layout', true ) )
 		||
-		( ( is_shop() || is_product_category() || is_product_tag() ) && 'et_full_width_page' !== et_get_option( 'divi_shop_page_sidebar', $default_sidebar_class ) )
+		( ( is_shop() || is_product_category() || is_product_tag() || is_tax() ) && 'et_full_width_page' !== et_get_option( 'divi_shop_page_sidebar', $default_sidebar_class ) )
 	) {
 		woocommerce_get_sidebar();
 	}
@@ -9045,4 +9051,17 @@ function et_divi_filter_et_core_is_builder_used_on_current_request( $is_builder_
 	return $is_builder_used;
 }
 add_filter( 'et_core_is_builder_used_on_current_request', 'et_divi_filter_et_core_is_builder_used_on_current_request' );
+endif;
+
+if ( ! function_exists( 'et_divi_version_rollback' ) ) :
+	function et_divi_version_rollback() {
+		global $themename, $shortname;
+		static $instance = null;
+
+		if ( null === $instance ) {
+			$instance = new ET_Core_VersionRollback( $themename, $shortname, et_get_theme_version() );
+		}
+
+		return $instance;
+	}
 endif;

@@ -1,9 +1,0 @@
-tests/vendor
-node_modules
-.DS_Store
-vendor/*
-!vendor/a5hleyrich
-!vendor/xrstf
-!vendor/composer
-!vendor/autoload_52.php
-vendor/composer/installed.json
