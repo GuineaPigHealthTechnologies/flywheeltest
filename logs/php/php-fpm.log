@@ -121,3 +121,11 @@
 [15-Jul-2018 18:32:04] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [15-Jul-2018 18:41:51] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [15-Jul-2018 18:51:50] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[15-Jul-2018 20:48:45] NOTICE: fpm is running, pid 35
+[15-Jul-2018 20:48:45] NOTICE: ready to handle connections
+[15-Jul-2018 20:50:28] NOTICE: Terminating ...
+[15-Jul-2018 20:50:28] NOTICE: exiting, bye-bye!
+[15-Jul-2018 20:50:32] NOTICE: fpm is running, pid 34
+[15-Jul-2018 20:50:32] NOTICE: ready to handle connections
+[15-Jul-2018 20:51:40] NOTICE: Terminating ...
+[15-Jul-2018 20:51:40] NOTICE: exiting, bye-bye!

@@ -22,4 +22,4 @@ CREATE TABLE `wp_actna8l0qc_wps_hit` (
   KEY `query` (`query_id`),
   KEY `ua` (`user_agent_id`),
   KEY `count` (`count`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

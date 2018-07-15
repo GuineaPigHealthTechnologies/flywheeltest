@@ -22,4 +22,4 @@ CREATE TABLE `wp_actna8l0qc_followup_email_orders` (
   KEY `is_sent` (`is_sent`),
   KEY `date_sent` (`date_sent`),
   KEY `status` (`status`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

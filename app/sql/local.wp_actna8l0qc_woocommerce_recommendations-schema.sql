@@ -8,4 +8,4 @@ CREATE TABLE `wp_actna8l0qc_woocommerce_recommendations` (
   `related_product_id` bigint(20) NOT NULL,
   `score` float NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=561 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1041 DEFAULT CHARSET=latin1;

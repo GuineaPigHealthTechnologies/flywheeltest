@@ -6,4 +6,4 @@ CREATE TABLE `wp_actna8l0qc_wps_key` (
   `key` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   PRIMARY KEY (`key_id`),
   KEY `key` (`key`(10))
-) ENGINE=InnoDB AUTO_INCREMENT=379 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3034 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

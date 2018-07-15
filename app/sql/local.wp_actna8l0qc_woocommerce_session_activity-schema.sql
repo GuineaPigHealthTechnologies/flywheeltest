@@ -10,4 +10,4 @@ CREATE TABLE `wp_actna8l0qc_woocommerce_session_activity` (
   `user_id` varchar(45) NOT NULL DEFAULT '0',
   `activity_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`activity_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=158 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=616 DEFAULT CHARSET=latin1;

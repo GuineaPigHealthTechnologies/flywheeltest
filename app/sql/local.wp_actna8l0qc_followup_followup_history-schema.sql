@@ -11,4 +11,4 @@ CREATE TABLE `wp_actna8l0qc_followup_followup_history` (
   KEY `followup_id` (`followup_id`),
   KEY `user_id` (`user_id`),
   KEY `date_added` (`date_added`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

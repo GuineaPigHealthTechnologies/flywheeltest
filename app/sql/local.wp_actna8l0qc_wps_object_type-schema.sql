@@ -14,4 +14,4 @@ CREATE TABLE `wp_actna8l0qc_wps_object_type` (
   KEY `context_table` (`context_table`(10)),
   KEY `context_column` (`context_column`(10)),
   KEY `context_key` (`context_key`(10))
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

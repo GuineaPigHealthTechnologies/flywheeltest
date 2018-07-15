@@ -13,4 +13,4 @@ CREATE TABLE `wp_actna8l0qc_followup_customer_carts` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `user_email` (`user_email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

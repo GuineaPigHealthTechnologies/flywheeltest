@@ -9,4 +9,5 @@ INSERT INTO `wp_actna8l0qc_wps_object_type` VALUES
 (5,"product","product","posts","post_content",NULL),
 (6,"product","sku","postmeta","meta_key","_sku"),
 (7,"product","tag","term_taxonomy","taxonomy","product_tag"),
-(8,"product","category","term_taxonomy","taxonomy","product_cat");
+(8,"product","category","term_taxonomy","taxonomy","product_cat"),
+(9,"product","memberships","term_taxonomy","taxonomy","pa_memberships");

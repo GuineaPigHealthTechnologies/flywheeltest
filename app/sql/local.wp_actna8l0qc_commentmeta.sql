@@ -9,4 +9,12 @@ INSERT INTO `wp_actna8l0qc_commentmeta` VALUES
 (5,21,"rating","5"),
 (6,21,"verified","0"),
 (7,22,"rating","5"),
-(8,22,"verified","0");
+(8,22,"verified","0"),
+(9,20,"_wp_trash_meta_status","1"),
+(10,20,"_wp_trash_meta_time","1531568770"),
+(11,22,"_wp_trash_meta_status","1"),
+(12,22,"_wp_trash_meta_time","1531568770"),
+(13,21,"_wp_trash_meta_status","1"),
+(14,21,"_wp_trash_meta_time","1531568770"),
+(15,19,"_wp_trash_meta_status","1"),
+(16,19,"_wp_trash_meta_time","1531568770");

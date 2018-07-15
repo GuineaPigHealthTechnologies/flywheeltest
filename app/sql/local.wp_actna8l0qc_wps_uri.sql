@@ -26,4 +26,14 @@ INSERT INTO `wp_actna8l0qc_wps_uri` VALUES
 (22,"https://guineapig.local/wp-admin/admin-ajax.php?order=DESC&order_by=date&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&limit=10&category_results=1&category_limit=5&product_thumbnails=1&customize_changeset_uuid=81329f31-d691-4d35-a849-f4657300b5e1&customize_autosaved=on&customize_preview_nonce=ef7b098622"),
 (23,"https://guineapig.local/product/friskis-membership/"),
 (24,"https://guineapig.local/?s=gift&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
-(25,"https://guineapig.local/?s=world+class&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1");
+(25,"https://guineapig.local/?s=world+class&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(26,"https://guineapig.local/product-category/gyms/"),
+(27,"https://guineapig.local/?s=iron+works&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(28,"https://guineapig.local/?s=iron&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(29,"https://guineapig.local/?s=bruce&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(30,"https://guineapig.local/?s=g%C3%A5rda&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(31,"https://guineapig.local/?s=loket&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(32,"https://guineapig.local/?s=svensons&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(33,"https://guineapig.local/?s=omnia&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(34,"https://guineapig.local/?s=viscus&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1"),
+(35,"https://guineapig.local/?s=gladius&post_type=product&title=1&excerpt=1&content=1&categories=1&attributes=1&tags=1&sku=1&ixwps=1");

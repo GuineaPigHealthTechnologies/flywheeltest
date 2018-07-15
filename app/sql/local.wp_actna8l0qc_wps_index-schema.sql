@@ -12,4 +12,4 @@ CREATE TABLE `wp_actna8l0qc_wps_index` (
   KEY `key_id` (`key_id`),
   KEY `object_id` (`object_id`),
   KEY `object_type_id` (`object_type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8694 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65017 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

@@ -12,4 +12,4 @@ CREATE TABLE `wp_actna8l0qc_followup_customers` (
   KEY `email_address` (`email_address`(191)),
   KEY `total_purchase_price` (`total_purchase_price`),
   KEY `total_orders` (`total_orders`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

@@ -20,4 +20,14 @@ INSERT INTO `wp_actna8l0qc_wps_query` VALUES
 (16,"world"),
 (17,"world class"),
 (18,"fri"),
-(19,"gift");
+(19,"gift"),
+(20,"iron works"),
+(21,"iron"),
+(22,"bruce"),
+(23,"garda"),
+(24,"loket"),
+(25,"svensons"),
+(26,"omnia"),
+(27,"viscus"),
+(28,"vi"),
+(29,"gladius");
