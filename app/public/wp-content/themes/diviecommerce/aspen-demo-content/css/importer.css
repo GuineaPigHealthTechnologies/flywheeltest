@@ -1,0 +1,43 @@
+#ags-demo-importer-frame {
+	width: 400px;
+	max-width: 100%;
+	height: 200px;
+	display: none;
+}
+#ags-demo-importer-status {
+	background-color: #fff;
+	width: 400px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	margin: 10px 0;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+	display: none;
+}
+#ags-demo-importer-status p {
+	font-size: 22px;
+	margin: 0;
+	margin-bottom: 20px;
+	display: none;
+}
+#ags-demo-importer-status #ags-demo-importer-complete-message {
+	font-size: 14px;
+	margin: 0;
+	font-style: italic;
+	margin-top: 20px;
+}
+#ags-demo-importer-progress {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+#ags-demo-importer-progress strong {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100px;
+	line-height: 100px;
+	font-size: 22px;
+}

@@ -1,0 +1,33 @@
+/* All styles for the waitlist settings tab */
+.form-table {
+    display: none;
+}
+
+.wcwl_settings_update_counts_text,
+.wcwl_settings_update_meta_text {
+    float: left;
+    margin-left: 10px;
+    width: 80%;
+}
+
+#woocommerce_waitlist_update_counts,
+#woocommerce_waitlist_update_meta {
+    float: left;
+}
+
+#woocommerce_waitlist_minimum_stock {
+    max-width: 65px;
+}
+
+#woocommerce_waitlist_admin_email {
+    max-width: 250px;
+}
+
+@media (max-width: 876px) {
+    .wcwl_settings_update_counts_text,
+    .wcwl_settings_update_meta_text {
+        margin-left: 0;
+        margin-top: 10px;
+        width: auto;
+    }
+}

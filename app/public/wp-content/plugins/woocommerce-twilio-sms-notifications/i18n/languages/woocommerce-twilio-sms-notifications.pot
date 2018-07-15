@@ -1,0 +1,425 @@
+# Copyright (C) 2018 SkyVerge
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Twilio SMS Notifications 1.10.0\n"
+"Report-Msgid-Bugs-To: "
+"https://woocommerce.com/my-account/marketplace-ticket-form/\n"
+"POT-Creation-Date: 2014-06-15 22:41:30+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/admin/class-wc-twilio-sms-admin.php:92
+msgid "SMS"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:136
+msgid "Please make sure you have entered a mobile phone number and test message."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:160
+msgid "SMS Messages"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:182
+msgid "Send automated order updates."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:187
+msgid "Send SMS Message:"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:189
+msgid "Send an SMS to the billing phone number for this order."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:189
+msgid "Send SMS"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:222
+msgid "General Settings"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:228
+msgid "Opt-in Checkbox Label"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:229
+msgid ""
+"Label for the Opt-in checkbox on the Checkout page. Leave blank to disable "
+"the opt-in and force ALL customers to receive SMS updates."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:231
+msgid "Please send me order updates via text message"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:237
+msgid "Opt-in Checkbox Default"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:238
+msgid "Default status for the Opt-in checkbox on the Checkout page."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:243
+msgid "Unchecked"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:244
+msgid "Checked"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:250
+msgid "Shorten URLs"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:251
+msgid ""
+"Enable to automatically shorten links in SMS messages via the Google URL "
+"Shortener."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:258
+msgid "Google API Key"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:265
+msgid "Admin Notifications"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:271
+msgid "Enable new order SMS admin notifications."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:278
+msgid "Admin Mobile Number"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:279
+msgid ""
+"Enter the mobile number (starting with the country code) where the New "
+"Order SMS should be sent. Send to multiple recipients by separating numbers "
+"with commas."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:286
+msgid "Admin SMS Message"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:288
+#. translators: %1$s is <code>, %2$s is </code>
+msgid ""
+"Use these tags to customize your message: %1$s%%shop_name%%%2$s, "
+"%1$s%%order_id%%%2$s, %1$s%%order_count%%%2$s, %1$s%%order_amount%%%2$s, "
+"%1$s%%order_status%%%2$s, %1$s%%billing_name%%%2$s, "
+"%1$s%%shipping_name%%%2$s, and %1$s%%shipping_method%%%2$s. Remember that "
+"SMS messages are limited to 160 characters."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:290
+msgid "%shop_name% : You have a new order (%order_id%) for %order_amount%!"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:297
+msgid "Customer Notifications"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:306
+msgid "Order statuses to send SMS notifications for"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:307
+msgid "Orders with these statuses will have SMS notifications sent."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:314
+msgid "Select statuses to automatically send notifications"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:320
+msgid "Default Customer SMS Message"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:322
+#. translators: %1$s is <code>, %2$s is </code>
+msgid ""
+"Use these tags to customize your message: %1$s%%shop_name%%%2$s, "
+"%1$s%%order_id%%%2$s, %1$s%%order_count%%%2$s, %1$s%%order_amount%%%2$s, "
+"%1$s%%order_status%%%2$s, %1$s%%billing_name%%%2$s, "
+"%1$s%%billing_first%%%2$s, %1$s%%billing_last%%%2$s, "
+"%1$s%%shipping_name%%%2$s, and %1$s%%shipping_method%%%2$s. Remember that "
+"SMS messages are limited to 160 characters."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:324
+msgid "%shop_name% : Your order (%order_id%) is now %order_status%."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:335
+msgid "%s SMS Message"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:336
+msgid ""
+"Add a custom SMS message for %s orders or leave blank to use the default "
+"message above."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:348
+msgid "Return SMS Message"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:351
+#. translators: %1$s - opening <a> tag, %2$s - closing </a> tag, %3$s - request
+#. URL
+msgid ""
+"When a customer replies to a SMS, Twilio will by default respond with a "
+"generic message. In order to send back a custom return message you can "
+"modify this section. You will then need to log into your Twilio account and "
+"navigate to the %1$sPhone Numbers page%2$s. Select the phone number where "
+"you want to receive SMS. Paste this URL into the Messaging > Request URL "
+"field: %3$s"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:360
+msgid "Enable return SMS message."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:367
+msgid "Response Message"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:368
+msgid ""
+"Enter the response message to be sent. Remember that SMS messages are "
+"limited to 160 characters. Leave blank to store the inbound SMS but disable "
+"replies."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:369
+msgid ""
+"%shop_name% : Unfortunately we do not provide support via SMS.  Please "
+"visit us at %site_url% for further assistance."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:377
+#: includes/admin/class-wc-twilio-sms-admin.php:396
+msgid "Sender ID"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:380
+#. translators: %1$s - opening <a> tag, %2$s - closing </a> tag
+msgid ""
+"Alphanumeric Sender ID allows you to set your own business brand as the "
+"Sender ID when sending one-way messages. This is only used when sending "
+"messages to %1$ssupported countries%2$s and messages sent using the Sender "
+"ID cannot accept customer replies. Spoofing of brands or companies with "
+"Sender ID is not allowed."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:389
+msgid "Enable Sender ID"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:397
+msgid "Enter the Alphanumeric Sender ID to send SMS messages from."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:404
+msgid "Connection Settings"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:410
+msgid "Account SID"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:411
+msgid "Log into your Twilio Account to find your Account SID."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:417
+msgid "Auth Token"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:418
+msgid "Log into your Twilio Account to find your Auth Token."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:424
+msgid "From Number"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:425
+msgid ""
+"Enter the number to send SMS messages from. This must be a purchased number "
+"from Twilio."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:431
+msgid "Log Errors"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:432
+msgid ""
+"Enable this to log Twilio API errors to the WooCommerce log. Use this if "
+"you are having issues sending SMS."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:440
+msgid "Send Test SMS"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:446
+msgid "Mobile Number"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:447
+msgid ""
+"Enter the mobile number (starting with the country code) where the test SMS "
+"should be send. Note that if you are using a trial Twilio account, this "
+"number must be verified first."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:453
+#: includes/class-wc-twilio-sms-notification.php:433
+msgid "Message"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:454
+msgid ""
+"Enter the test message to be sent. Remember that SMS messages are limited "
+"to 160 characters."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:460
+msgid "Send"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:513
+msgid "Twilio SMS Notifications"
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:522
+msgid "Your store has not sent any SMS messages today."
+msgstr ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:525
+#. translators: %1$d - the number of SMS messages sent, %2$s - the total cost
+#. of the SMS messages sent
+msgid "Your store has sent %1$d SMS message today at a cost of $%2$s"
+msgid_plural "Your store has sent %1$d SMS messages today at a cost of $%2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-wc-twilio-sms-admin.php:540
+msgid "Add Funds to Your Twilio Account"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-ajax.php:70
+msgid "Test message sent successfully"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-ajax.php:74
+msgid "Error sending SMS: %s"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-ajax.php:130
+msgid "Message Sent"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-ajax.php:145
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: includes/class-wc-twilio-sms-ajax.php:149
+msgid "You have taken too long, please go back and try again."
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:129
+msgid "Send SMS: To number / Body is blank!"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:658
+msgid "Endpoint and / or HTTP Method is blank."
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:663
+msgid "Requested HTTP Method is invalid."
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:679
+msgid "Empty Response"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:683
+msgid "Empty Body"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:707
+msgid "%1$s See: %2$s"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:708
+msgid "No Message Available"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:709
+#: includes/class-wc-twilio-sms-notification.php:425
+msgid "N/A"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-api.php:719
+msgid "Response HTTP Code Not Set"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-notification.php:182
+msgid "Sent"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-notification.php:301
+msgid "URL Shortener error"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-notification.php:430
+msgid "SMS Notification"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-notification.php:431
+msgid "To"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-notification.php:432
+msgid "Date Sent"
+msgstr ""
+
+#: includes/class-wc-twilio-sms-notification.php:434
+msgid "Status"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Twilio SMS Notifications"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woocommerce.com/products/twilio-sms-notifications/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Send SMS order notifications to admins and customers for your WooCommerce "
+"store. Powered by Twilio :)"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "SkyVerge"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.woocommerce.com"
+msgstr ""

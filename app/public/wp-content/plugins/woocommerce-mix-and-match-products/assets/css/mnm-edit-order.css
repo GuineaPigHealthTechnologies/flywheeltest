@@ -1,0 +1,9 @@
+#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .mnm_table_container td { border-bottom: none !important; }
+#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .mnm_table_container dl, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .mnm_table_container .display_meta { font-size: .96em; }
+#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .mnm_table_item { border-bottom: none !important; }
+#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .mnm_table_item * { font-size: .96em; }
+#woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .mnm_table_item td.name, #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items .mnm_table_item td.thumb { padding-left: 3em; }
+
+.wc-order-preview-table tr.wc-order-preview-table__item.mnm_table_item * { font-size: 0.96em; }
+.wc-order-preview-table tr.wc-order-preview-table__item.mnm_table_item td.wc-order-preview-table__column--product { padding-left: 3em; }
+.wc-order-preview-table tr.wc-order-preview-table__item.mnm_table_item:not(.last) td, .wc-order-preview-table tr.wc-order-preview-table__item.mnm_table_item td { border-bottom-color: #f8f8ff; }

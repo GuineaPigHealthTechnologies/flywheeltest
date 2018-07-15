@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Drip\n"
+"POT-Creation-Date: 2014-11-19 15:06+0700\n"
+"PO-Revision-Date: 2015-03-14 09:44+0700\n"
+"Last-Translator: Bryce <bryce@bryce.se>\n"
+"Language-Team: Bryce <bryce@bryce.se>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-wcdrip-events.php:79
+msgid "Purchase"
+msgstr ""
+
+#: includes/class-wcdrip-events.php:118
+msgid "Customer"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:37
+msgid "Drip"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:38
+msgid ""
+"Configure the settings below to connect your WooCommerce store to your Drip "
+"account and start recording events."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:38
+msgid ""
+"After authenticating and selecting an account, the Drip embed code will "
+"automatically be added to your site."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:111
+msgid "Authentication & Account"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:113
+msgid ""
+"Please authenticate your Drip account here and choose the account to connect "
+"it with."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:117
+msgid "API Token"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:119
+#, php-format
+msgid "Go the your %s and copy the Token provided."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:119
+msgid "Drip General Settings"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:123
+msgid "Account"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:125
+msgid "Which account do you want to link this site up with?"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:130
+#: includes/class-wcdrip-settings.php:138
+msgid "Subscribe Checkbox"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:132
+msgid ""
+"Add a subscription box to the checkout page and WooCommerce registration "
+"form."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:140
+msgid "Enable Subscription Checkbox"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:143
+msgid "This will add a subscription box on checkout"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:147
+msgid "Campaign"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:149
+msgid "Which campaign do you want to the subscribe box to sign a user up for?"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:149
+msgid "Note:"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:149
+msgid ""
+"After saving a new account above, please use the Reload Data option below."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:155
+msgid "Subscribe Text"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:159
+#, php-format
+msgid ""
+"%s Subscribe to {campaign_name}%sText for the subscribe checkbox - valid "
+"HTML allowed. Use the template tag %s to display the campaign name "
+"(optional)."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:159
+#: includes/class-wcdrip-settings.php:174
+msgid "Default:"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:164
+msgid "Other"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:170
+msgid "Event Sale Name"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:174
+#, php-format
+msgid ""
+"%s Purchase%s Name the event that is added to a subscriber after a purchase. "
+"It should (optionally) match your Conversion Goal name exactly."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:249
+msgid "Reload Drip Data"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:251
+msgid "Reload Accounts / Campaigns"
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:252
+msgid ""
+"If you have added a new account and/or campaign and it's not showing, this "
+"will refresh the list."
+msgstr ""
+
+#: includes/class-wcdrip-settings.php:405
+msgid "The API Key is invalid. Please double check it and try again!"
+msgstr ""
+
+#: includes/class-wcdrip-subscribe.php:100
+msgid "Subscribe to "
+msgstr ""
+
+#: woocommerce-drip.php:115
+#, php-format
+msgid "WooCommerce Drip requires %s to be installed and active."
+msgstr ""

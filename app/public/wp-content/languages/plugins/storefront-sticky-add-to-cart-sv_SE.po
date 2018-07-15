@@ -1,0 +1,53 @@
+# Translation of Plugins - Storefront Sticky Add to Cart - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Storefront Sticky Add to Cart - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-10-21 01:04:43+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Storefront Sticky Add to Cart - Stable (latest release)\n"
+
+#: classes/class-storefront-sticky-add-to-cart.php:104
+#: classes/class-storefront-sticky-add-to-cart.php:113
+msgid "Cheatin&#8217; huh?"
+msgstr "Fuskar du?"
+
+#: classes/class-storefront-sticky-add-to-cart.php:124
+msgid "Support"
+msgstr "Support"
+
+#: classes/class-storefront-sticky-add-to-cart.php:225
+msgid "Placeholder"
+msgstr "Platshållare"
+
+#: classes/class-storefront-sticky-add-to-cart.php:263
+msgid "You're viewing:"
+msgstr "Du visar nu:"
+
+#: classes/class-storefront-sticky-add-to-cart.php:272
+msgid "Select options"
+msgstr "Välj alternativ"
+
+#. Plugin Name of the plugin/theme
+msgid "Storefront Sticky Add to Cart"
+msgstr "Storefront Sticky Add to Cart"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/storefront-sticky-add-to-cart/"
+msgstr "https://wordpress.org/plugins/storefront-sticky-add-to-cart/"
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr "WooThemes"
+
+#. Author URI of the plugin/theme
+msgid "http://woothemes.com/"
+msgstr "http://woothemes.com/"
+
+#. Description of the plugin/theme
+msgid "Adds a sticky add-to-cart bar in single product pages that is revealed as the user scrolls down the page."
+msgstr "Lägger till ett fast lägg-i-kundvagn-fält på sidor för en enda produkt som visas när användaren bläddrar nedåt på sidan."

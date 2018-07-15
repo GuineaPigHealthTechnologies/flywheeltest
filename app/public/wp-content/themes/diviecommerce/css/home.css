@@ -1,0 +1,320 @@
+/* 
+   Header homepage styles 
+*/
+
+/* SLIDER */ 
+
+.home-slider  .et-pb-arrow-next, 
+.home-slider  .et-pb-arrow-prev { 
+	background: #fff;
+	font-weight: 300;
+	font-size: 30px;
+	color: #000 !important;
+	padding: 10px;
+}
+
+.home-slider  .et-pb-arrow-next:before {
+	content: '\24' ;
+}
+
+.home-slider  .et-pb-arrow-prev:before {
+	content: '\23';
+}
+
+.home-slider  .et-pb-arrow-next:hover, 
+.home-slider .et-pb-arrow-prev:hover {
+	color: #fff !important;  
+}
+ 
+.home-slider .et-pb-controllers a { 
+	position: relative; 
+	margin: 15px;
+}
+
+.home-slider .et-pb-controllers a:before {
+	content: "";
+	position: absolute;
+	top: -9px;
+	left: -9px;
+	width: 21px;
+	height: 21px; 
+	border: 2px solid rgba(255, 255, 255, 0);
+	border-radius: 50%;
+}
+
+.home-slider .et_pb_bg_layout_light .et-pb-controllers a:hover {
+	background: #555 !important;
+} 
+
+.home-slider .et_pb_bg_layout_dark .et-pb-controllers a:hover {
+	background: #fff !important;
+}  
+ 
+.home-slider .et_pb_bg_layout_light .et-pb-controllers a:hover:before {
+	border-color: rgba(0, 0, 0, 0.3);
+}
+ 
+.home-slider .et_pb_bg_layout_dark .et-pb-controllers a:hover:before {
+	border-color: rgba(255, 255, 255, 0.75);
+} 
+
+@media (max-width: 767px) {
+	.home-slider .et_pb_slide_description {
+		padding-top: 85px !important;
+		padding-bottom: 85px !important;
+	}
+	.home-slider  .et-pb-arrow-next, 
+	.home-slider  .et-pb-arrow-prev {  
+		font-size: 20px; 
+		padding: 8px;
+	}
+	.home-slider .et-pb-controllers a {  
+		margin: 10px;
+	}
+	.home-slider .et-pb-controllers a:before { 
+		top: -6px;
+		left: -6px;
+		width: 15px;
+		height: 15px; 
+		border: 2px solid rgba(255, 255, 255, 0); 
+	}
+}
+
+/* HOME - CATEGORY SHOP WITH CTA */
+
+.shop-category-cta .column-cta {
+	padding: 25px;
+	position: relative;
+}
+
+.shop-category-cta .column-cta .et_pb_promo  {
+	border: 8px solid; 
+}
+
+@media(min-width: 768px) {
+	.shop-category-cta .column-cta .et_pb_promo  { 
+		padding: 25px !important; 
+		min-height: 300px;
+	}
+}
+
+@media(max-width: 767px) {
+	.shop-category-cta .column-cta .et_pb_promo  { 
+		padding: 50px 25px !important;  
+	}
+}
+
+.shop-category-cta .column-cta .et_pb_promo.et_pb_bg_layout_dark  {
+	border-color: rgba(255,255,255,0.1);
+}
+
+.shop-category-cta .column-cta .et_pb_promo.et_pb_bg_layout_light  {
+	border-color: rgba(0,0,0,0.05);
+}
+
+.shop-category-cta .woocommerce ul.products li.product,
+.shop-category-cta .woocommerce ul.products  {
+	margin-bottom: 0 !important;
+}
+
+@media(min-width: 981px) {
+	.shop-category-cta .column-cta .et_pb_promo  {
+		width: calc(100% - 50px);
+		height: calc(100% - 50px);
+		position: absolute;
+		top: 25px;
+		left: 25px;
+	}
+}
+
+
+/* DEAL OF THE DAY */
+
+@media (min-width: 981px) {
+	.today-deal .deal_row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}
+
+.deal-cta {
+	padding: 50px 40px  60px!important;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 0 !important;
+	position: relative;
+}
+
+.deal-cta .ribbon {
+	position: absolute;
+	right: -45px; top: -55px;
+	z-index: 1;
+	overflow: hidden;
+	width: 75px; height: 75px;
+	text-align: right;
+}
+
+.deal-cta .ribbon strong {
+	font-weight: 600;
+	font-size: 14px; 
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	width: 100px;
+	display: block;
+	background: #ed1b24;
+	position: absolute;
+	top: 19px; right: -21px;
+}
+
+.deal-cta .ribbon strong::before {
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #cc1018;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #cc1018;
+}
+
+.deal-cta .ribbon strong::after {
+	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #cc1018;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #cc1018;
+}
+
+.deal-cta h3.price {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 100%;  
+	padding: 5px 0 15px;
+}
+
+.deal-cta h3.price del {
+	opacity: 0.6;
+	font-weight: normal !important;
+	font-size: 75%; 
+	padding-right: 5px;
+	vertical-align: middle;
+}
+
+.deal-counter {
+	margin-top: -35px;
+	font-size: 0;
+}
+
+.deal-counter .values {
+	background: #fff;
+	color: #232323;
+	border-width: 10px 5px;
+	border-style: solid ;
+	border-color: #F6F6F6;
+	padding: 15px 5px;
+	width: 20%  !important;
+	max-width: 180px  !important;
+}
+
+.deal-counter .value {
+	font-weight: bold; 
+}
+
+.deal-counter .label { 
+	font-size: 10px !important;
+	text-transform: uppercase;
+	line-height: 1   !important;
+	opacity: 0.75;
+}
+
+.deal-counter .values:first-child {
+	border-left-width: 10px;
+}
+
+.deal-counter .values:last-child {
+	border-right-width: 10px;
+}
+
+.deal-counter .sep {
+	display: none;
+}
+
+/* Newsletter */
+
+.newsletter-section .et_pb_row {
+	padding: 80px 50px; 
+}
+
+.newsletter-section .et_pb_row:before {
+    border: 5px solid rgba(0,0,0,0.05);
+    content: "";
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+} 
+
+.newsletter-header {
+	font-weight: normal;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.newsletter-header h1 {
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 1.2;
+	padding-bottom: 0;
+	text-transform: uppercase;
+} 
+
+.newsletter-section .caldera-grid .form-control {
+	width: 100%;
+	display: block;
+	padding: 0 20px;
+	background: transparent; 
+	border: none;
+	font-size: 14px;
+	line-height: 1;
+	height: 49px;
+	border: 1px solid  rgba(0,0,0,0.1);
+	border-radius: 1px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: none;
+}
+
+.newsletter-section .caldera-grid .btn-default { 
+	display: block;
+	width: 100%;
+	padding: 0 10px;
+	background: #111;
+	color: #fff;
+	border: none;
+	font-size: 16px; 
+	text-transform: uppercase;
+	line-height: 1;
+	height: 49px;
+	border-radius: 1px;  
+}
+ 
+.newsletter-section .caldera-grid .row {
+	margin-left: 0;
+	margin-right: 0; 
+}
+
+.newsletter-section .caldera-grid .col-sm-12 {
+	padding: 0 !important;
+}
+
+.newsletter-section .caldera-grid .form-group,
+.newsletter-section  .caldera-grid .btn-default {
+	margin-bottom: 0;
+}

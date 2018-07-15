@@ -1,0 +1,230 @@
+ Changelog
+ 
+ 2.2
+ - Added new module "Product Categories"
+ 
+ 2.3
+ - Fixed loop archive module not showing pagination on search
+ 
+ 2.4
+ - Added support for Product Tag pages
+ 
+ 2.5
+ - Removed PHP notice for background layout on loop module
+ 
+ 2.6
+ - Fixed responsive text size/line height issues
+ - Added more configuration options in advanced design settings across all modules
+ 
+ 2.7
+ - Added 'no content' option for the content module to enable use of the read more button on it's own
+ - Modded price module to NOT show when no price is returned. Helps with styling an markup
+ 
+ 2.8
+ - Added custom query option on loop archive module
+ - Added licensing and auto updates
+ 
+ 2.9
+ - Fixed gallery thumbnail cols CSS
+ 
+ 3.0 - 3/2/17
+ - Loop Archive module, hide grid columns option when list mode selected
+ - Added new rating module
+ - Added text alignment and light/dark colour settings to content and title modules
+ - Added "add to cart" button renaming setting
+ - improved settings page by adding helpful links when no layouts are present
+ - improved settings page by removing prebuilt layouts from the various layout dropdowns
+ - Added hide reviews tabs option to tabs module
+ - Fixed advanced design settings in Price module
+ - Added title option in price module
+ - Added variation price styling in add to cart module
+ - Added/Fixed styling options in add to cart module
+ - Added support for tags as well as the existing category overrides
+ - Added number to show option in upsell and related items modules
+ 
+ 3.1 - 9/2/17
+ - Remove superfluous layouts from Woo Loop Archive module layouts list
+ - Added settings to present all tag and category archives in their own templates
+ - Fixed bug whereby the settings page wouldn't save if the site had hundreds of tag/cats. Disabled ability to override individual terms at 100
+ - Fixed posts number in loop archive module
+ 
+ 3.2 - 31/3/17
+ - Added text alignment and colour options to the shop title module
+ 
+ 3.3 - 5/4/17
+ - Added basic support for Woo 3.0. Product thumbnails now correct size and location although integration needs work
+ 
+ 3.4 - 18/4/17
+ - Added further support for Woo 3.0. Product thumbnails now show (forced CSS)
+ - Fixed 'missing argument 3' bug
+ 
+ 3.5 - 14/8/17
+ - Added global setting to remove the woocommerce hover gallery feature added in Woo3+
+ - Added global setting to Allow you to change the placeholder image for products without imagery
+ - Fixed Woo image module size selection
+ - Moved Woo Layout Injector submenu below the WooCommerce heading
+ - Fixed tag general layout selection
+ - Renamed modules to remove ET prefix as it's not necessary. Woo is less ambiguous
+ - Added Woo check and admin nag
+ - Added handy "edit" buttons to the settings page to help you find the layouts more easily
+ - Added new 'cross sell' module for use on the cart pages
+ - Added new Woo Attributes module to allow associated attributes for products to be shown easily
+ - Fixed layouts issue in the Loop Archive reported in the latest Divi release (~Aug 2017)
+ 
+ 3.6 - 15/8/17
+ - Extended attributes module to include non-taxonony attributes
+ - Fixed some PHP Notices
+ 
+ 3.7 - 15/9/17
+ - Added custom ordering to the loop archive module
+ - Added 'hide if no results' to the loop archive module
+ 
+ 3.8 - 20/9/17
+ - Fixed issues with custom ordering
+ - Added Woo Read More module to allow a direct link to the product page to be added
+ 
+ 3.9 - 29/10/17
+ - Fixed hover zoom issues within Woo Injector. Completely rewrote the image and gallery modules. Also completely integrated a hover zoom and lightbox functionality
+ 
+ 3.9.1 - 31/10/17
+ - Updated thumbnail column CSS for improved cross browser compatibility
+ - Improved support for third party plugins such as Yith based on a move to 'action' based modules rather than function based
+ - Made all modules more usable by using a settings group to move the useful settings above the background selector default with Divi
+ 
+ 3.9.2 - 02/11/17
+ - Updated thumbnail CSS
+ - Added hover zoom disable functionality
+ - Fixed Auto Update functionality
+ 
+ 3.9.3 - 05/11/17
+ - Added Woo Notices module for the added to cart message placement
+ - Fixed JS error around jQuery zoom which effected some users
+ 
+ 4.0 - 15/11/17
+ - Fixed Woo Content module formatting
+ - Fixed breadcrumb module styling options and added text orientation to the settings
+ - Fixed product image flicker on change
+ - Fixed when using the overlay option on the product image you can now click the image to visit the product page
+ - If Woo Notices module not used then a fallback to having the notices at the top of the page now kicks in
+ - Updated Rating module to include better alignment options, styling optiond and an option to hide the module if there are no ratings yet
+ - Refactored code into several files for easier management
+ - Added option to add/remove sale banners to both archive and single pages along with the ability to define where the banners show.. over image/content/title
+ - Added alignment options to 'add to cart' module
+ - Added offset and limit fields to the thumbnails module to allow for the thumbnails to be split across multiple page locations as necessary
+ - Added 'short content' module as having it as part of the 'woo content' module was confusing some users
+ - Added global setting to allow you to enable the Divi Builder for WooCommerce Product Pages
+ - Added new product archive module for simpler stores. Much like the Loop Archive except no sub layout is necessary. Just add the module and you're good to go
+ - Added single product module to show any single product on any page that uses the Divi Builder. Viewable in a default layout OR using the loop item concept
+ - Added header mini cart option. Hover to view current cart and visit cart/checkout etc
+ - Added ability to use the page builder to create your own checkout page
+ - Added ability to use the page builder to create your own cart page
+ - Added ability to use the page builder to create your own my account pages
+ 
+ 4.0 - 16/11/17
+ - Fixed shop/category description module throwing an error when description is turned on
+ 
+ 4.1 - 12/01/18
+ - Added support for Yith get a quote - premium
+ - Fixed header cart for slide in menus and centred logo options
+ - Fixed occasional bug with Woo Title module (sale price related)
+ - Fixed error with srcset calculation
+ - Limited colorbox css and js to product pages as it was interfering with the modal popup plugin
+ - Removed overlay as link code as it was causing issues with old versions of Divi and messing with related items imagery
+ - Set the related image size to large for quality purposes
+ - Fixed occasional bug with Woo Content module (sale price related)
+ - Fixed occasional bug with Woo Meta module (get sku on non object)
+ - Coupon functionality changes now only kicks in when the checkout itself it overridden rather than all the time
+ 
+ 4.2 - 02/02/18
+ - Better Cross Sell module options
+ 
+ 4.3 - 12/02/18
+ - Added shortcodes [wli_content] and [wli_hook] for general use
+ - Added two new filters to modify the heading tag used for single and archive pages. sb_et_woo_li_single_title_tag and sb_et_woo_li_archive_title_tag
+ 
+ 4.4 - 19/03/18
+ - Fixed call to get_item_data replacing with wc_get_formatted_cart_item_data for newer versions of woo
+ - Fixed shop module grid titles not clickable issue
+ - Fixed occasional additional empty row added with the loop archive and archive (basic) module
+ - Added plugin page action links for support, settings etc..
+ - Added wpautop to the content shortcode
+ - Removed Woo modules from contexts where they are not needed. IE non product based/divi library pages. This will speed up the builder and include the modules ONLY where they are needed
+ - Added variation ajax limit filter to 250 to avoid ajax being used to handle variations as it's not currently compatible. There is a PHP define which you can extend if you need this number more thean 250
+ - Added code to prevent Woo Title being used when the user actually meant to use the shop title module
+ - Fixed sale badge bug whereby the sale badge was removed from the shop module if any sale badge location other than 'none' was selected
+ - fixed bug whereby text shadow was showing more than once in the advanced design settings
+ - Changed "text" to "content" in design settings to avoid fields being called Text Text Font Size, Text Text Font Colour. Now they will read Content Text font Size. It reads better
+ - Added notices to show when the woo archive and woo loop archive are used in the wrong context. That is to say when they are used on a normal page and without custom query turned on.
+ - Added new module for creating a grid of product categories
+ - Added new support for Divi Extended Column Layouts whereby you can now show up to 8 products or categories per row IF the DECL FREE plugin is enabled
+ - Added title field to all of the archive modules (3) for optional use of a heading
+ - Added button styling (custom button yes/no etc from core Divi) to all modules requiring one (archives x 3, read more, content, short content) for better button styling
+ - Fixed sale badge locations when using the Woo Archive module.
+ - Added colour options for the sale badge (background colour and text colour) on the WLI settings page
+ - Overhauled the Related Products module to optionally use the Loop Layout method for much more flexibility
+ - Overhauled the Upsells module to optionally use the Loop Layout method for much more flexibility
+ - Overhauled the Cross Selling module to optionally use the Loop Layout method for much more flexibility
+ - Fixed issue whereby having two product image modules on the same page broke the selection between thumbs on mobile
+ - Added Disable Zoom option on product image module to allow you to turn off zoom on a per module basis. Overridden by the site-wide setting
+ - Fixed issue whereby if 'disable zoom' was turned on then the lightbox would also be disabled. Now the 'disable zoom' button only disables the zoom itself
+ - Added ability to style variation text in the add to cart module
+ - Added button (and button disabled) styling in the add to cart module
+ - Added ability to add a title to the Woo Content module
+ - Added light/dark background options, delimiter selection and link (hover) design settings to the breadcrumb module
+ - Updated the Woo Notices module to feature configurable background colours, fonts, alignment and button styles
+ - Added title option to Short content module
+ - Added title option to Additional Info tab module
+ - Hooked up the advanced styling/background colouring within the Woo Meta module
+ - Added edit button on edit product layout for easier access to the divi library layout when overriding on a per product basis
+ - Integrated a new tab management system to allow you to easily extend the tabs on any product with no coding required
+ - Updated the reviews module to include button styling, background and alignment options
+ - Extended the tabs module to include better styling functions and regarding alignment and colouring etc
+ - Added image size to the single product module along with Divi button styling options
+ - Woo General module added better styling/alignment options, button styles, prices/buttons/content and headings
+ - Fixed 'Woo General' bug whereby only the add to cart button showed. Now shows Title, Image, Short Descripton, Add to Cart and Meta info
+ - Added an admin notice (red bar nag) to show in the edit screens for the Shop, Cart, Checkout, My Account pages for the site to highlight to admins that they can be edited and providing handy instructions to do so
+ - Woo Cart Products - added remove borders option, added image sizing control to change the size of the cart thumbnails, added button styling
+ - Woo Cart Checkout - added button styling and remove borders option
+ - Archive modules now can use the built in Woo Pagination without the need to use the WP Page Navi plugin
+ - Added option to show ordering options above the archive modules (archive basic and loop archive)
+ - Added custom css options to archive (basic) and loop archive modules
+ - Added list option to Woo Categories (single product) module, also additional styling options including light/dark text dropdowns
+ - Added list option to Woo Attributes module, also additional styling options including light/dark text dropdowns
+ - Added button styles to checkout coupon module
+ - Added text/button styles to checkout payment module
+ - Added text styles to checkout billing and shipping modules
+ - Overhauled the coupon system for the checkout to use a new module and popup overlays for error and success messages
+ - Added code to prevent checkout and cart modules being used in the wrong contexts
+ - All 'My Account' modules - text styles added, button styles added where appropriate
+ - My Account Navigation module, added ability to present the links as buttons and style accordingly. Also alignment options
+ - Neatened up the returning customer banner on the checkout
+
+4.4.1 - 27/03/18
+- Added ordering to loop archive module when custom query is turned on
+- Fixed JS issue whereby when using the thumbnails module, on click it would not change the main image
+
+4.5 - 12/04/18
+- Added ability to disable lightbox from product image module
+- Added filter 'wli_term_count_limit' which can be overridden in PHP for sites with more than 100 categories or tags
+- Added display type field in the ATC module for contextual changes in output
+- Fixed broken cart widget
+- AJAX add to cart now adds class of 'button' to 'added_to_cart' link that pops up after a successful add for consistency
+- AJAX add to cart using ajax keeps track of the number of items in real time
+- Added better support for Contact Form 7 forms. Styling now matches Woo in terms of input fields and the submit button. It also correctly stores the post_id for the special field types to work within CF7
+- Added support for YITH WooCommerce Badge Management
+- Added support for Woo Variations Table plugin
+- Fixed preamble (wrapper) for checkout login form bug whereby it was showing when the user was logged in creating a gap at the top of the screen
+- Fixed placeholder field in Woo Checkout Coupon module
+- Improved empty cart process with AJAX
+
+
+ next version?
+ - dot nav/arrows to nav between product images
+ - allow for sorting options
+ - test with infinite scroll/ajax filters
+ - quick view layouts
+ - add sharing module
+ - styling for individual images (custom css tab on thumbnails and product image modules)
+ - default css import for woo from divi
+ - visually appealing variation selectors
+ 

@@ -1,0 +1,73 @@
+# Translation of Plugins - Storefront Product Pagination - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Storefront Product Pagination - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-10-21 01:01:31+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Storefront Product Pagination - Stable (latest release)\n"
+
+#: classes/class-storefront-product-pagination.php:102
+#: classes/class-storefront-product-pagination.php:111
+msgid "Cheatin&#8217; huh?"
+msgstr "Fuskar du?"
+
+#: classes/class-storefront-product-pagination.php:203
+msgid "Storefront Product Pagination requires that you use Storefront as your parent theme."
+msgstr "Storefront Product Pagination kräver att du har Storefront som överordnat tema."
+
+#: classes/class-storefront-product-pagination.php:203
+msgid "Install Storefront now"
+msgstr "Installera Storefront nu"
+
+#: classes/class-storefront-product-pagination.php:217
+msgid "Product Pagination"
+msgstr "Product Pagination"
+
+#: classes/class-storefront-product-pagination.php:231
+msgid "Background color"
+msgstr "Bakgrundsfärg"
+
+#: classes/class-storefront-product-pagination.php:246
+msgid "Display products in same category"
+msgstr "Visa produkter i samma kategori"
+
+#: classes/class-storefront-product-pagination.php:247
+msgid "When enabled, pagination will only display links to products in the same category as the one currently being viewed."
+msgstr "När pagination är aktiverat visas endast länkar till produkter i samma kategori som den som användaren tittar på. "
+
+#: classes/class-storefront-product-pagination.php:335
+msgid "More products"
+msgstr "Fler produkter"
+
+#. Plugin Name of the plugin/theme
+msgid "Storefront Product Pagination"
+msgstr "Storefront Product Pagination"
+
+#. Plugin URI of the plugin/theme
+msgid "http://woothemes.com/storefront/"
+msgstr "http://woothemes.com/storefront/"
+
+#. Description of the plugin/theme
+msgid "Add unobstrusive links to next/previous products on your WooCommerce single product pages."
+msgstr "Lägg till diskreta länkar till nästa/föregående produkter på dina WooCommerce-sidor med endast en produkt."
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr "WooThemes"
+
+#. Author URI of the plugin/theme
+msgid "http://woothemes.com/"
+msgstr "http://woothemes.com/"
+
+#: classes/class-storefront-product-pagination.php:232
+msgid "Background color for the product pagination links"
+msgstr "Bakgrundsfärg för länkar i Product Pagination"
+
+#: classes/class-storefront-product-pagination.php:132
+msgid "%sThanks for installing the Storefront Product Pagination extension. Configure the settings in the %sCustomizer%s.%s %sOpen the Customizer%s"
+msgstr "%sTack för att du installerar tillägget Storefront Product Pagination. Konfigurera inställningarna i verktyget %sAnpassa%s.%s %sÖppna Anpassa nu%s"

@@ -1,0 +1,57 @@
+/* Styles to add for the front end input fields and buttons needed for the waitlist */
+.wcwl_control {
+    margin: 0 0 1.714285714rem;
+    padding-top: 0.5%;
+}
+
+.wcwl_email_field {
+    margin-right: 1%;
+}
+
+.woocommerce_waitlist_label {
+    color: red;
+    line-height: 1.714285714;
+}
+
+.wcwl_add_user_form {
+    margin-bottom: 0;
+}
+
+.post-type-archive-product .wcwl_frontend_wrap,
+.archive.tax-product_cat .wcwl_frontend_wrap,
+.post-type-archive-product .wcwl_email_elements,
+.archive.tax-product_cat .wcwl_email_elements,
+.wcwl_hide {
+    display: none;
+}
+
+.post-type-archive-product .wcwl_email_label,
+.archive.tax-product_cat .wcwl_email_label {
+    display: block;
+}
+
+.wcwl_frontend_wrap .wcwl_error_highlight {
+    border: 2px solid red;
+}
+
+.wcwl_frontend_wrap input[name="wcwl_optin"] {
+    margin-right: 10px;
+}
+
+.wcwl_frontend_wrap .wcwl_optin {
+    margin-top: 3px;
+    padding: 5px;
+}
+
+/* Styles to add for the front end grouped product elements for the waitlist */
+table.group_table {
+    width: 100%;
+}
+
+table.group_table tr td.price p.out-of-stock {
+    margin: 0;
+}
+
+table.group_table tr td.price ins {
+    display: table;
+}

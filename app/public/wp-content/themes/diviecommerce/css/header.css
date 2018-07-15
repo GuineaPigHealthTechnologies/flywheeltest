@@ -1,0 +1,148 @@
+/* 
+   Header custom styles 
+*/
+
+#main-header { 
+	box-shadow: none;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+#top-menu li {	
+	line-height: 1.05; 
+	font-weight: 400;
+	opacity: 1;
+}
+
+/* TOP HEADER */
+
+#et-info-phone, #et-info-email {
+	font-size: 120%; 
+}
+
+#et-info-phone span, #et-info-email span {
+	font-size: 75% !important;  
+	margin-right: 5px; 
+	font-weight: 300;
+}
+
+#et-info-phone:before,
+#et-info-email:before {
+	display: none;
+} 
+
+#top-header li.et-social-icon  {
+	margin-left: 5px !important;
+	margin-top: 0  !important;
+}
+
+#top-header .et-social-icon a {
+	font-size: 14px;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	border-width: 1px  !important;
+	border-style: solid  !important; 
+	border-color: rgba(0,0,0,0.2);
+	border-radius: 1px;
+	transition: all 0.2s ease-in-out 0s;
+}
+
+#top-header .et-social-icon a:hover { 
+	opacity: 1;
+} 
+
+/* TOP HEADER MENU */
+
+#et-secondary-menu  { 
+	padding-left: 10px;
+}
+
+#et-secondary-nav li a {
+	padding-bottom: 14px !important;
+	padding-top: 14px !important;
+	margin-bottom: 0; 
+	position: relative;
+}
+
+#et-secondary-nav .menu-item-has-children>a:first-child:after {
+	top: 50%;
+	margin-top: -8px;
+}
+
+/* Sub menu */
+
+.nav li ul,
+ul#mobile_menu {
+	border: none !important; 
+	padding: 0; 
+}
+
+#top-menu li li {  
+	width: 100% !important;
+	padding: 0;
+	font-weight: normal !important;
+}
+
+#top-menu li li a,
+.et_mobile_menu li a,
+#mobile_menu li a   {
+	text-transform: none;
+	width: 100% !important;
+	display: block;
+	padding: 15px 25px !important;
+	border-bottom: 1px solid rgba(0,0,0,0.1); 
+	opacity: 1;
+}
+
+#top-menu li li:last-child a, ul#mobile_menu li:last-child a, #mobile_menu i:last-child a {
+	border: none;
+}
+
+.mobile_nav.opened span.mobile_menu_bar:before {
+	content: '\4d';
+}
+
+@media (max-width: 980px) { 
+	#main-header .mobile_nav { 
+		background-color:transparent !important; 
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 981px) and (max-width: 1200px) { 
+	#main-header .container,
+	#top-header .container {
+		width: 95%;
+	}
+}  
+
+@media (max-width: 980px) {  
+	.et_header_style_split #et_mobile_nav_menu { 
+	    margin-top: 0 !important;
+	}
+	#et-info {
+		float: none;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 0;
+	}
+	#et-info-phone, #et-info-email {
+		margin-top: 10px;
+		display: block;
+		float: left;
+	}
+	#top-header .et-social-icons {
+		display: block;
+		float: right;
+	}
+}
+
+@media (max-width: 600px) {   
+	#et-info {
+		display: none;
+	}
+}
