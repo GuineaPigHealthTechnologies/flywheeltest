@@ -1,0 +1,439 @@
+/*!
+ * product-search.css
+ *
+ * Copyright (c) "kento" Karim Rahimpur www.itthinx.com
+ *
+ * This code is provided subject to the license granted.
+ * Unauthorized use and distribution is prohibited.
+ * See COPYRIGHT.txt and LICENSE.txt
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * This header and all notices must be kept intact.
+ *
+ * @author itthinx
+ * @package woocommerce-product-search
+ * @since 1.0.0
+ */
+.product-search.floating {
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.product-search.floating .product-search-results {
+	position: absolute;
+	z-index: 10;
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: -1px 0 0 0;
+}
+.product-search.floating .product-search-results:empty {
+	border: none;
+}
+.product-search input[type="text"].product-search-field,
+.product-search input[type="text"].product-filter-field,
+.product-search-filter-price input.product-search-filter-price-field {
+	margin: 0;
+}
+.product-search input[type="text"].product-search-field,
+.product-search input[type="text"].product-filter-field {
+	display: inline-block;
+	width: 85%;
+}
+.product-search .product-search-results {
+	display: none;
+	overflow: hidden;
+}
+.product-search-form input.blinker {
+	background-image: url( ../images/blinker.gif );
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+.product-search-results .entry,
+.product-search-results .no-results {
+	padding: 1px;
+}
+
+.product-search-results .entry a,
+.product-search-results .search-results .entry a {
+	text-decoration: none;
+	font-weight: inherit;
+}
+.product-search-results .entry span.title {
+	font: inherit;
+	display: block;
+}
+.product-search-results .entry span.title,
+.product-search-results .entry span.description,
+.product-search-results .entry span.price,
+.product-search-results .entry img.thumbnail {
+	vertical-align: middle;
+}
+.product-search-results .entry span.description {
+	display: block;
+	font-size: 85%;
+}
+.product-search-results .entry span.price {
+	display: block;
+	font-size: 95%;
+}
+.product-search-results .entry span.price .amount {
+	display: inline-block;
+	font-size: inherit;
+}
+
+.product-search-results .entry img.thumbnail {
+	max-width: none;
+	box-shadow: unset;
+}
+.product-search-results .entry a:hover {
+	text-decoration: none !important;
+	/*color: inherit;*/
+}
+.product-search-results .entry a span.title:hover {
+	text-decoration: underline;
+}
+.product-search-results .entry:hover,
+.product-search-results .entry.active {
+	background-color: #f0f0f0;
+}
+.product-search-results .entry.s_product_cat.first {
+	border-top: 1px solid #ccc;
+}
+.product-search-results table.search-results {
+	table-layout: auto;
+}
+.product-search-results table.search-results {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	width: 100%;
+}
+.product-search-results table.search-results td:last-child {
+	width: 100%;
+}
+.product-search-results table.search-results tr:nth-child(n) td {
+	background-color: inherit;
+}
+.product-search-results table.search-results tr,
+.product-search-results table.search-results tr td,
+.entry-content .product-search-results table.search-results tr td {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.product-search-results table.search-results tr td,
+.entry-content .product-search-results table.search-results tr td {
+	padding: 4px;
+	vertical-align: top;
+	text-align: left;
+}
+.product-search-filter-blinker {
+	background-image: url( ../images/blinker-256x256.gif );
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.product-search-filter-search-heading,
+.product-search-filter-price-heading,
+.product-search-filter-terms-heading {
+	font-size: 95%;
+	font-weight: 600;
+}
+.product-search-filter-terms ul li {
+	border: none;
+}
+.product-search-filter-terms .product-search-filter-product_cat,
+.product-search-filter-terms .product-search-filter-product_tag,
+.product-search-filter-terms .product-search-filter-attribute {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.product-search-filter-terms .product-search-filter-product_cat ul,
+.product-search-filter-terms .product-search-filter-product_tag ul,
+.product-search-filter-terms .product-search-filter-attribute ul {
+	list-style: none;
+}
+.product-search-filter-terms .product-search-filter-product_cat.style-inline li,
+.product-search-filter-terms .product-search-filter-product_tag.style-inline li,
+.product-search-filter-terms .product-search-filter-attribute.style-inline li {
+	display: inline;
+}
+.product-search-filter-terms .product-search-filter-product_cat .term-thumbnail,
+.product-search-filter-terms .product-search-filter-product_tag .term-thumbnail,
+.product-search-filter-terms .product-search-filter-attribute .term-thumbnail {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 6px;
+	box-shadow: 0 0 1px #333;
+	margin: 4px;
+}
+.product-search-filter-terms .product-search-filter-product_cat .term-name,
+.product-search-filter-terms .product-search-filter-product_tag .term-name,
+.product-search-filter-terms .product-search-filter-attribute .term-name {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 2px;
+}
+.product-search-filter-terms .product-search-filter-product_cat.hide-thumbnails .term-thumbnail,
+.product-search-filter-terms .product-search-filter-product_tag.hide-thumbnails .term-thumbnail,
+.product-search-filter-terms .product-search-filter-attribute.hide-thumbnails .term-thumbnail {
+	display: none;
+}
+.product-search-filter-terms .product-search-filter-product_cat.hide-names .term-name,
+.product-search-filter-terms .product-search-filter-product_tag.hide-names .term-name,
+.product-search-filter-terms .product-search-filter-attribute.hide-names .term-name {
+	display: none;
+}
+
+.woocommerce-product-search-filter-products-prefix,
+.woocommerce-product-search-filter-products-suffix {
+	font-size: smaller;
+	min-height: 1.618em;
+}
+.woocommerce-product-search-filter-products-prefix {
+	margin-bottom: 1em;
+}
+.woocommerce-product-search-filter-products-suffix {
+	margin-top: 1em;
+}
+.product-search-product_cat-filter-item a:hover,
+.product-search-attribute-filter-item a:hover {
+	cursor: pointer;
+}
+.product-search-product_cat-filter-item.current-cat > a:after,
+.product-search-attribute-filter-item.current-attribute > a:after
+/* creates touch double tap issues
+.product-search-product_cat-filter-item > a:hover:after,
+.product-search-attribute-filter-item > a:hover:after
+*/ {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 80%;
+	content: "\f111";
+	vertical-align: middle;
+	padding: 0 2px;
+}
+.product-search-product_cat-filter-item.current-cat > a:hover:after,
+.product-search-attribute-filter-item.current-attribute > a:hover:after {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 80%;
+	content: "\f057";
+	vertical-align: middle;
+	padding: 0 2px;
+}
+
+.product-search-filter-terms .hide-names.style-inline .product-search-product_cat-filter-item.current-cat > a,
+.product-search-filter-terms .hide-names.style-inline .product-search-attribute-filter-item.current-attribute > a,
+.product-search-filter-terms .hide-names.style-inline .product-search-product_cat-filter-item > a,
+.product-search-filter-terms .hide-names.style-inline .product-search-attribute-filter-item > a,
+.product-search-filter-terms .hide-names.style-inline .product-search-product_cat-filter-item.current-cat > a,
+.product-search-filter-terms .hide-names.style-inline .product-search-attribute-filter-item.current-attribute > a {
+	position: relative;
+}
+
+.product-search-filter-terms .hide-names.style-inline .product-search-product_cat-filter-item.current-cat > a:after,
+.product-search-filter-terms .hide-names.style-inline .product-search-attribute-filter-item.current-attribute > a:after,
+.product-search-filter-terms .hide-names.style-inline .product-search-product_cat-filter-item > a:hover:after,
+.product-search-filter-terms .hide-names.style-inline .product-search-attribute-filter-item > a:hover:after,
+.product-search-filter-terms .hide-names.style-inline .product-search-product_cat-filter-item.current-cat > a:hover:after,
+.product-search-filter-terms .hide-names.style-inline .product-search-attribute-filter-item.current-attribute > a:hover:after {
+	color: #333;
+	display: inline-block;
+	height: 16px;
+	padding: 0;
+	position: absolute;
+	right: 4px;
+	text-align: center;
+	top: 1px;
+	vertical-align: middle;
+	width: 16px;
+	opacity: 0.85;
+	text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, 0 -1px 1px #fff, -1px 0 1px #fff;
+}
+
+a.product-search-product_tag-filter-item {
+	padding: 4px;
+	border: 1px solid transparent;
+	display: inline-block;
+}
+div.product-search-filter-tag a.product-search-product_tag-filter-item {
+	display: inline-block;
+}
+a.product-search-product_tag-filter-item.current-tag,
+a.product-search-product_tag-filter-item:hover {
+	border: 1px solid;
+	border-radius: 2px;
+}
+
+.product-search-filter-terms .style-inline li.nav-back {
+	display: block;
+}
+.product-search-filter-terms .nav-back:before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: "\f0d8";
+	vertical-align: middle;
+	padding: 0 2px;
+}
+.product-search-filter-terms .cat-item-all.nav-back > a,
+.product-search-filter-terms .attribute-item-all.nav-back > a,
+.product-search-filter-terms .tag-item-all.nav-back > a {
+	vertical-align: middle;
+}
+.product-search-filter-terms .cat-item-all.nav-back:before,
+.product-search-filter-terms .attribute-item-all.nav-back:before,
+.product-search-filter-terms .tag-item-all.nav-back:before {
+	content: "\d7";
+	font-family: inherit;
+	font-weight: inherit;
+}
+.product-search-filter-terms .nav-back a:hover:after {
+	content: "" !important;
+	display: none !important;
+}
+
+.product-search-filter-terms .loading-term-filter {
+	background-image: url( ../images/blinker.gif );
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 20px;
+}
+
+.product-search-filter-terms .hide-names.style-inline .loading-term-filter {
+	background-position: center center;
+	padding: 0;
+}
+.product-search-filter-terms .hide-names.style-inline .nav-back .loading-term-filter {
+	background-position: right center;
+	padding-right: 20px;
+}
+.product-search-filter-terms .hide-names.style-inline .loading-term-filter img.term-thumbnail,
+.product-search-filter-terms .hide-names.style-inline a.loading-term-filter:after,
+.product-search-filter-terms .hide-names.style-inline a.loading-term-filter:hover:after {
+	opacity: 0.32;
+}
+
+.product-search-product_cat-filter-item a.loading-term-filter:after,
+.product-search-product_cat-filter-item.current-cat a.loading-term-filter:hover:after,
+.product-search-attribute-filter-item.current-attribute a.loading-term-filter:hover:after {
+	content: "";
+}
+
+.product-search-filter-search,
+.product-search-filter-price {
+	position: relative;
+}
+
+.product-search-filter-search .product-search-filter-search-clear,
+.product-search-filter-price .product-search-filter-price-clear {
+	cursor: pointer;
+	padding: 0;
+	vertical-align: middle;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	font-size: 13px;
+}
+.product-search-filter-search .product-search-filter-search-clear:before,
+.product-search-filter-price .product-search-filter-price-clear:before {
+	content: "\d7";
+	display: inline-block;
+	padding: 0.31em;
+	text-align: center;
+}
+.product-search-form .product-search-field-clear {
+	cursor: pointer;
+	padding: 0;
+}
+.product-search-form .product-search-field-clear:after {
+	content: "\d7";
+	display: inline-block;
+	padding: 0.31em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+input[type="text"].product-search-filter-price-field {
+	width: 33%;
+	display: inline-block;
+}
+div.product-search-filter-terms a,
+.widget-area .widget div.product-search-filter-terms a {
+	box-shadow: unset;
+	font-weight: inherit;
+	text-decoration: none;
+}
+.wps_add_to_cart {
+	font-size: inherit;
+}
+.wps_add_to_cart a.button.add_to_cart_button,
+.wps_add_to_cart a.button.add_to_cart_button::before,
+.wps_add_to_cart a.button.add_to_cart_button::after,
+.wps_add_to_cart a.button.add_to_cart_button:hover,
+.wps_add_to_cart a.button.ajax_add_to_cart,
+.wps_add_to_cart a.button.ajax_add_to_cart::before,
+.wps_add_to_cart a.button.ajax_add_to_cart::after,
+.wps_add_to_cart a.button.ajax_add_to_cart:hover {
+	font-size: 90%;
+}
+
+.fusion-body .wps_add_to_cart a.button.add_to_cart_button,
+.fusion-body .wps_add_to_cart a.button.ajax_add_to_cart {
+	margin: 0;
+	padding: 0;
+}
+.fusion-body .wps_add_to_cart a.button.add_to_cart_button::before,
+.fusion-body .wps_add_to_cart a.button.ajax_add_to_cart::before {
+	content: '';
+}
+
+.product-search-filter-terms .term-expander {
+	vertical-align: middle;
+	font-size: 90%;
+	cursor: pointer;
+	padding: 0 2px;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+}
+.product-search-filter-terms .cat-parent.expandable > .term-expander .expand {
+	display: inline;
+}
+.product-search-filter-terms .cat-parent.expandable > .term-expander .retract {
+	display: none;
+}
+.product-search-filter-terms .cat-parent.expandable.expanded > .term-expander .expand {
+	display: none;
+}
+.product-search-filter-terms .cat-parent.expandable.expanded > .term-expander .retract {
+	display: inline;
+}
+.product-search-filter-terms .cat-parent.expandable > ul {
+	display: none;
+}
+
+@font-face {
+	font-family: 'Font Awesome 5 Free';
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/fa-regular-400.eot");
+	src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.woff") format("woff"), url("../fonts/fa-regular-400.ttf") format("truetype"), url("../fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+	font-family: 'Font Awesome 5 Free';
+	font-style: normal;
+	font-weight: 900;
+	src: url("../fonts/fa-solid-900.eot");
+	src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff"), url("../fonts/fa-solid-900.ttf") format("truetype"), url("../fonts/fa-solid-900.svg#fontawesome") format("svg");
+}

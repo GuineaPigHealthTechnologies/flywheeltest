@@ -1,0 +1,27 @@
+*** WooCommerce Customer History ***
+
+2016.06.23 - version 1.2.1
+* Added separate settings for admin email notifications. You can now independently choose to include customer browsing history and/or purchase history in admin email notifications.
+* Fixed rounding error on customer lifetime value.
+* Updated order reporting tables to utilize admin color scheme colors for heading and border.
+* Removed WC 3.0 deprecation warnings on order reporting tables.
+
+2015.06.04 - version 1.2.0
+* Introduced JS-based tracking to circumvent page caching.
+* Introduced stand-alone database table to move active history away from transients stored in WP_Options
+
+2014.10.24 - version 1.1.1
+* Corrected a PHP warning on the order details admin page introduced in 1.1.0.
+* Corrected a PHP Fatal at checkout due to incorrect method name.
+
+2014.10.22 - version 1.1.0
+* Rewrote history tracking to use transients + cookies for increased stability.
+* Rewrote 2.2 Compatibility to support all order statuses on purchase history.
+* Updated purchase history lifetime value calculation to use new WC 2.2 order statuses.
+* Added setting for optionally including customer history in admin emails.
+
+2014.09.09 - version 1.0.1
+* 2.2 Compatibility
+
+2014.07.29 - version 1.0.0
+* Initial Release!

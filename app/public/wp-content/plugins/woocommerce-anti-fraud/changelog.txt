@@ -1,0 +1,60 @@
+*** WooCommerce Anti Fraud ***
+
+2017-05-23 - version 1.0.15
+* Update - Privacy policy notification.
+* Update - Export/erasure hooks added.
+* Update - WC 3.4 compatibility.
+
+2017-12-12 - version 1.0.14
+* Update - WC tested up to version.
+
+2017-12-05 - version 1.0.13
+* Fix - Disabling email notification had no affect.
+* Fix - On-hold and Cancelled were incorrectly set.
+
+2017-07-05 - version 1.0.12
+* Fix - Blank order sreen when order completed.
+
+2017-06-13 - version 1.0.11
+* Fix - Order status should not change to processing for cancelled orders.
+
+2017-06-01 - version 1.0.10
+* Fix - Additional updates for WC 3.0 compatibility.
+
+2017-05-31 - version 1.0.9
+* Fix - Rules not being triggered.
+* Fix - Additional updates for WC 3.0 compatibility.
+
+2017-04-03 - version 1.0.8
+* Fix - Update for WC 3.0 compatibility.
+
+2016-11-24 - version 1.0.7
+* Fix - When scores become negative number, cancel and on-hold is not disabled.
+* Fix - Ensure get ip address is checking for proxies.
+
+2016-10-28 - version 1.0.6
+* Fix - Use order number instead of id as 3rd party plugins adds their own filters.
+
+2016-07-21 - version 1.0.5
+* Fix - Setting 0 to disable order status change was not working.
+
+2016-03-31 - version 1.0.4
+* Fix - Help text specification should be equal to or greater than
+
+2015-08-18 - version 1.0.3
+* Remove order status tweaking since it was causing twice completed.
+
+2015-07-31 - version 1.0.2
+* Replaced call to deprecated get_billing_address with get_formatted_billing_address
+* Replaced call to deprecated get_shipping_address with get_formatted_shipping_address
+* Fixed fatal error when viewing orders in wp-admin with proxy rule violations
+* Use order IP, not server IP, when comparing orders for same ip, multiple details rule
+* Replaced call to deprecated get_billing_address with get_formatted_billing_address
+* Replaced call to deprecated get_shipping_address with get_formatted_shipping_address
+* Fixed fatal error when generating fraud notification emails for WC 2.3+
+
+2014-10-14 - version 1.0.1
+* Registered waiting post status in wc_order_statuses.
+
+2014-09-11 - version 1.0
+* First Release

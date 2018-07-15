@@ -1,0 +1,422 @@
+# Translation of Plugins - Klarna Checkout for WooCommerce - Development (trunk) in Swedish
+# This file is distributed under the same license as the Plugins - Klarna Checkout for WooCommerce - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-05-25 07:18:09+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Klarna Checkout for WooCommerce - Development (trunk)\n"
+
+#: includes/klarna-checkout-for-woocommerce-functions.php:467
+msgid "No shipping was selected."
+msgstr "Ingen frakt valdes."
+
+#: includes/klarna-checkout-for-woocommerce-functions.php:465
+msgid "Not all products are in stock."
+msgstr "Alla produkter fanns inte i lager."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:263
+msgid "To change the text navigate to → Appearance → Customize → WooCommerce → Checkout."
+msgstr "För att ändra texten navigera till \t Utseende \t Anpassa \t WooCommerce \t Till kassan."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:261
+msgid "Add a terms and conditions checkbox inside Klarna checkout iframe"
+msgstr "Lägg till en kryssruta för villkor inuti Klarna Checkout-iframen"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:260
+msgid "Terms and conditions checkbox"
+msgstr "Kryssruta för villkor"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:256
+msgid "Display below checkout"
+msgstr "Visa under kassan"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:255
+msgid "Display above checkout"
+msgstr "Visa över kassan"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:254
+msgid "Do not display"
+msgstr "Visa inte"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:250
+msgid "Select if you want to show the <em>Checkout privacy policy</em> text on the checkout page, and where you want to display it."
+msgstr "Välj om du vill visa texten för WooCommerce <em>Integritetspolicy i kassan</em>, och var du vill visa den."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:249
+msgid "Checkout privacy policy text"
+msgstr "Integritetspolicy i kassan"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:126
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:173
+msgid "Test Username (UID)"
+msgstr "Test Användarnamn (UID)"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:112
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:159
+msgid "Production Username (UID)"
+msgstr "Produktion Användarnamn (UID)"
+
+#: includes/class-klarna-checkout-for-woocommerce-ajax.php:278
+msgid "This order was made as a fallback due to an error in the checkout (%s). Please verify the order with Klarna."
+msgstr "Den här ordern skapades som en fallback på grund av ett fel i kassan (%s). Verifiera ordern i Klarnas system."
+
+#: vendor/krokedil/krokedil-logger/src/krokedil-order-event-log.php:124
+msgid "Events"
+msgstr "Events"
+
+#: includes/klarna-checkout-for-woocommerce-status-report.php:22
+msgid "Displays the number of orders created via the API callback feature during the last month."
+msgstr "Visar antalet ordrar skapade via API callback-anrop under den senaste månaden."
+
+#: includes/klarna-checkout-for-woocommerce-status-report.php:21
+msgid "Orders created via API callback"
+msgstr "Ordrar skapade via API callback"
+
+#: includes/klarna-checkout-for-woocommerce-status-report.php:15
+msgid "Klarna Checkout System Status."
+msgstr "Klarna Checkout System Status."
+
+#: includes/class-klarna-checkout-for-woocommerce-api-callbacks.php:451
+msgid "Order needs manual review, WooCommerce total and Klarna total do not match. Klarna order total: %s."
+msgstr "Ordern behöver manuell granskning. Ordersumman i WooCommerce och Klarna stämmer inte överens. Klarna ordersumma: %s."
+
+#: includes/class-klarna-checkout-for-woocommerce-admin-notices.php:92
+msgid "You need to enable and configure https to be able to use Klarna Checkout."
+msgstr "Du måste aktivera och konfigurera https för att kunna använda Klarna Checkout."
+
+#: klarna-checkout-for-woocommerce.php:252
+msgid "Install\tNow"
+msgstr "Installera nu"
+
+#: klarna-checkout-for-woocommerce.php:228
+msgid "Activate Now"
+msgstr "Aktivera nu"
+
+#: includes/class-klarna-checkout-for-woocommerce-gateway.php:346
+msgid "An account is already registered with your email address. Please log in."
+msgstr "Ett konto är redan registrerat med din e-postadress. Vänligen logga in."
+
+#: includes/class-klarna-checkout-for-woocommerce-gateway.php:335
+msgid "Order address should not be changed and any changes you make will not be reflected in Klarna system."
+msgstr "Orderadresser ska inte ändras. Eventuella ändringar som du gör kommer inte att återspeglas i Klarnas system."
+
+#: includes/class-klarna-checkout-for-woocommerce-confirmation.php:56
+msgid "Please wait while we process your order."
+msgstr "Vänligen vänta medan vi behandlar din beställning."
+
+#. translators: Klarna order ID.
+#: includes/class-klarna-checkout-for-woocommerce-api-callbacks.php:103
+#: includes/class-klarna-checkout-for-woocommerce-api-callbacks.php:438
+#: includes/class-klarna-checkout-for-woocommerce-gateway.php:296
+msgid "Klarna order is under review, order ID: %s."
+msgstr "Klarna order är under granskning, order ID: %s."
+
+#: includes/class-klarna-checkout-for-woocommerce-api-callbacks.php:100
+#: includes/class-klarna-checkout-for-woocommerce-api-callbacks.php:435
+#: includes/class-klarna-checkout-for-woocommerce-gateway.php:293
+msgid "Klarna Checkout order was rejected."
+msgstr "Klarna Checkout order nekades."
+
+#. translators: Klarna order ID.
+#: includes/class-klarna-checkout-for-woocommerce-api-callbacks.php:97
+#: includes/class-klarna-checkout-for-woocommerce-api-callbacks.php:432
+#: includes/class-klarna-checkout-for-woocommerce-gateway.php:290
+msgid "Payment via Klarna Checkout, order ID: %s"
+msgstr "Betalning via Klarna Checkout, order ID: %s"
+
+#: includes/class-klarna-checkout-for-woocommerce-admin-notices.php:77
+msgid "You need to specify a terms page in WooCommerce Settings to be able to use Klarna Checkout."
+msgstr "Du behöver ange en villkorssida i WooCommerce inställningar för att kunna använda Klarna Checkout."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:71
+msgid "Select if you want to sell both to consumers and companies or only to one of them (available for SE, NO and FI). Learn more and <a href=\"%s\" target=\"_blank\">sign up for Klarna Checkout B2B here</a>."
+msgstr "Välj om du vill sälja till både privatpersoner och företag eller enbart till en av dem (tillgängligt för SE, NO och FI). Läs mer och <a href=\"%s\" target=\"_blank\">registrera dig för Klarna Checkout B2B här</a>."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:69
+msgid "B2B & B2C (defaults to B2B)"
+msgstr "B2B & B2C (standard B2B)"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:68
+msgid "B2C & B2B (defaults to B2C)"
+msgstr "B2C & B2B (standard B2C)"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:67
+msgid "B2B only"
+msgstr "B2B enbart"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:66
+msgid "B2C only"
+msgstr "B2C enbart"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:63
+msgid "Allowed Customer Types"
+msgstr "Tillåtna kundtyper"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:50
+msgid "Customize the <em>Select another payment method</em> button text that is displayed in checkout if using other payment methods than Klarna Checkout. Leave blank to use the default (and translatable) text."
+msgstr "Anpassa <em>Välj ett annat betalsätt</em>-knappen som visas i kassan om du erbjuder fler betalsätt utöver Klarna Checkout. Lämna rutan tom för att använda standardtexten (som är översättningsbar)."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:48
+msgid "Other payment method button text"
+msgstr " Knapptext för annat betalsätt"
+
+#: includes/klarna-checkout-for-woocommerce-functions.php:113
+msgid "Select another payment method"
+msgstr "Välj ett annat betalsätt"
+
+#: klarna-checkout-for-woocommerce.php:171
+msgid "Support"
+msgstr "Support"
+
+#: klarna-checkout-for-woocommerce.php:170
+msgid "Settings"
+msgstr "Inställningar"
+
+#: includes/klarna-checkout-for-woocommerce-functions.php:58
+msgid "Create an account?"
+msgstr "Skapa ett konto?"
+
+#. Author of the plugin/theme
+msgid "Krokedil"
+msgstr "Krokedil"
+
+#: includes/class-klarna-checkout-for-woocommerce-order-lines.php:504
+#: includes/class-klarna-checkout-for-woocommerce-order-lines.php:532
+msgid "Shipping"
+msgstr "Frakt"
+
+#: includes/class-klarna-checkout-for-woocommerce-order-lines.php:155
+#: includes/class-klarna-checkout-for-woocommerce-order-lines.php:156
+msgid "Sales Tax"
+msgstr "Moms på försäljning"
+
+#: klarna-checkout-for-woocommerce.php:114
+#: klarna-checkout-for-woocommerce.php:124
+msgid "Nope"
+msgstr "Nej"
+
+#: includes/class-klarna-checkout-for-woocommerce-gateway.php:20
+msgid "Klarna Checkout replaces standard WooCommerce checkout page."
+msgstr "Klarna Checkout ersätter standardkassan i WooCommerce."
+
+#: includes/class-klarna-checkout-for-woocommerce-gateway.php:19
+#: includes/klarna-checkout-for-woocommerce-status-report.php:15
+msgid "Klarna Checkout"
+msgstr "Klarna Checkout"
+
+#. Author URI of the plugin/theme
+msgid "https://krokedil.com/"
+msgstr "https://krokedil.se/"
+
+#. Description of the plugin/theme
+msgid "Klarna Checkout payment gateway for WooCommerce."
+msgstr "Klarna Checkout betalmetod för WooCommerce."
+
+#. Plugin URI of the plugin/theme
+msgid "https://krokedil.com/klarna/"
+msgstr "https://krokedil.se/klarna/"
+
+#. Plugin Name of the plugin/theme
+msgid "Klarna Checkout for WooCommerce"
+msgstr "Klarna Checkout för WooCommerce"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:236
+msgid "Checkout page radius border in pixels"
+msgstr "KCO-kassa border radius i pixlar"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:234
+msgid "Checkout radius border (px)"
+msgstr "Checkout border radius (px)"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:229
+msgid "Checkout page link color"
+msgstr "KCO-kassa länkfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:227
+msgid "Checkout link color"
+msgstr "Checkout länkfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:222
+msgid "Checkout page header color"
+msgstr "KCO-kassa header-färg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:220
+msgid "Checkout header color"
+msgstr "Checkout header färg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:188
+msgid "Color Settings"
+msgstr "Färginställningar"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:215
+msgid "Checkout page checkbox checkmark color"
+msgstr "KCO-kassa kryssrutans bockfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:213
+msgid "Checkout checkbox checkmark color"
+msgstr "Checkout kryssruta bockfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:208
+msgid "Checkout page checkbox color"
+msgstr "KCO-kassa kryssrutans färg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:206
+msgid "Checkout checkbox color"
+msgstr "Checkout kryssruta färg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:201
+msgid "Checkout page button text color"
+msgstr "KCO-kassa knapp textfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:199
+msgid "Checkout button text color"
+msgstr "Checkout knapp textfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:194
+msgid "Checkout page button color"
+msgstr "KCO-kassa knappfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:192
+msgid "Checkout button color"
+msgstr "Checkout knappfärg"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:161
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:168
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:175
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:182
+msgid "Get your API keys from your Klarna Checkout merchant account for US."
+msgstr "Hämta dina API-nycklar från ditt Klarna merchant-konto för US."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:149
+msgid "Only applicable for stores based in Germany and Austria"
+msgstr "Gäller endast för webbutiker i Tyskland och Österrike"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:148
+msgid "Show prefill consent notice"
+msgstr "Visa notis om godkännande av förifyllning"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:143
+msgid "If unchecked, title becomes optional. Only available for orders for country GB."
+msgstr "Om rutan inte kryssas i blir titel ett valbart fält. Gäller endast för ordrar i Storbritannien."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:141
+msgid "Make customer title mandatory"
+msgstr "Gör kundens titel obligatorisk"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:140
+msgid "Title mandatory (GB)"
+msgstr "Titel obligatorisk (GB)"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:133
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:180
+msgid "Test Password"
+msgstr "Lösenord test"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:119
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:166
+msgid "Production Password"
+msgstr "Lösenord produktion"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:114
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:121
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:128
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:135
+msgid "Get your API keys from your Klarna Checkout merchant account for Europe."
+msgstr "Hämta dina API-nycklar från ditt Klarna merchant-konto för EU."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:102
+msgid "If checked, the customer cannot skip date of birth."
+msgstr "Om rutan är ikryssad kan kunden inte slutföra köp utan att ange personnummer."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:100
+msgid "Make customer date of birth mandatory"
+msgstr "Gör kundens personnummer till ett obligatoriskt fält"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:99
+msgid "Date of birth mandatory"
+msgstr "Personnummer obligatoriskt"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:94
+msgid "Place the payment gateway in test mode using test API keys."
+msgstr "Sätt betalmodulen i testläge med hjälp av test-API-nycklar."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:92
+msgid "Enable Test Mode"
+msgstr "Aktivera testläge"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:91
+msgid "Test mode"
+msgstr "Testläge"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:86
+msgid "Save debug messages to the WooCommerce System Status log."
+msgstr "Spara debug-meddelanden till WooCommerce statuslogg."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:84
+msgid "Log debug messages"
+msgstr "Logga debug-meddelanden"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:83
+msgid "Logging"
+msgstr "Loggning"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:78
+msgid "Send product and product image URLs to Klarna"
+msgstr "Skicka URL'er för produkter och produktbilder till Klarna"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:76
+msgid "Product URLs"
+msgstr "Produkt-URL'er"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:58
+msgid "Will be shown to customer in thank you page."
+msgstr "Visas för kund på tacksidan."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:56
+msgid "Shipping details note shown to customer"
+msgstr "Leveransinfo som visas för kunden"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:55
+msgid "Shipping details"
+msgstr "Leveransinfo"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:43
+msgid "If this option is checked, customers will be able to enter shipping address different than their billing address in checkout."
+msgstr "Om det här valet är ikryssat kan kunder ange en leveransadress som skiljer sig från fakturaadressen."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:41
+msgid "Allow separate shipping address"
+msgstr "Tillåt separat leveransadress"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:40
+msgid "Separate shipping address"
+msgstr "Separat leveransadress"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:35
+msgid "Payment method description."
+msgstr "Betalsättets beskrivning."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:33
+msgid "Description"
+msgstr "Beskrivning"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:28
+msgid "Payment method title."
+msgstr "Betalsättets titel."
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:26
+msgid "Title"
+msgstr "Titel"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:20
+msgid "Enable Klarna Checkout"
+msgstr "Aktivera Klarna Checkout"
+
+#: includes/class-klarna-checkout-for-woocommerce-fields.php:19
+msgid "Enable/Disable"
+msgstr "Aktivera/inaktivera"

@@ -1,0 +1,1854 @@
+# Copyright (C) 2018 SkyVerge
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce PDF Product Vouchers 3.4.3\n"
+"Report-Msgid-Bugs-To: "
+"https://woocommerce.com/my-account/marketplace-ticket-form/\n"
+"POT-Creation-Date: 2018-06-21 02:55:28+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: i18n/strings.php:34 includes/class-wc-voucher-template.php:542
+msgid "Recipient Name"
+msgstr ""
+
+#: i18n/strings.php:35
+msgid "Message to Recipient"
+msgstr ""
+
+#: i18n/strings.php:36 includes/class-wc-voucher-template.php:548
+msgid "Recipient Email"
+msgstr ""
+
+#: includes/abstract-wc-voucher-base.php:139
+msgid "Placeholder"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-orders.php:156
+#: includes/class-wc-pdf-product-vouchers-handler.php:537
+msgid "Voucher:"
+msgid_plural "Vouchers:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:88
+msgid ""
+"Quick note: This product has a single-purpose voucher, so it may need to be "
+"taxable."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:88
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:90
+msgid "View Documentation"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:90
+msgid ""
+"Quick note: This product has a multi-purpose voucher, so it may need to be "
+"non-taxable."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:146
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:276
+msgid "Has Voucher"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:147
+msgid "Voucher products give access to a PDF voucher upon purchase."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:176
+#: includes/class-wc-pdf-product-vouchers-post-types.php:157
+msgid "Voucher Template"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:177
+msgid "Select a voucher template to make this into a voucher product."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:199
+msgid "Has Voucher?"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:199
+msgid "Enable this option if you want to attach a voucher to this variation"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:231
+msgid "Voucher Template:"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:232
+msgid "Select a voucher template to make this variation into a voucher product."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-products.php:267
+msgid "Virtual"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:112
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:114
+msgid "Image"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:113
+msgid "Name"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:114
+msgid "Type"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:115
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:120
+msgid "Redeemable products"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:116
+msgid "Expiry days"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:139
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:167
+msgid "Draft"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:162
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:190
+msgid "ID: %s"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:164
+msgid "Make a duplicate from this voucher template"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:200
+msgid "Multi-purpose"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:203
+msgid "Single-purpose"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:266
+msgid "Voucher template copied."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:274
+msgid "Voucher template creation failed, could not find original template:"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:302
+msgid "(Copy)"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:110
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:115
+#: includes/functions/wc-pdf-product-vouchers-functions-template.php:149
+msgid "Number"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:116
+#: includes/admin/meta-boxes/views/html-voucher-redemption.php:66
+#: includes/admin/meta-boxes/views/html-voucher-voided.php:51
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:119
+#: includes/functions/wc-pdf-product-vouchers-functions-template.php:150
+msgid "Expires"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:124
+#: includes/admin/meta-boxes/views/html-voucher-void.php:43
+msgid "Remaining value"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:127
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:80
+msgid "Actions"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:255
+#. translators: %1$s and %2$s - monetary value. Example: $30.50 of $50.00
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:259
+msgid "%1$s of %2$s uses"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:267
+#: templates/myaccount/vouchers.php:91
+msgid "Never"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:297
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:256
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:79
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:119
+msgid "Redeem"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers.php:184
+msgid "Please select a product to add a voucher for."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers.php:194
+msgid "Please select a product with a voucher template to add a voucher."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:240
+#: includes/admin/meta-boxes/views/html-voucher-data.php:145
+#: includes/admin/meta-boxes/views/html-voucher-data.php:159
+msgid "Guest"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:241
+#: includes/admin/meta-boxes/views/html-voucher-edit-product-modal.php:49
+msgid "Product"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:242
+msgid "Purchaser"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:243
+#: includes/class-wc-pdf-product-vouchers-post-types.php:124
+msgid "Add Voucher"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:244
+msgid "Redeem Voucher"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:245
+msgid ""
+"Are you sure you want to calculate taxes? This will calculate the product "
+"taxes based on the customer's country (or the store base country) and "
+"update the voucher value. This action cannot be undone."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:246
+msgid ""
+"Are you sure you want to delete this redemption? This action cannot be "
+"undone."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:247
+msgid "Are you sure you want to void the remaining value for this voucher?"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:248
+msgid ""
+"Are you sure you want restore the voided balance and re-activate the "
+"voucher?"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:249
+msgid ""
+"Load the customer's billing details? This will remove any currently entered "
+"purchaser information."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:250
+msgid ""
+"Copy purchaser details to recipient details? This will remove any currently "
+"entered recipient information."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:251
+msgid "No customer selected."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:252
+msgid "Select Product and Purchaser"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:253
+#: includes/admin/meta-boxes/views/html-voucher-edit-product-modal.php:59
+#: includes/admin/meta-boxes/views/html-voucher-edit-product-modal.php:74
+msgid "Search for a product&hellip;"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:254
+msgid "Amount *"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:255
+#: includes/admin/meta-boxes/views/html-voucher-redeem.php:62
+msgid "Notes (optional)"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:257
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:135
+msgid "Void"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:258
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:102
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:118
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:134
+#: includes/admin/meta-boxes/views/html-voucher-edit-product-modal.php:90
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-position-control.php:59
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:259
+msgid "Void Remaining Value"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:260
+#: includes/admin/meta-boxes/views/html-voucher-void.php:47
+msgid "Reason (optional)"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:261
+msgid "Please enter in a value greater than 0."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:262
+msgid "Please enter in a value less or equal to the remaining value."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:263
+msgid "Please enter in a value that is a multiple of the product price."
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:310
+#: includes/class-wc-pdf-product-vouchers-post-types.php:121
+#: includes/frontend/class-wc-pdf-product-vouchers-frontend.php:659
+msgid "Vouchers"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin.php:314
+#: includes/class-wc-pdf-product-vouchers-post-types.php:156
+msgid "Voucher Templates"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-product-redemption-vouchers.php:55
+msgid "Redemption vouchers"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-product-redemption-vouchers.php:73
+msgid "Redeemable by"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-product-redemption-vouchers.php:75
+msgid ""
+"Select any single-purpose PDF product vouchers that can be used to redeem "
+"this product online."
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-product-redemption-vouchers.php:88
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-product-redemption-vouchers.php:108
+msgid "Search for a voucher template&hellip;"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:53
+msgid "Voucher Actions"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:81
+msgid "Voucher emails"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:105
+msgid "Generate PDF"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:107
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:78
+msgid "Calculate Taxes"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:125
+msgid "Apply"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:134
+msgid "Delete Permanently"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:136
+msgid "Move to Trash"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:142
+msgid "Save Voucher"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:142
+msgid "Save/update the voucher"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:204
+#. translators: %s - email title
+msgid "%s email notification manually sent."
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-actions.php:232
+#: includes/class-wc-pdf-product-vouchers-ajax.php:296
+#: includes/class-wc-pdf-product-vouchers-ajax.php:353
+#. Translators: %s - error message
+#. translators: %s - error message
+msgid "Could not generate voucher PDF: %s"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-balance.php:54
+msgid "Balance"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-data.php:53
+msgid "Voucher Data"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-data.php:189
+msgid ""
+"Voucher customer has changed and is taxed differently from previous "
+"customer. You may need to recalculate voucher taxes."
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-notes.php:51
+msgid "Voucher Notes"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-notes.php:67
+msgid "Add note"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-notes.php:67
+msgid "Add a note for your reference."
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-notes.php:71
+msgid "Add Note"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-wc-pdf-product-vouchers-meta-box-voucher-preview.php:51
+msgid "Voucher Preview"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:42
+msgid "Item"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:43
+msgid "Value"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:44
+msgid "Qty"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:45
+msgid "Total"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:77
+msgid "Void remaining value"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:80
+msgid "To calculate taxes or redeem this voucher, please save it first."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:82
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:85
+msgid "To edit this voucher change the status back to \"Pending\""
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:82
+msgid "This voucher has been fully redeemed."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:84
+msgid "Restore voided balance"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:85
+msgid "This voucher has been voided and can no longer be redeemed."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-balance.php:103
+msgid "Save"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:50
+#. translators: %s - voucher number
+msgid "Voucher #%s details"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:52
+#. translators: %1$s - <a> tag, %2$s - order number, %3$s - </a> tag
+msgid "Purchased in %1$sOrder #%2$s%3$s"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:56
+msgid "General Details"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:58
+msgid "Voucher date:"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:59
+#: includes/admin/meta-boxes/views/html-voucher-data.php:64
+msgid "h"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:59
+#: includes/admin/meta-boxes/views/html-voucher-data.php:64
+msgid "m"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:62
+msgid "Expiration date:"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:67
+msgid "Voucher status:"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:90
+msgid "Purchaser Details"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:91
+#: includes/admin/meta-boxes/views/html-voucher-data.php:193
+#: includes/class-wc-pdf-product-vouchers-post-types.php:126
+#: includes/class-wc-pdf-product-vouchers-post-types.php:161
+msgid "Edit"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:92
+msgid "Load customer details"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:99
+#: includes/admin/meta-boxes/views/html-voucher-data.php:170
+#: includes/class-wc-voucher-template.php:536
+msgid "Purchaser Name"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:100
+#: includes/admin/meta-boxes/views/html-voucher-data.php:172
+msgid "Purchaser Email"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:104
+msgid "No purchaser details available"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:116
+msgid "Customer:"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:192
+msgid "Recipient Details"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:194
+msgid "Copy from purchaser details"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-data.php:223
+msgid "No recipient details available"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-edit-product-modal.php:40
+msgid "Edit Voucher Product"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-edit-product-modal.php:83
+msgid "Price"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-edit-product-modal.php:91
+msgid "Update"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-note.php:50
+#. translators: Placeholders: Date (%1$s) and time (%2$s) when a voucher note
+#. was added
+msgid "added on %1$s at %2$s"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-note.php:55
+#: includes/class-wc-voucher.php:2079 includes/class-wc-voucher.php:2081
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-note.php:58
+#. translators: Placeholders: %1$s - voucher note published date and time; %2$s
+#. voucher note published by - for example "On 1 October 2020 at 10:25am by
+#. John Doe"
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-note.php:67
+msgid "Delete note"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-notes.php:64
+msgid "There are no notes yet."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-preview.php:48
+msgid ""
+"Voucher PDF has not been generated yet. You can generate it using the "
+"Voucher Actions."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-preview.php:55
+msgid "Change voucher image"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-preview.php:59
+msgid "Please save the voucher to regenerate the PDF."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-preview.php:62
+msgid "View Voucher PDF"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-product.php:63
+msgid "SKU:"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-product.php:93
+msgid "Edit product"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-product.php:96
+msgid "This voucher was purchased in an order, so the product cannot be changed."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-product.php:98
+msgid "This voucher has redemptions, so the product can no longer be changed."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redeem.php:39
+#: includes/admin/meta-boxes/views/html-voucher-void.php:39
+msgid "Amount already redeemed"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redeem.php:43
+msgid "Total available to redeem"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redeem.php:50
+#: includes/admin/meta-boxes/views/html-voucher-redeem.php:52
+msgid "Redemption amount"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redemption.php:62
+msgid "Redemption"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redemption.php:72
+#: includes/admin/meta-boxes/views/html-voucher-voided.php:57
+msgid "Added By"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redemption.php:75
+#. translators: %s - order number
+msgid "Order %s"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redemption.php:85
+#: includes/admin/meta-boxes/views/html-voucher-redemption.php:99
+msgid "Notes"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-redemption.php:143
+msgid "Edit redemption"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:46
+msgid ""
+"This is the original voucher value, which is the total of the product price "
+"and its quantity."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:46
+msgid "Original Value"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:62
+msgid "This is the total tax amount charged on the voucher."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:78
+msgid "This is the total redeemed value."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:78
+msgid "Redeemed"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:95
+msgid "This is the voided voucher value, which cannot be redeemed."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:95
+msgid "Voided"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:112
+msgid "This is the remaining voucher value."
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-totals.php:112
+#: includes/functions/wc-pdf-product-vouchers-functions-template.php:151
+msgid "Remaining Value"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-voided.php:47
+msgid "Remaining Value Voided"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-voucher-voided.php:66
+msgid "Reason"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:252
+#: includes/class-wc-pdf-product-vouchers-ajax.php:333
+#: includes/class-wc-pdf-product-vouchers-ajax.php:408
+#: includes/class-wc-pdf-product-vouchers-ajax.php:467
+#: includes/class-wc-pdf-product-vouchers-ajax.php:523
+#: includes/class-wc-pdf-product-vouchers-ajax.php:571
+#: includes/class-wc-pdf-product-vouchers-ajax.php:613
+msgid "Invalid voucher"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:256
+msgid "Could not change voucher product: voucher is not editable or has redemptions"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:335
+msgid ""
+"Could not recalculate voucher product tax: voucher is not editable or has "
+"redemptions"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:412
+#: includes/class-wc-pdf-product-vouchers-ajax.php:471
+#: includes/class-wc-pdf-product-vouchers-ajax.php:527
+#: includes/class-wc-pdf-product-vouchers-ajax.php:575
+msgid "Voucher is not editable"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:544
+#: includes/class-wc-pdf-product-vouchers-ajax.php:663
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:439
+#. translators: %1$s - voucher number, %2$s - error message
+msgid "Could not redeem voucher %1$s: %2$s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:617
+msgid "Voucher is not voided"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:658
+#. translators: %s - voucher number
+msgid "Voucher %s redeemed."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-ajax.php:702
+#. translators: %s - voucher number
+msgid "Voucher %s voided."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-cart.php:102
+#. translators: Placeholder: %s - field label
+msgid "Field '%s' is required."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-cart.php:398
+#. translators: Placeholders: %1$s - order number, %2$s - product name, %3$s -
+#. order item id, %4$s - error message
+msgid "Could not create voucher for order %1$s from item %2$s (#%3$s): %4$s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-download-handler.php:67
+msgid "Invalid voucher download link."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-download-handler.php:89
+#: includes/class-wc-pdf-product-vouchers-download-handler.php:92
+msgid "You must be logged in to download vouchers."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-download-handler.php:92
+msgid "Login"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-download-handler.php:92
+msgid "Log in to Download Vouchers"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-download-handler.php:96
+msgid "This is not your download link."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-download-handler.php:135
+msgid ""
+"Whoops, we're still preparing your voucher! It will be ready shortly and "
+"will be sent in a separate email."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:350
+#. translators: Placeholders: %1$s - voucher number, %2$s - error message
+msgid "PDF Product Vouchers: unable to generate PDF for voucher %1$s: %2$s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:379
+msgid "Order failed."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:382
+msgid "Order was cancelled."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:385
+msgid "Order was fully refunded."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:388
+msgid "Order status set to %s."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:440
+msgid "Voucher was refunded."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:542
+msgid "We're preparing your voucher - it will be available for download soon!"
+msgid_plural "We're preparing your vouchers - they'll be available for download soon!"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:543
+msgid "Please refresh this page in 1 minute."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:700
+#. translators: Placeholders: Voucher status changed from status A (%1$s) to
+#. status B (%2$s)
+msgid "Voucher status changed from %1$s to %2$s."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:810
+#. translators: Pending Voucher(s)
+msgid "Pending <span class=\"count\">(%s)</span>"
+msgid_plural "Pending <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:817
+#. translators: Active Voucher(s)
+msgid "Active <span class=\"count\">(%s)</span>"
+msgid_plural "Active <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:826
+#. translators: Redeemed Voucher(s)
+msgid "Redeemed <span class=\"count\">(%s)</span>"
+msgid_plural "Redeemed <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:833
+#. translators: Expired Voucher(s)
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:841
+#. translators: Expired Voucher(s)
+msgid "Voided <span class=\"count\">(%s)</span>"
+msgid_plural "Voided <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-order.php:126
+msgid "Voucher redeemed."
+msgid_plural "All vouchers redeemed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-pdf-generator.php:68
+msgid "Voucher image not found"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-pdf-generator.php:74
+#. translators: Placeholders: %s - image path
+msgid "Voucher image file missing or not readable: %s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-pdf-generator.php:113
+#. translators: Placeholders: %s - error message
+msgid "Cannot load voucher HTML: %s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-pdf-generator.php:118
+#. translators: Placeholders: %1$d - HTTP response code, %2$s - HTTP error
+#. message
+msgid "Cannot load voucher HTML: %1$d - %2$s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-pdf-generator.php:124
+msgid "Voucher HTML is empty"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-pdf-generator.php:183
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:669
+#. translators: %s - voucher file path
+msgid "Voucher path %s is not writable"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:122
+msgid "Voucher"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:125
+msgid "Add New Voucher"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:127
+msgid "Edit Voucher"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:128
+msgid "New Voucher"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:129
+msgid "View Vouchers"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:130
+msgid "View Voucher"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:131
+msgid "Search Vouchers"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:132
+msgid "No Vouchers found"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:133
+msgid "No Vouchers found in trash"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:135
+msgid "This is where you can see and redeem all purchased vouchers."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:159
+msgid "Add Voucher Template"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:160
+msgid "Add New Voucher Template"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:162
+msgid "Edit Voucher Template"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:163
+msgid "New Voucher Template"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:164
+msgid "View Voucher Templates"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:165
+msgid "View Voucher Template"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:166
+msgid "Search Voucher Templates"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:167
+msgid "No Voucher Templates found"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:168
+msgid "No Voucher Templates found in trash"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:170
+msgid ""
+"This is where you can add new templates for vouchers that you can attach to "
+"products and sell."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:225
+#: includes/class-wc-pdf-product-vouchers-post-types.php:228
+msgid "Voucher updated."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:226
+#: includes/class-wc-pdf-product-vouchers-post-types.php:242
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:227
+#: includes/class-wc-pdf-product-vouchers-post-types.php:243
+msgid "Custom field deleted."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:230
+#: includes/class-wc-pdf-product-vouchers-post-types.php:231
+msgid "Voucher saved."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:234
+msgid "Voucher draft updated."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:235
+msgid "Voucher updated and email sent."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:236
+msgid "Voucher updated and PDF generated."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:241
+#: includes/class-wc-pdf-product-vouchers-post-types.php:244
+msgid "Voucher Template updated."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:246
+#: includes/class-wc-pdf-product-vouchers-post-types.php:247
+msgid "Voucher Template saved."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:250
+msgid "Voucher Template draft updated."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:270
+msgid "%s voucher updated."
+msgid_plural "%s vouchers updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:271
+msgid "%s voucher not updated, somebody is editing it."
+msgid_plural "%s vouchers not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:272
+msgid "%s voucher permanently deleted."
+msgid_plural "%s vouchers permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:273
+msgid "%s voucher moved to the Trash."
+msgid_plural "%s vouchers moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:274
+msgid "%s voucher restored from the Trash."
+msgid_plural "%s vouchers restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:278
+msgid "%s voucher template updated."
+msgid_plural "%s voucher templates updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:279
+msgid "%s voucher template not updated, somebody is editing it."
+msgid_plural "%s voucher templates not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:280
+msgid "%s voucher template permanently deleted."
+msgid_plural "%s voucher templates permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:281
+msgid "%s voucher template moved to the Trash."
+msgid_plural "%s voucher templates moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:282
+msgid "%s voucher template restored from the Trash."
+msgid_plural "%s voucher templates restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-pdf-product-vouchers-product.php:92
+msgid "Select options"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:93
+msgid "Multi-purpose voucher"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:192
+msgid "Sorry, this voucher is only valid for the %s currency."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:224
+msgid "Voucher applied successfully."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:228
+msgid "Voucher removed successfully."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:251
+msgid "Voucher: %s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:517
+#. translators: %1$s - voucher number, %2$s - error message
+msgid "Could not delete redemptions for voucher %1$s: %2$s"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:669
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:713
+msgid "Voucher credit used:"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-redemption-handler.php:713
+msgid "This is the total credit used from multi-purpose-vouchers."
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:987
+msgid "Voucher Group 1: Modern"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:993
+msgid "Voucher Group 1: Formal"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:999
+msgid "Voucher Group 1: Christmas"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:1010
+msgid "Voucher Group 2: Celebration"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:1016
+msgid "Voucher Group 2: Children"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:1022
+msgid "Voucher Group 2: Feminine"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-upgrade.php:1089
+#. Translators: %1$s - file name, %2$s - error message
+msgid "Could not install default voucher image %1$s: %2$s"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:500
+#: includes/class-wc-voucher-template.php:877
+#: includes/class-wc-voucher.php:1837
+msgid "Logo"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:505
+msgid "Product Name"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:510
+msgid "Product SKU"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:515
+msgid "Product Price"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:520
+msgid "Product Quantity"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:525
+msgid "Voucher Number"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:530
+msgid "Expiration Date"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:554
+msgid "Message"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:737
+#: includes/class-wc-voucher-template.php:891
+msgid "Position"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:742
+msgid "Font"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:748
+msgid "Font Size"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:758
+msgid "Font Style"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:768
+msgid "Font Color"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:778
+msgid "Label"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:779
+msgid "The field label to show on the frontend/emails"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:784
+msgid "Max Length"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:785
+msgid "The maximum number of characters of the field"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:789
+msgid "No limit"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:795
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:796
+msgid "Display this field on the product page"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:801
+msgid "Required"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:802
+msgid "Make this field required in order to add a voucher product to the cart"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:850
+msgid "Days to expiration"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:851
+msgid "Optional number of days after purchase until the voucher expires"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:855
+msgid "days"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:864
+msgid "Amount"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:865
+msgid "Number of products/tickets/passess this voucher is eligible for"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:878
+msgid "Optional image that can be displayed as a logo on the voucher."
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:880
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:374
+msgid "Select image"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:881
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:375
+msgid "Change image"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:882
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:376
+msgid "Remove"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:883
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:377
+msgid "Default"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:884
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:378
+msgid "No image selected"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:885
+msgid "Select voucher logo"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:886
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:380
+msgid "Choose image"
+msgstr ""
+
+#: includes/class-wc-voucher-template.php:932
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:504
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:525
+msgid "(Default)"
+msgstr ""
+
+#: includes/class-wc-voucher.php:1254
+msgid "No remaining value"
+msgstr ""
+
+#: includes/class-wc-voucher.php:1258
+msgid "Either amount or quantity must be provided"
+msgstr ""
+
+#: includes/class-wc-voucher.php:1262
+msgid "Redemption amount must be a positive number"
+msgstr ""
+
+#: includes/class-wc-voucher.php:1266 includes/class-wc-voucher.php:1319
+msgid ""
+"Redemption amount must be a multiple of the product price for a "
+"single-purpose voucher."
+msgstr ""
+
+#: includes/class-wc-voucher.php:1270
+msgid "Redemption amount is greater than remaining voucher value"
+msgstr ""
+
+#: includes/class-wc-voucher.php:1274
+msgid "Redemption quantity is greater than remaining quantity"
+msgstr ""
+
+#: includes/class-wc-voucher.php:1312
+msgid "Invalid redemption amount for redemption #%d."
+msgstr ""
+
+#: includes/class-wc-voucher.php:1325
+msgid "Total amount of redemptions cannot be greater than voucher value."
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-font-style-control.php:67
+msgid "Bold"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-font-style-control.php:76
+msgid "Italic"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-font-style-control.php:88
+msgid "Align left"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-font-style-control.php:89
+msgid "Align center"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-font-style-control.php:90
+msgid "Align right"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-position-control.php:57
+msgid "Set Position"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-position-control.php:58
+msgid "Done"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-position-control.php:60
+msgid "Remove position"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:71
+msgid "Default Images"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:138
+msgid "Set image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:143
+msgid "Remove image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:154
+msgid "No image set"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:209
+msgid ""
+"Please upload one or more voucher background images by clicking <strong>Add "
+"New Image</strong>. While any dimensions are accepted, if you upload more "
+"than one background, please ensure alternative images have the <strong>same "
+"dimensions and resolution</strong> as the primary image."
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:215
+msgid "Primary image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:224
+msgid "Add new voucher image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:224
+msgid "Add new image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:232
+msgid "All Voucher Images"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customize-voucher-image-control.php:236
+msgid ""
+"If there is more than one image, images will appear as alternative voucher "
+"image options for the customer. Click on an image to make it primary."
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:260
+msgid "General"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:264
+msgid "Images"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:308
+msgid "Template Name"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:311
+msgid "Voucher Template Name"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:318
+msgid "Voucher type"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:321
+msgid "Single purpose (for a particular product / service)"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:322
+msgid "Multi-purpose (can be redeemed on any product / service)"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:329
+msgid "Allow online redemptions"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:331
+msgid "Requires WooCommerce at least 3.2"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:352
+#: templates/single-product/product-voucher.php:66
+#: templates/voucher/voucher.php:64
+msgid "Voucher Image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:363
+msgid "Image DPI"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:364
+msgid ""
+"Enter the DPI or resolution at which the voucher background was created. "
+"This affects the resolution at which voucher fields are added, so this "
+"value should match the image file."
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:370
+#: templates/voucher/voucher.php:72
+msgid "Additional Image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:372
+msgid ""
+"Optional image with the same dimensions as the primary voucher image, that "
+"will be added as a second page to the voucher. Useful for terms or "
+"redemption instructions."
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:379
+msgid "Select additional voucher image"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:526
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:632
+msgid "(Untitled Voucher Template)"
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:527
+msgid ""
+"The Customizer allows you to adjust your PDF voucher template with a live "
+"preview. No changes are permanent until you click Save."
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:835
+msgid "Please set a name for the template."
+msgstr ""
+
+#: includes/customizer/class-wc-pdf-product-vouchers-customizer.php:863
+msgid "Voucher number must be added to the template when using online redemptions."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:56
+msgid "Voucher Purchaser"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:57
+msgid "Sent to a voucher purchaser email address when a voucher is generated."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:59
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:61
+msgid "Your voucher is ready!"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:60
+msgid "Your voucher from order {order_number} is ready"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:75
+msgid "Your vouchers are ready!"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:76
+msgid "Your vouchers from order {order_number} are ready"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:300
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:319
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:302
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:321
+msgid "Enable this email notification"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:307
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:326
+msgid "Subject"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:310
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:329
+#. translators: %s - default email subject
+msgid ""
+"This controls the email subject line. Leave blank to use the default "
+"subject: <code>%s</code>."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:316
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:335
+msgid "Subject Multiple"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:319
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:338
+#. translators: %s - default email subject
+msgid ""
+"This controls the email subject line when the email contains more than one "
+"voucher. Leave blank to use the default subject: <code>%s</code>."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:325
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:344
+msgid "Email Heading"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:328
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:347
+#. translators: %s - default email heading
+msgid ""
+"This controls the main heading contained within the email notification. "
+"Leave blank to use the default heading: <code>%s</code>."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:334
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:353
+msgid "Email Heading Multiple"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:337
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:356
+#. translators: %s - default email heading
+msgid ""
+"This controls the main heading contained within the email notification when "
+"the email contains more than one voucher. Leave blank to use the default "
+"heading: <code>%s</code>."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:343
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:362
+msgid "Email type"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:345
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:364
+msgid "Choose which format of email to send."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:349
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:368
+msgid "Plain text"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:350
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:369
+msgid "HTML"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-purchaser.php:351
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:370
+msgid "Multipart"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:60
+msgid "Voucher Recipient"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:61
+msgid ""
+"Sent to a voucher recipient email address provided by the customer when "
+"adding a voucher product to the cart."
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:63
+msgid "You have received a voucher"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:64
+msgid "You have received a voucher from {purchaser_name}"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:78
+msgid "You have received vouchers"
+msgstr ""
+
+#: includes/emails/class-wc-pdf-product-vouchers-email-voucher-recipient.php:79
+msgid "You have received vouchers from {billing_first_name} {billing_last_name}"
+msgstr ""
+
+#: includes/frontend/class-wc-pdf-product-vouchers-frontend.php:631
+msgid "Active Vouchers"
+msgstr ""
+
+#: templates/emails/plain/voucher-purchaser.php:40
+#: templates/emails/voucher-purchaser.php:41
+msgid "Hi there. Your voucher is ready!"
+msgid_plural "Hi there. You have %d vouchers from your order ready!"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/emails/plain/voucher-purchaser.php:44
+#: templates/emails/voucher-purchaser.php:43
+msgid "You can find your voucher attached to this email."
+msgid_plural "You can find your vouchers attached to this email."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/emails/plain/voucher-recipient.php:42
+#: templates/emails/voucher-recipient.php:42
+msgid "Hi there. You've been sent a voucher!"
+msgid_plural "Hi there. You've been sent %d vouchers!"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/emails/plain/voucher-recipient.php:50
+#: templates/emails/voucher-recipient.php:48
+msgid "You can find your voucher attached to this email"
+msgid_plural "You can find your vouchers attached to this email"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/myaccount/vouchers.php:102
+msgid "Download"
+msgstr ""
+
+#: templates/myaccount/vouchers.php:140
+msgid "Go Shop"
+msgstr ""
+
+#: templates/myaccount/vouchers.php:143
+msgid "No vouchers available yet."
+msgstr ""
+
+#: templates/single-product/product-voucher.php:64
+msgid "Voucher Option %d"
+msgstr ""
+
+#: templates/voucher/voucher.php:55
+msgid "Please set the voucher image to see the preview."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce PDF Product Vouchers"
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:435
+msgid "PDF Product Vouchers"
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:492
+msgid "Personal data removed from voucher upon original purchaser's request."
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:495
+#. translators: Placeholder: %s - voucher ID
+msgid "Removed personal data from voucher \"%s\"."
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:501
+#. translators: Placeholder: %s - voucher ID
+msgid "Personal data for voucher \"%s\" has been retained."
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:577
+#. translators: Placeholders: %1$s - this plugin name, %2$s - opening HTML <a>
+#. anchor tag, %3$s - closing HTML </a> tag
+msgid ""
+"Hi there! It looks like you have upgraded %1$s from an older version. We "
+"have added lots of new features, please %2$scheck out the documentation%3$s "
+"for an overview!"
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:585
+#. translators: Placeholders: %1$s - the plugin name, %2$s - opening HTML <a>
+#. anchor tag, %3$s closing HTML </a> tag
+msgid ""
+"Thanks for installing %1$s! To get started, please take a minute to "
+"%2$sread the documentation%3$s :)"
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:600
+#. translators: Placeholders: %1$s - <strong>; %2$s - </strong>; %3$s, %5$s -
+#. <a> tags; %4$s - </a> tag
+msgid ""
+"%1$sBackground PDF Generation%2$s is currently unavailable because your "
+"site does not support background processing. To speed up your checkouts "
+"with vouchers by generating PDFs in the background, please ask your hosting "
+"company to ensure your server has loopback connections enabled, or switch "
+"to a %3$srecommended hosting provider%4$s."
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:625
+#. translators: Placeholders: %1$s - plugin name, %2$s - uploads path, %3$s -
+#. <code> tag or empty string, %4$s - </code> tag or empty string
+msgid ""
+"%1$s: non-writable path %3$s%2$s%4$s detected, please fix directory "
+"permissions or voucher files may not be able to be generated."
+msgstr ""
+
+#: woocommerce-pdf-product-vouchers.php:658
+#. translators: Placeholders: %1$s - plugin name, %2$s - the required PHP
+#. version
+msgid ""
+"%1$s requires PHP version at least %2$s to function. Your server is "
+"currently using version %3$s. Contact your host or server administrator to "
+"upgrade PHP."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woocommerce.com/products/pdf-product-vouchers/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Customize and sell PDF product vouchers with WooCommerce"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "SkyVerge"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.woocommerce.com"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-voucher-templates-list.php:168
+msgctxt "Duplicate a Voucher Template"
+msgid "Duplicate"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:303
+msgctxt "verb"
+msgid "Void"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:312
+msgctxt "verb"
+msgid "Download"
+msgstr ""
+
+#: includes/admin/class-wc-pdf-product-vouchers-admin-vouchers-list.php:319
+msgctxt "verb"
+msgid "View"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:808
+msgctxt "Voucher Status"
+msgid "Pending"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:815
+msgctxt "Voucher Status"
+msgid "Active"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:824
+msgctxt "Voucher Status"
+msgid "Redeemed"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:831
+msgctxt "Voucher Status"
+msgid "Expired"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-handler.php:839
+msgctxt "Voucher Status"
+msgid "Voided"
+msgstr ""
+
+#: includes/class-wc-pdf-product-vouchers-post-types.php:123
+#: includes/class-wc-pdf-product-vouchers-post-types.php:158
+msgctxt "Admin menu name"
+msgid "Vouchers"
+msgstr ""

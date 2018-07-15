@@ -1,0 +1,134 @@
+#toplevel_page_divibusinesspro-options .dashicons-admin-generic:before {
+
+        content: 'DS'!important;
+
+    position: absolute;
+
+    font-size: 10px;
+
+    line-height: 17px;
+
+    z-index: 100000;
+
+    left: 0;
+
+    width: 18px;
+
+    height: 18px;
+
+    left: 8px;
+
+    border: 1px solid;
+
+    border-radius: 100%;
+
+    padding: 1px!important;
+
+    font-family: arial;
+
+    line-height: 19px;
+
+    top: 5px;
+
+}
+
+.demo_content_options p {
+
+    font-size: 16px;
+
+}
+
+.demo_content_options span {
+
+    font-style: italic;
+
+    font-size: 14px;
+
+}
+
+.demo_content_options ul, .demo_content_options ol {
+	margin-left: 2em;
+}
+.demo_content_options ul li {
+	font-size: 15px;
+    padding-bottom: 5px;
+	list-style-type: disc;
+	list-style-position: outside;
+}
+.demo_content_options ol li {
+	font-size: 15px;
+    padding-bottom: 5px;
+}
+
+/** License key activation styles **/
+#AGS_THEME_license_form {
+	max-width: 500px;
+	background-color: #fff;
+	border: 1px solid #1c3244;
+	text-align: center;
+}
+#AGS_THEME_license_form_header {
+	background-color: #1c3244;
+	padding: 10px;
+	padding-top: 8px;
+	margin: 0;
+}
+#AGS_THEME_license_form_header a {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+#AGS_THEME_license_form_header img {
+	height: 56px;
+}
+#AGS_THEME_license_form h3 {
+	color: #1c3244;
+	font-size: 22px;
+	margin: 0;
+	margin-bottom: 15px;
+}
+#AGS_THEME_license_form p {
+	margin-bottom: 20px;
+}
+#AGS_THEME_license_form p.submit {
+	margin: 0;
+	margin-top: 20px;
+	padding: 0;
+	text-align: center;
+}
+#AGS_THEME_license_form label {
+	display: table;
+	width: 100%;
+}
+#AGS_THEME_license_form label > * {
+	display: table-cell;
+}
+#AGS_THEME_license_form label > span {
+	width: 100px;
+	text-align: left;
+	font-weight: bold;
+}
+#AGS_THEME_license_form input[type="text"] {
+	width: 100%;
+}
+#AGS_THEME_license_form_body {
+	padding: 20px;
+}
+#AGS_THEME_license_form_error {
+	color: #f00000;
+	margin-top: 2px;
+}
+#AGS_THEME_license_form_error, #AGS_THEME_license_form p.description {
+	margin-left: 100px;
+	text-align: left;
+}
+#AGS_THEME_license_key_activation_page #AGS_THEME_license_form {
+	margin: 0 auto;
+	margin-top: 50px;
+}
+#AGS_THEME_license_key_box {
+	margin-top: 20px;
+}
+/** End license key activation styles **/
+#setting-error-tgmpa > p span:first-child {
+	margin-top: 0 !important;
+}

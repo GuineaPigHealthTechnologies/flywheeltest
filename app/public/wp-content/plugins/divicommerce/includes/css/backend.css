@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'etbuilder';
+	src: url('https://boltthemes.com/fonts/builder.ttf');
+	font-weight: normal;
+}
+/*Metabox*/
+#divi-commerce-single-product h2.hndle.ui-sortable-handle {
+    background-color: #6c2eb9!important;
+    color: #fff!important;
+}
+
+#divi-commerce-single-product span.toggle-indicator {
+    color: #fff!important;
+}
+
+#divi-commerce-single-product label.rwmb-image-select {
+    width: 26%!important;
+}
+
+#divi-commerce-single-product div.rwmb-input {
+    margin-top: 10px!important;
+}
+/*Modules*/
+
+.et-pb-all-modules li.et_pb_additional_info_meta , 
+.et-pb-all-modules li.et_pb_addtocart, 
+.et-pb-all-modules li.et_pb_price, 
+.et-pb-all-modules li.et_pb_product_breadcrumbs,
+.et-pb-all-modules li.et_pb_related_products, 
+.et-pb-all-modules li.et_pb_reviews,
+.et-pb-all-modules li.et_pb_title,
+.et-pb-all-modules li.et_pb_product_gallery,
+.et-pb-all-modules li.et_pb_product_thumbnails {
+    background-color: #00a79d!important;
+    color: #fff!important;
+}
+/*Hover module styling*/
+.et-pb-all-modules li.et_pb_additional_info_meta:hover,
+.et-pb-all-modules li.et_pb_addtocart:hover,
+.et-pb-all-modules li.et_pb_price:hover,
+.et-pb-all-modules li.et_pb_product_breadcrumbs:hover,
+.et-pb-all-modules li.et_pb_related_products:hover,
+.et-pb-all-modules li.et_pb_reviews:hover,
+.et-pb-all-modules li.et_pb_title:hover,
+.et-pb-all-modules li.et_pb_product_gallery:hover,
+.et-pb-all-modules li.et_pb_product_thumbnails:hover {
+    background-color: #007777!important;
+    color: #fff!important;
+}

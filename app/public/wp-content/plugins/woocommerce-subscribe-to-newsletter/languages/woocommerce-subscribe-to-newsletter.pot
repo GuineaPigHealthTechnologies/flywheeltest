@@ -1,0 +1,350 @@
+# <!=Copyright (C) 2018 WooCommerce
+# This file is distributed under the GNU General Public License v3.0.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Subscribe to Newsletter 2.3.11\n"
+"Report-Msgid-Bugs-To: https://docs.woocommerce.com\n"
+"POT-Creation-Date: 2018-03-26 07:57:52+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/class-wc-cm-integration.php:82
+msgid "Unable to load data from Campaign Monitor - check your API key."
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:110
+#: includes/class-wc-mailchimp-newsletter-integration.php:240
+#: includes/class-wc-mailpoet-integration.php:95
+msgid "Total subscribers"
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:111
+msgid "Subscribers today"
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:112
+msgid "Subscribers this month"
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:113
+msgid "Unsubscribes this month"
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:119
+msgid "Unable to load stats from Campaign Monitor"
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:169
+msgid "Unexpected response from Campaign Monitor API."
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:171
+msgid "HTTP status code %s with following response: %s."
+msgstr ""
+
+#: includes/class-wc-cm-integration.php:175
+msgid "Email subscription failed (Campaign Monitor)"
+msgstr ""
+
+#. translators: 1: list code 2: list error
+
+#: includes/class-wc-mailchimp-newsletter-integration.php:193
+msgid "Unable to load lists() from MailChimp: (%1$s) %2$s"
+msgstr ""
+
+#: includes/class-wc-mailchimp-newsletter-integration.php:229
+msgid "Unable to load stats from MailChimp"
+msgstr ""
+
+#: includes/class-wc-mailchimp-newsletter-integration.php:241
+#: includes/class-wc-mailpoet-integration.php:96
+msgid "Unsubscribes"
+msgstr ""
+
+#: includes/class-wc-mailchimp-newsletter-integration.php:242
+msgid "Subscribers since last newsletter"
+msgstr ""
+
+#: includes/class-wc-mailchimp-newsletter-integration.php:243
+msgid "Unsubscribes since last newsletter"
+msgstr ""
+
+#: includes/class-wc-mailchimp-newsletter-integration.php:290
+msgid "Email subscription failed (Mailchimp)"
+msgstr ""
+
+#: includes/class-wc-mailpoet-integration.php:146
+msgid "No error messages were returned by MailPoet."
+msgstr ""
+
+#: includes/class-wc-mailpoet-integration.php:151
+msgid "Email subscription failed (MailPoet)"
+msgstr ""
+
+#: includes/class-wc-mailpoet-integration.php:152
+msgid "Error:"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:44
+msgid "Allow users to subscribe to your MailChimp or Campaign Monitor lists."
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:46
+msgid "WooCommerce Subscribe to Newsletter"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:71
+#: includes/class-wc-widget-subscribe-to-newsletter.php:161
+#: woocommerce-subscribe-to-newsletter.php:177
+msgid "Newsletter"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:101
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:104
+msgid "Thanks for subscribing."
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:111
+msgid "Your Name:"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:112
+msgid "Your name"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:117
+msgid "Email Address:"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:118
+msgid "Your email address"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:121
+msgid "Subscribe"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:154
+msgid "You must set up API details in WooCommerce > Settings > Newsletter before using this widget."
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:160
+msgid "Title:"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:163
+msgid "Show Name Field?"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:165
+msgid "List:"
+msgstr ""
+
+#: includes/class-wc-widget-subscribe-to-newsletter.php:174
+msgid "Choose a list to subscribe newsletter subscribers to or leave blank to use the list in your setting panel."
+msgstr ""
+
+#: node_modules/grunt-wp-i18n/test/fixtures/basic-theme/exclude/file.php:3
+#: node_modules/grunt-wp-i18n/test/fixtures/plugin-include/plugin-include.php:6
+msgid "Exclude"
+msgstr ""
+
+#: node_modules/grunt-wp-i18n/test/fixtures/plugin-include/include/file.php:2
+msgid "Include"
+msgstr ""
+
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/add-domain.php:2
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:2
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:3
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:4
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:2
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-domains.php:3
+msgid "String"
+msgstr ""
+
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:6
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:7
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:8
+msgctxt "a string"
+msgid "String"
+msgstr ""
+
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:9
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:10
+#: node_modules/grunt-wp-i18n/test/fixtures/text-domains/update-all-domains.php:11
+msgid "1 Star"
+msgid_plural "%s Stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: A single line translators comment.
+
+#: node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:7
+msgid "A"
+msgstr ""
+
+#. translators: A multiline translators comment.
+
+#: node_modules/grunt-wp-i18n/test/fixtures/translator-comments/translator-comments.php:15
+msgid "B"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:138
+msgid "Settings"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:139
+msgid "Docs"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:140
+msgid "Support"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:154
+msgid "Newsletter subscribers"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:241
+#: woocommerce-subscribe-to-newsletter.php:251
+msgid "Enter your key and save to see your lists"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:245
+#: woocommerce-subscribe-to-newsletter.php:251
+#: woocommerce-subscribe-to-newsletter.php:253
+msgid "Select a list..."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:247
+msgid "Please create a list in your MailChimp account"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:258
+msgid "Newsletter Configuration"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:261
+msgid "Service provider"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:262
+msgid "Choose which service is handling your subscribers."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:272
+msgid "Default checkbox status"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:273
+msgid "The default state of the subscribe checkbox. Be aware some countries have laws against using opt-out checkboxes."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:280
+msgid "Checked"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:280
+msgid "Un-checked"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:284
+msgid "Subscribe checkbox label"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:285
+msgid "The text you want to display next to the \"subscribe to newsletter\" checkboxes."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:295
+msgid "API settings"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:298
+msgid "MailChimp API Key"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:299
+msgid "You can obtain your API key by <a href=\"https://us2.admin.mailchimp.com/account/api/\">logging in to your MailChimp account</a>."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:308
+msgid "MailChimp List"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:309
+#: woocommerce-subscribe-to-newsletter.php:340
+msgid "Choose a list customers can subscribe to (you must save your API key first)."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:319
+msgid "Enable Double Opt-in?"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:320
+msgid "Controls whether a double opt-in confirmation message is sent, defaults to true. Abusing this may cause your account to be suspended."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:329
+msgid "Campaign Monitor API Key"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:330
+msgid "You can obtain your API key by logging in to your Campaign Monitor account."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:339
+msgid "Campaign Monitor List"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:350
+msgid "MailPoet List"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:351
+msgid "Choose a list customers can subscribe to. The <a href=\"https://www.mailpoet.com/\">MailPoet</a> WordPress plugin must be installed and configured first."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:469
+msgid "User subscribed to newsletter via PayPal Express return page."
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:503
+msgid "Points earned for newsletter signup"
+msgstr ""
+
+#: woocommerce-subscribe-to-newsletter.php:504
+msgid "Enter the amount of points earned when a customer signs up for a newsletter via the \"Subscribe to Newsletter\" extension."
+msgstr ""
+
+#. translators: 1: points label
+
+#: woocommerce-subscribe-to-newsletter.php:526
+msgid "%s earned for newsletter signup"
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Subscribe to Newsletter"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://woothemes.com/woocommerce"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Allow users to subscribe to your newsletter via the checkout page and via a sidebar widget. Supports MailChimp and Campaign Monitor and also MailChimp ecommerce360 tracking. Go to WooCommerce > Settings > Newsletter to configure the plugin."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://woocommerce.com"
+msgstr ""

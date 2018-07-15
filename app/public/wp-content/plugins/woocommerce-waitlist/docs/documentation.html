@@ -1,0 +1,223 @@
+<img class="aligncenter size-medium wp-image-616887" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/wcwl-single-product-front.png?w=550" alt="An example of the waitlist functionality on a single product page" width="550" height="416" />
+
+WooCommerce Waitlist allows customers to sign up to be notified by email when an out-of-stock product becomes available.
+
+As a store owner you can also review who is on the waiting list for which products, and sort products by the number of people registered on the waiting list.
+
+<section>
+  <h2>Installation</h2>
+  <ol>
+    <li><strong>Download</strong> the .zip file from your <a href="https://woocommerce.com/my-account/downloads/" target="_blank" rel="noopener">WooCommerce account</a>.</li>
+    <li><strong>Go to</strong>: <strong>WordPress Admin &gt; Plugins &gt; Add New</strong> to upload the file you downloaded with Choose File.</li>
+    <li><strong>Activate</strong> the extension.</li>
+  </ol>
+  More information at: [ilink url="http://codex.wordpress.org/Managing_Plugins#Installing_Plugins"]Installing and Managing Plugins[/ilink].
+  <h2>Setup and Configuration</h2>
+  <h3>Settings Screen</h3>
+  There are plenty of options to customize the plugin to suit your needs on the settings screen (found in the administration area by navigating to <strong>WooCommerce-&gt;Settings-&gt;Products</strong> and clicking on the Waitlist link).
+  Display options enable you to control what your customer see in your shop:
+
+  <a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/display-options.png"><img class="aligncenter size-medium wp-image-1022748" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/display-options.png?w=550" alt="Display options available on the Waitlist settings screen" width="550" height="230" /></a>
+
+  By default all customers can use the waitlist functionality. When a customer joins a waiting list an account is automatically created without further input. The welcome email is automatically created and sent.
+
+  Administration options allow the shop manager to specify options to make the plugin work for them:
+
+  <a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/admin-options.png"><img class="aligncenter size-medium wp-image-1022749" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/admin-options.png?w=550" alt="Admin options available for the Waitlist plugin found on the settings page" width="550" height="162" /></a>
+
+  Update options are for the sole purpose of updating the stored metadata pertaining to the plugin (this may be required when updating from an older version):
+
+  <a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/update-options.png"><img class="aligncenter size-medium wp-image-1022751" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/update-options.png?w=550" alt="Update options available for the Waitlist plugin found on the settings page" width="550" height="91" /></a>
+  <h3>Products Listing Screen</h3>
+  WooCommerce Waitlist adds a new column to the Products listing in the WordPress administration area, displaying the number of users on the waiting list for a product. This column is sortable to enable Shop Managers to quickly find the most 'sought after' products in the catalog.
+
+  <a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/product-listing-page.png"><img class="aligncenter size-medium wp-image-1022752" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/product-listing-page.png?w=550" alt="The column added by the Waitlist plugin showing how many customers are on the waitlist for each product" width="550" height="297" /></a>
+  <h3>Edit Product Screen</h3>
+  WooCommerce Waitlist adds a new product tab to the Edit Product screen. This new tab displays any customers that are currently on the waiting list for the product, any customers that were sent an in-stock notification email and subsequently removed from the waiting list (if archiving is enabled) and available options for this product.
+
+  On the waitlist tab the shop manager can add single or multiple email addresses (separated by a comma), remove customers from the waiting list, manually send out in-stock notification emails or send custom emails:
+
+  <a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/waitlist-tab.png"><img class="aligncenter size-medium wp-image-1022756" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/waitlist-tab.png?w=550" alt="Example of the waitlist tab on the product edit screen" width="550" height="239" /></a>
+
+  On the archive tab the shop manager has options to add customers back to the waiting list (these customers will remain in the archive until deleted), permanently delete customers from the archive or send the customers a custom email (if, for example, it is suspected a notification email has not reached them).  If a customer removes themselves from the archive (via the "My Waitlists" tab on the "My Account" page), this tab will also reflect this:
+
+  <a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/archive-tab.png"><img class="aligncenter size-medium wp-image-1022762" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/archive-tab.png?w=550" alt="Example of the waitlist archive tab on the product edit screen" width="550" height="263" /></a>
+
+  The options tab provides the shop manager with the ability to enforce specific options for certain products. If set here, these options will override the global options (for this product only):
+
+  <a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/options-tab.png"><img class="aligncenter size-medium wp-image-1022765" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/options-tab.png?w=550" alt="Example of the waitlist options tab on the product edit screen" width="550" height="225" /></a>
+
+</section>Waiting lists are updated instantly when working on the product edit screen. This avoids having to update/save the product post each time an edit is required.
+
+For variable products it is advised that the product is updated when changes are made to variations (for example, altering the stock level/status) as changes will not be instantly reflected on the Waitlist tab.
+
+When sending out custom emails from these tabs the default mail client on your computer will be activated.
+<h3>Automated Emails</h3>
+When a product is switched from 'Out-of'stock' status to 'In-stock', WooCommerce Waitlist sends all users on the waiting list an email informing them that the product is back in stock, with a link to the product listing for making purchases. The emails follow the same design as all other WooCommerce emails, but the subject and the heading can be altered from within <strong>WooCommerce &gt; Settings &gt; Emails &gt; Waitlist Mailout</strong>.
+
+<a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/mailout-options.png"><img class="aligncenter size-medium wp-image-1022775" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/mailout-options.png?w=550" alt="Email options for the waitlist plugin on the email settings screen" width="550" height="334" /></a>
+
+Here, it is also possible to add google analytics tracking codes to the product link sent out in the email.
+
+Once this email is sent, WooCommerce Waitlist removes all users from the waiting list for this product. If the product is subsequently switched back to 'Out-of-stock', the waiting list will be empty.
+<h3>Waitlist Archiving</h3>
+When a product comes back into stock and automated emails are turned on, a record of the waiting list is saved.  The archive tab lists all of the customers that were sent a back in stock notification, the date that the emails were sent and provides controls to manually add the customers back to the waiting list, remove them permanently or send custom emails:
+
+<a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/screen-shot-2018-05-22-at-11-34-54.png"><img class="aligncenter size-medium wp-image-1022788" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/screen-shot-2018-05-22-at-11-34-54.png?w=550" alt="Example of the waitlist archive tab showing the available options" width="550" height="226" /></a>
+<h3>Opt-In Options</h3>
+In version 1.8, options have been added to display an opt-in checkbox and a notice to users signing up to a waiting list.  With these options enabled users will need to consent to an account being created and receiving further communications before being allowed to join the waiting list.  This can be enabled for new users and registered users (a different notice is shown to new users with additional information regarding an account being created):
+
+<a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/opt-in-single-product.png"><img class="aligncenter size-medium wp-image-1022813" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/opt-in-single-product.png?w=550" alt="Example of the opt-in notification shown to users" width="550" height="339" /></a>
+<h3>Displaying Waitlist Elements on Product Archive Pages</h3>
+Also in version 1.8, an option was added to display the waitlist elements on product archive pages.  With this enabled, users will be able to join waiting lists for products from the shop page, product category pages or any other product archive pages:
+
+<a href="https://docs.woocommerce.com/wp-content/uploads/2012/10/opt-in-shop.png"><img class="aligncenter size-medium wp-image-1022818" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/opt-in-shop.png?w=550" alt="Example of a product archive page with waitlist elements displayed" width="550" height="416" /></a>
+<h2>Extending &amp; Customization</h2>
+WooCommerce Waitlist comes with action and filter hooks for your customization needs. For more information on using hooks in WordPress, see <a title="WordPress Action &amp; Filter Hook guide" href="http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters">Plugin API</a>.
+<p class="p1"><span class="s1">[box type="note"]<b>Note:</b> This is a <b>Developer level</b> section. If you are unfamiliar with hooks and filters and resolving potential conflicts, select a <a href="https://woocommerce.com/customizations/"><span class="s2">WooExpert or Developer</span></a> for assistance. We are unable to provide support for customizations under our<span class="Apple-converted-space">  </span><a href="http://www.woocommerce.com/support-policy/"><span class="s2">Support Policy</span></a>.[/box]</span></p>
+
+<h3>Action Hooks</h3>
+<ul>
+  <li><strong><code>wcwl_before_add_user_to_waitlist</code> - </strong>passes the <code>WC_Product</code> and <code>WP_User</code> objects as parameters</li>
+  <li><strong><code>wcwl_after_add_user_to_waitlist</code></strong> - passes the <code>WC_Product</code> and <code>WP_User</code> objects as parameters</li>
+  <li><strong><code>wcwl_before_remove_user_from_waitlist</code></strong> - passes the <code>WC_Product</code> and <code>WP_User</code> objects as parameters</li>
+  <li><strong><code>wcwl_after_remove_user_from_waitlist</code></strong> - passes the <code>WC_Product</code> and <code>WP_User</code> objects as parameters</li>
+  <li><strong><code>wcwl_mailout_send_email</code></strong> - passes the <code>customer ID</code> and <code>WC_Product ID</code> as parameters</li>
+</ul>
+<h2>Filter Hooks</h2>
+<h3>Options</h3>
+<ul>
+  <li><strong><code>wcwl_persistent_waitlists_are_disabled</code></strong></li>
+  <li><strong><code>wcwl_display_empty_waitlists_on_in_stock_products</code></strong></li>
+  <li><strong><code>wcwl_automatic_mailouts_are_disabled</code></strong></li>
+</ul>
+<h3>Admin</h3>
+<ul>
+  <li><strong><code>wcwl_empty_waitlist_introduction</code></strong></li>
+  <li><strong><code>wcwl_waitlist_introduction</code></strong></li>
+  <li><strong><code>wcwl_waitlist_variation_instock_introduction</code></strong></li>
+  <li><strong><code>wcwl_variation_tab_title</code></strong></li>
+  <li><strong><code>wcwl_admin_notification_email_subject</code></strong></li>
+  <li><strong><code>wcwl_admin_notification_email_message</code></strong></li>
+  <li><strong><code>wcwl_updated_nag_text</code></strong></li>
+  <li><strong><code>wcwl_dismiss_nag_text</code></strong></li>
+</ul>
+<h3>Shortcode</h3>
+<ul>
+  <li><strong><code>wcwl_shortcode_title</code></strong></li>
+  <li><strong><code>wcwl_shortcode_intro_text</code></strong></li>
+  <li><strong><code>wcwl_shortcode_product_title</code></strong></li>
+  <li><strong><code>wcwl_shortcode_thumbnail</code></strong></li>
+  <li><strong><code>wcwl_shortcode_remove_text</code></strong></li>
+  <li><strong><code>wcwl_shortcode_no_waitlists_text</code></strong></li>
+  <li><strong><code>wcwl_shortcode_archive_intro_text</code></strong></li>
+  <li><strong><code>wcwl_shortcode_archive_product_title</code></strong></li>
+  <li><strong><code>wcwl_shortcode_archive_remove_text</code></strong></li>
+</ul>
+<h3>Frontend</h3>
+<h4>Join Waitlist Elements</h4>
+<ul>
+  <li><strong><code>wcwl_join_waitlist_message_text</code></strong></li>
+  <li><strong><code>wcwl_join_waitlist_success_message_text</code></strong></li>
+  <li><strong><code>wcwl_join_waitlist_button_classes</code></strong></li>
+  <li><strong><code>wcwl_join_waitlist_submit_button_text</code></strong></li>
+  <li><strong><code>wcwl_join_waitlist_submit_button_html</code></strong></li>
+</ul>
+<h4>Leave Waitlist Elements</h4>
+<ul>
+  <li><strong><code>wcwl_leave_waitlist_message_text</code></strong></li>
+  <li><strong><code>wcwl_leave_waitlist_success_message_text</code></strong></li>
+  <li><strong><code>wcwl_leave_waitlist_button_classes</code></strong></li>
+  <li><strong><code>wcwl_leave_waitlist_submit_button_text</code></strong></li>
+  <li><strong><code>wcwl_leave_waitlist_submit_button_html</code></strong></li>
+</ul>
+<h4>Update Waitlist Elements (grouped products)</h4>
+<ul>
+  <li><strong><code>wcwl_update_waitlist_button_classes</code></strong></li>
+  <li><strong><code>wcwl_grouped_product_joined_message_text</code></strong></li>
+  <li><strong><code>wcwl_grouped_product_message_classes</code></strong></li>
+  <li><strong><code>wcwl_grouped_product_message_html</code></strong></li>
+  <li><strong><code>wcwl_grouped_waitlist_submit_button_html</code></strong></li>
+  <li><strong><code>wcwl_grouped_waitlist_submit_button_text</code></strong></li>
+  <li><strong><code>wcwl_grouped_product_message_registered_user_text</code></strong></li>
+  <li><strong><code>wcwl_grouped_product_message_unregistered_user_text</code></strong></li>
+  <li><strong><code>wcwl_grouped_product_style_block_css</code></strong></li>
+  <li><strong><code>wcwl_grouped_product_style_block</code></strong></li>
+</ul>
+<h4>Error Notices</h4>
+<ul>
+  <li><strong><code>wcwl_join_waitlist_user_requires_registration_message_text</code></strong></li>
+  <li><strong><code>wcwl_join_waitlist_invalid_email_message_text</code></strong></li>
+  <li><strong><code>wcwl_toggle_waitlist_no_product_message_text</code></strong></li>
+</ul>
+<h4>Miscellaneous</h4>
+<ul>
+  <li><strong><code>wcwl_toggle_waitlist_url</code></strong></li>
+  <li><strong><code>wcwl_enable_waitlist_account_tab</code></strong></li>
+  <li><strong><code>wcwl_new_user_opt-in_text</code></strong></li>
+  <li><strong><code>wcwl_registered_user_opt-in_text</code></strong></li>
+  <li><strong><code>wcwl_email_field_label</code></strong></li>
+  <li><strong><code>wcwl_frontend_email_field_html</code></strong></li>
+  <li><strong><code>wcwl_frontend_logged_out_user_html</code></strong></li>
+  <li><strong><code>wcwl_signup_notice_html</code></strong></li>
+</ul>
+<h3>Advanced</h3>
+<ul>
+  <li><strong><code>wcwl_supported_products</code></strong></li>
+  <li><strong><code>wcwl_waitlist_endpoint</code></strong></li>
+  <li><strong><code>wcwl_locate_template</code></strong></li>
+</ul>
+<h2>FAQ</h2>
+<h3>Can a customer view all the products they are on a waiting list for?</h3>
+Since version 1.7.0 customers will be able to view the products they are waiting for on the newly added "Your Waitlists" tab found on the default "My Account" page. There is also a shortcode [woocommerce_my_waitlist] which will display a list of all the products that the currently logged in user is waiting for.
+<h3>Are customers put on a waitlist in a particular order?</h3>
+Yes. Customers are added to the waitlist in the order they join. A date has also been added to make it clear when each customer joined.
+<h3>Does WooCommerce Waitlist work with WPML?</h3>
+Yes. Support has now been added for for WPML with the release of version 1.6.1.
+<h3>Does this work for affiliate products?</h3>
+No. At the moment, stock status has no bearing on the output of an affiliate product listing so these have been left well alone.
+<h3>Does this work for variable products?</h3>
+There is a known issue when using WooCommerce Waitlist in conjunction with variable products that prevents the Waitlist UI from being displayed in the Edit Product screen <strong>when the 'Out of Stock Visibility' option is set to ON.</strong>
+
+You would only need to do this if you were managing waitlists internally, but did not want customers to be able to join a waitlist via the front-end of your site.
+
+The only current solution to this problem is to turn this option off:
+
+<img class="aligncenter size-full wp-image-160351" src="https://docs.woocommerce.com/wp-content/uploads/2012/10/woocommerce-waitlist-disable.png" alt="woocommerce waitlist disable" width="1024" height="723" />
+<h3>How do I change the subject/content of emails?</h3>
+The content of the email and the subject line are both editable via the WooCommerce email system. WooCommerce Waitlist adds a new section to the 'Emails' tab of WooCommerce Settings where this can be managed. More information at: <a href="http://docs.woocommerce.com/document/configuring-woocommerce-settings/#section-8">Configuring WooCommerce Settings</a>.
+
+The "Back in stock" notification email can also be completely customized by overwriting the file in your theme. This is done by copying the relevant file over from woocommerce-waitlist/templates/emails/ into your theme's main directory and making the required changes.
+<h3>What if I don't want users to be automatically emailed when a product is back in stock?</h3>
+We have you covered. Add the following snippet to the functions.php file in your theme, and no email will be sent and users remain on the waitlist.
+
+<code>add_filter( 'wcwl_automatic_mailouts_are_disabled', '__return_true' );
+</code>
+<h3>What if I want to email users automatically, but don't want them to be removed from the waitlist?</h3>
+That's possible also. Add the following snippet to the functions.php file in your theme, and users remain on the waitlist until they purchase that product.
+
+<code>add_filter( 'wcwl_persistent_waitlists_are_disabled', '__return_false' );
+</code>
+<h3>Why does Waitlist only show up for some products?</h3>
+If you're using the <a title="Advanced Notifications Extension" href="http://woocommerce.com/products/advanced-notifications/">Advanced Notifications extension</a>, be sure to disable the backorder setting.
+<img class="size-full wp-image-151400 aligncenter" src="http://docs.woocommerce.com/wp-content/uploads/2012/10/backorders.png" alt="backorders" width="767" height="303" />
+<h3>Do I have to show the "My Waitlists" tab on the my account page?</h3>
+Not at all! Simply add the following snippet to your functions.php file in your theme and the Waitlist tab will not be loaded.
+<code>add_filter( 'wcwl_enable_waitlist_account_tab', '__return_false' );
+</code>
+If you would like to display customer waitlists on another page simply use the shortcode [woocommerce_my_waitlist]
+<h3>Can I change the text on the Waitlist buttons?</h3>
+Of course, just customize the following snippet by replacing the text 'Custom Text' for the join/leave buttons respectively. Add it to your functions.php file in your theme to see the changes.
+<code>add_filter( 'wcwl_join_waitlist_button_text', 'change_waitlist_join_button_text' );
+  function change_waitlist_join_button_text( $text ) {
+  return __( 'Custom Text' );
+  }
+  add_filter( 'wcwl_leave_waitlist_button_text', 'change_waitlist_leave_button_text' );
+  function change_waitlist_leave_button_text( $text ) {
+  return __( 'Custom Text' );
+  }
+</code>
+<h2>Questions &amp; Support</h2>
+Have a question before you buy? <a href="http://woocommerce.com/contact-us/#sales-form">Please fill out this pre-sales form.</a>
+
+Already purchased and need some assistance? <a href="https://woocommerce.com/my-account/marketplace-ticket-form/">Get in touch the developer</a> via the Help Desk.

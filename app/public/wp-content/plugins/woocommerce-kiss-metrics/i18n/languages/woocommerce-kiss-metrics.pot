@@ -1,0 +1,649 @@
+# Copyright (C) 2018 SkyVerge
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Kissmetrics 1.11.3\n"
+"Report-Msgid-Bugs-To: "
+"https://woocommerce.com/my-account/marketplace-ticket-form/\n"
+"POT-Creation-Date: 2018-05-09 04:17:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: includes/class-wc-kissmetrics-integration.php:70
+msgid "Kissmetrics"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:71
+msgid ""
+"Web analytics tool that tracks visitors to your site as people, not "
+"pageviews. Visualize your online sales funnels and find out which ones are "
+"driving revenue and which are not."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1318
+msgid "API Settings"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1319
+msgid "Enter your API key to start tracking."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1325
+msgid "API Key"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1326
+msgid ""
+"Log into your account and go to Site Settings. Leave blank to disable "
+"tracking."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1332
+msgid "Identity Preference"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1333
+msgid "Select how to identify logged in users."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1337
+msgid "Email Address"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1338
+msgid "Wordpress Username"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1343
+msgid "Logging"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1344
+msgid ""
+"Select whether to log nothing, queries, errors, or both queries and errors "
+"to the WooCommerce log. Careful, this can fill up log files very quickly on "
+"a busy site."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1348
+msgid "Off"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1349
+msgid "Queries"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1350
+msgid "Errors"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1351
+msgid "Queries & Errors"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1356
+msgid "Event Names"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1357
+msgid ""
+"Customize the event names. Leave a field blank to disable tracking of that "
+"event."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1363
+msgid "Signed In"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1364
+msgid "Triggered when a customer signs in."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1370
+msgid "Signed Out"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1371
+msgid "Triggered when a customer signs out."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1377
+msgid "Viewed Signup"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1378
+msgid "Triggered when a customer views the registration form."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1384
+msgid "Signed Up"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1385
+msgid "Triggered when a customer registers a new account."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1391
+msgid "Viewed Homepage"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1392
+msgid "Triggered when a customer views the homepage."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1398
+msgid "Viewed Product"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1399
+msgid "Triggered when a customer views a single product"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1405
+msgid "Added to Cart"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1406
+msgid "Triggered when a customer adds an item to the cart."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1412
+msgid "Removed from Cart"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1413
+msgid "Triggered when a customer removes an item from the cart."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1419
+msgid "Changed Cart Quantity"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1420
+msgid "Triggered when a customer changes the quantity of an item in the cart."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1426
+msgid "Viewed Cart"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1427
+msgid "Triggered when a customer views the cart."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1433
+msgid "Applied Coupon"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1434
+msgid "Triggered when a customer applies a coupon"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1440
+msgid "Started Checkout"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1441
+msgid "Triggered when a customer starts the checkout."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1447
+msgid "Started Payment"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1448
+msgid ""
+"Triggered when a customer views the payment page (used with direct post "
+"payment gateways)"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1454
+msgid "Completed Purchase"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1455
+msgid "Triggered when a customer completes a purchase."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1461
+msgid "Completed Payment"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1462
+msgid "Triggered when a customer completes payment for their purchase."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1468
+msgid "Wrote Review"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1469
+msgid "Triggered when a customer writes a review."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1475
+msgid "Commented"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1476
+msgid "Triggered when a customer write a comment."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1482
+msgid "Viewed Account"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1483
+msgid "Triggered when a customer views the My Account page."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1489
+msgid "Viewed Order"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1490
+msgid "Triggered when a customer views an order"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1496
+msgid "Updated Address"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1497
+msgid "Triggered when a customer updates their address."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1503
+msgid "Changed Password"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1504
+msgid "Triggered when a customer changes their password."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1510
+msgid "Estimated Shipping"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1511
+msgid "Triggered when a customer estimates shipping."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1517
+msgid "Tracked Order"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1518
+msgid "Triggered when a customer tracks an order."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1524
+msgid "Cancelled Order"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1525
+msgid "Triggered when a customer cancels an order."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1531
+msgid "Reordered"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1532
+msgid "Triggered when a customer reorders a previous order."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1538
+msgid "Property Names"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1539
+msgid ""
+"Customize the property names. Leave a field blank to disable tracking of "
+"that property."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1545
+msgid "Product Name"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1546
+msgid ""
+"Tracked when a customer views a product, adds / removes / changes "
+"quantities in the cart, or writes a review."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1552
+msgid "Product Quantity"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1553
+msgid ""
+"Tracked when a customer adds a product to their cart or changes the "
+"quantity in their cart."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1559
+msgid "Product Price"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1560
+#: includes/class-wc-kissmetrics-integration.php:1567
+msgid "Tracked when a customer adds a product to their cart."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1566
+msgid "Product Category"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1573
+msgid "Coupon Code"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1574
+msgid "Tracked when a customer applies a coupon."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1580
+msgid "Order ID"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1581
+#: includes/class-wc-kissmetrics-integration.php:1588
+#: includes/class-wc-kissmetrics-integration.php:1595
+#: includes/class-wc-kissmetrics-integration.php:1602
+#: includes/class-wc-kissmetrics-integration.php:1609
+msgid "Tracked when a customer completes their purchase."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1587
+msgid "Order Total"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1594
+msgid "Shipping Total"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1601
+msgid "Total Quantity"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1608
+msgid "Payment Method"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1615
+msgid "Post Title"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1616
+msgid "Tracked when a customer leaves a comment on a post."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1622
+msgid "Shipping Country"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1623
+msgid "Tracked when a customer estimates shipping."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1629
+msgid "Purchased SKU"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1630
+#: includes/class-wc-kissmetrics-integration.php:1637
+#: includes/class-wc-kissmetrics-integration.php:1644
+#: includes/class-wc-kissmetrics-integration.php:1651
+#: includes/class-wc-kissmetrics-integration.php:1658
+msgid "Tracked when a customer purchases the product."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1636
+msgid "Purchased Product Name"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1643
+msgid "Purchased Category"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1650
+msgid "Purchased Price"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-integration.php:1657
+msgid "Purchased Quantity"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:69
+#. translators: Placeholders: %1$s - <a> tag, %2$s - </a> tag
+msgid ""
+"Please %1$supdate%2$s your Kissmetrics settings in order to start tracking "
+"Subscription events."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:697
+msgid "Subscription Event Names"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:698
+msgid ""
+"Customize the event names for Subscription events. Leave a field blank to "
+"disable tracking of that event."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:702
+msgid "Activated Subscription"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:703
+msgid "Triggered when a customer activates their subscription."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:708
+msgid "Subscription Free Trial Ended"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:709
+msgid "Triggered when a the free trial ends for a subscription."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:714
+msgid "Subscription End of Pre-Paid Term"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:715
+msgid ""
+"Triggered when the end of a pre-paid term for a previously cancelled "
+"subscription is reached."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:720
+msgid "Subscription Expired"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:721
+msgid "Triggered when a subscription expires."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:726
+msgid "Suspended Subscription"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:727
+msgid "Triggered when a customer suspends their subscription."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:732
+msgid "Reactivated Subscription"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:733
+msgid "Triggered when a customer reactivates their subscription."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:738
+msgid "Cancelled Subscription"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:739
+msgid "Triggered when a customer cancels their subscription."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:744
+msgid "Renewed Subscription"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:745
+msgid ""
+"Triggered when a customer is automatically billed for a subscription "
+"renewal."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:750
+msgid "Subscription Property Names"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:751
+msgid ""
+"Customize the property names for Subscription events. Leave a field blank "
+"to disable tracking of that property."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:755
+msgid "Subscription Name"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:756
+msgid "Tracked anytime a subscription event occurs."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:761
+msgid "Subscription ID"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:762
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:768
+msgid "Tracked when a subscription is activated."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:767
+msgid "Subscription Price"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:773
+msgid "Total Initial Payment"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:774
+msgid ""
+"Tracked for subscription activations. Includes the Recurring amount and "
+"Sign Up Fee."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:779
+msgid "Initial Sign Up Fee"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:780
+msgid ""
+"Tracked for subscription activations. This will be zero if the subscription "
+"has no sign up fee."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:785
+msgid "Subscription Period"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:786
+msgid "Tracks the period (e.g. Day, Month, Year) for subscription activations."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:791
+msgid "Subscription Interval"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:792
+msgid ""
+"Tracks the interval (e.g. every 1st, 2nd, 3rd, etc.) for subscription "
+"activations."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:797
+msgid "Subscription Length"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:798
+msgid ""
+"Tracks the length (e.g. infinite, 12 months, 2 years, etc.) for "
+"subscription activations."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:803
+msgid "Subscription Trial Period"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:804
+msgid ""
+"Tracks the trial period (e.g. Day, Month, Year) for subscription "
+"activations with a free trial."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:809
+msgid "Subscription Trial Length"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:810
+msgid ""
+"Tracks the trial length (e.g. 1-90 periods) for subscription activations "
+"with a free trial."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:815
+msgid "Billing Amount for Subscription Renewal"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:816
+msgid ""
+"Tracks the amount billed to the customer when their subscription "
+"automatically renews."
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:821
+msgid "Billing Description for Subscription Renewal"
+msgstr ""
+
+#: includes/class-wc-kissmetrics-subscriptions-integration.php:822
+msgid ""
+"Tracks the name of the subscription billed to the customer when the "
+"subscription automatically renews."
+msgstr ""
+
+#: woocommerce-kissmetrics.php:48
+msgid "WooCommerce KISSmetrics"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Kissmetrics"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woocommerce.com/products/kiss-metrics/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds Kissmetrics tracking to WooCommerce with one click!"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "SkyVerge"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.woocommerce.com"
+msgstr ""

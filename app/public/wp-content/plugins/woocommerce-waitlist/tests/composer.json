@@ -1,0 +1,13 @@
+{
+    "require-dev": {
+        "lucatume/wp-browser": "*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "./run.sh"
+        ],
+        "post-update-cmd": [
+            "./run.sh"
+        ]
+    }
+}

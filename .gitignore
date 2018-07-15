@@ -1,7 +1,7 @@
 #------------------------
 #  Log files
 #------------------------
-*
-!*/
-!wp-content/**
-!.gitignore
+#*
+#!*/
+#!wp-content/**
+#!.gitignore

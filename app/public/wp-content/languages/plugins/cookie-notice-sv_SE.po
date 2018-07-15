@@ -1,0 +1,386 @@
+# Translation of Plugins - Cookie Notice for GDPR - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Cookie Notice for GDPR - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-06-12 10:38:02+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Cookie Notice for GDPR - Stable (latest release)\n"
+
+#: cookie-notice.php:553
+msgid "The text of the privacy policy button."
+msgstr "Texten på knappen för integritetspolicyn."
+
+#: cookie-notice.php:744
+msgid "Enter additional button CSS classes separated by spaces."
+msgstr "Lägg in extra CSS-klasser för knappen, separerade med mellanslag."
+
+#: cookie-notice.php:614
+msgid "Select the privacy policy link target."
+msgstr "Välj vart länken för integritetspolicy ska peka."
+
+#: cookie-notice.php:585
+msgid "Synchronize with WordPress Privacy Policy page."
+msgstr "Synkronisera med integritetspolicysidan för WordPress."
+
+#: cookie-notice.php:549
+msgid "Enable privacy policy link."
+msgstr "Aktivera länk för integritetspolicy."
+
+#: cookie-notice.php:515
+msgid "Select the method for displaying the revoke button - automatic (in the Cookie Notice container) or manual using <code>[cookies_revoke]</code> shortcode."
+msgstr "Välj metod för hur återkallningsknappen ska visas – automatiskt (i containern för cookie-information) eller manuellt med hjälp av kortkoden <code>[cookies_revoke]</code>."
+
+#: cookie-notice.php:507
+msgid "The text of the button to revoke the cookie consent."
+msgstr "Text på knapp för att återkalla samtycke till cookies."
+
+#: cookie-notice.php:504
+msgid "Enable to give to the user the possibility to revoke their cookie consent <i>(requires \"Refuse cookies\" option enabled)</i>."
+msgstr "Aktivera detta för att ge användaren möjlighet att återkalla sitt samtycke till cokies <i>(för etta behöver alternativet ”Tacka nej till cookies” vara aktiverat)</i>."
+
+#: cookie-notice.php:489
+msgid "The code to be used in your site footer, before the closing body tag."
+msgstr "Koden som ska användas i sidfoten för din webbplats, före taggen &gt;/body&lt;."
+
+#: cookie-notice.php:485
+msgid "The code to be used in your site header, before the closing head tag."
+msgstr "Koden som ska användas i html-huvudet för din webbplats, före taggen &gt;/head&lt;."
+
+#: cookie-notice.php:482
+msgid "Body"
+msgstr "BODY"
+
+#: cookie-notice.php:481
+msgid "Head"
+msgstr "HEAD"
+
+#: cookie-notice.php:407
+msgid "Button class"
+msgstr "Klass för knapp"
+
+#: cookie-notice.php:192 cookie-notice.php:394
+msgid "Revoke cookies"
+msgstr "Återkalla cookies"
+
+#: cookie-notice.php:393
+msgid "Refuse cookies"
+msgstr "Tacka nej till cookies"
+
+#: cookie-notice.php:193 cookie-notice.php:391
+msgid "Privacy policy"
+msgstr "Integritetspolicy"
+
+#: cookie-notice.php:165
+msgid "An hour"
+msgstr "En timme"
+
+#: cookie-notice.php:146
+msgid "Manual"
+msgstr "Manuellt"
+
+#: cookie-notice.php:145
+msgid "Automatic"
+msgstr "Automatisk"
+
+#: cookie-notice.php:526
+msgid "Enable to reload the page after cookies are accepted."
+msgstr "Aktivera för att ladda om sidan när cookies har accepterats."
+
+#: cookie-notice.php:396
+msgid "Reloading"
+msgstr "Laddar om"
+
+#: cookie-notice.php:493
+msgid "To get the cookie notice status use <code>cn_cookies_accepted()</code> function."
+msgstr "Använd funktionen <code>cn_cookies_accepted()</code> för att få reda på aktuell status för cookie-notis."
+
+#: cookie-notice.php:463
+msgid "The text of the button to refuse the usage of the cookies."
+msgstr "Texten på knapp för att neka användningen av cookies."
+
+#: cookie-notice.php:395
+msgid "Script blocking"
+msgstr "Skriptblockering"
+
+#: cookie-notice.php:357
+msgid "Check out our other <a href=\"%s\" target=\"_blank\">WordPress plugins</a>."
+msgstr "Kolla in våra andra <a href=\"%s\" target=\"_blank\">WordPress-tillägg</a>."
+
+#: cookie-notice.php:356
+msgid "Blog about it & link to the <a href=\"%s\" target=\"_blank\">plugin page</a>."
+msgstr "Blogg om det och länka till <a href=\"%s\" target=\"_blank\">tilläggssidan</a>."
+
+#: cookie-notice.php:355
+msgid "<a href=\"%s\" target=\"_blank\">Rate it 5</a> on WordPress.org"
+msgstr "<a href=\"%s\" target=\"_blank\">Betygsätt det med 5</a> på WordPress.org"
+
+#: cookie-notice.php:352
+msgid "If you are having problems with this plugin, please browse it's <a href=\"%s\" target=\"_blank\">Documentation</a> or talk about them in the <a href=\"%s\" target=\"_blank\">Support forum</a>"
+msgstr "Om du har problem med detta tillägg, bläddra i <a href=\"%s\" target=\"_blank\">dokumentationen</a> eller prata om det i <a href=\"%s\" target=\"_blank\">supportforumet</a>"
+
+#: cookie-notice.php:550
+msgid "Need a Cookie Policy? Generate one with <a href=\"%s\" target=\"_blank\" title=\"iubenda\">iubenda</a>."
+msgstr "Behöver du en Cookie-policy? Generera en med <a href=\"%s\" target=\"_blank\" title=\"iubenda\">iubenda</a>."
+
+#. Author URI of the plugin/theme
+msgid "http://www.dfactory.eu/"
+msgstr "http://www.dfactory.eu/"
+
+#. Author of the plugin/theme
+msgid "dFactory"
+msgstr "dFactory"
+
+#. Description of the plugin/theme
+msgid "Cookie Notice allows you to elegantly inform users that your site uses cookies and to comply with the EU cookie law GDPR regulations."
+msgstr "Cookie Notice ger dig möjlighet att elegant informera användare om att din webbplats använder cookies och följer EU-cookielagen för GDPR-förordningar."
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.dfactory.eu/plugins/cookie-notice/"
+msgstr "http://www.dfactory.eu/plugins/cookie-notice/"
+
+#: cookie-notice.php:1060
+msgid "Are you sure you want to reset these settings to defaults?"
+msgstr "Är du säker på att du vill återställa inställningarna till standardvärden?"
+
+#: cookie-notice.php:993
+msgid "Settings"
+msgstr "Inställningar"
+
+#: cookie-notice.php:976
+msgid "Support"
+msgstr "Support"
+
+#: cookie-notice.php:870
+msgid "Settings restored to defaults."
+msgstr "Inställningarna återställda till standardvärden."
+
+#: cookie-notice.php:731
+msgid "Choose buttons style."
+msgstr "Välj knapparnas stil."
+
+#: cookie-notice.php:710
+msgid "Number of pixels user has to scroll to accept the usage of the cookies and make the notification disappear."
+msgstr "Antal pixel användaren måste bläddra för att acceptera användning av cookies och för att notifieringen ska försvinna."
+
+#: cookie-notice.php:707
+msgid "Enable cookie notice acceptance when users scroll."
+msgstr "Aktivera notis ”acceptera cookies” när användare bläddrar."
+
+#: cookie-notice.php:696
+msgid "Cookie notice acceptance animation."
+msgstr "Animation för godkännande av cookie meddelandet."
+
+#: cookie-notice.php:675
+msgid "Select location for your cookie notice."
+msgstr "Välj plats för din cookie meddelande."
+
+#: cookie-notice.php:655
+msgid "Select where all the plugin scripts should be placed."
+msgstr "Välj var alla tilläggets skript ska placeras."
+
+#: cookie-notice.php:637
+msgid "The ammount of time that cookie should be stored for."
+msgstr "Den tid som cookien ska lagras."
+
+#: cookie-notice.php:592
+msgid "Enter the full URL starting with http(s)://"
+msgstr "Ange den fullständiga URL:en som börjar med http(s)://"
+
+#: cookie-notice.php:579
+msgid "Select from one of your site's pages."
+msgstr "Välj någon av webbplatsens sidor."
+
+#: cookie-notice.php:568
+msgid "-- select page --"
+msgstr "-- välj sida --"
+
+#: cookie-notice.php:565
+msgid "Select where to redirect user for more information about cookies."
+msgstr "Välj vart du vill omdirigera användaren för mer information om cookies."
+
+#: cookie-notice.php:493
+msgid "Enter non functional cookies Javascript code here (for e.g. Google Analitycs) to be used after cookies are accepted."
+msgstr "Här skriver du in javascriptkoden för icke-funktionella cookies (för t.ex. Google Analytics). Den kommer att användas efter att cookies accepterats."
+
+#: cookie-notice.php:459
+msgid "Enable to give to the user the possibility to refuse third party non functional cookies."
+msgstr "Aktivera att användaren får möjlighet att neka icke-funktionella cookies från tredje part."
+
+#: cookie-notice.php:448
+msgid "The text of the option to accept the usage of the cookies and make the notification disappear."
+msgstr "Texten i alternativet för att acceptera användningen av cookies och få meddelandet att försvinna."
+
+#: cookie-notice.php:435
+msgid "Enter the cookie notice message."
+msgstr "Ange notismeddelandet för cookien."
+
+#: cookie-notice.php:423
+msgid "Enable if you want all plugin data to be deleted on deactivation."
+msgstr "Aktivera om du vill att all data ska tas bort vid avaktivering av tillägget."
+
+#: cookie-notice.php:408
+msgid "Colors"
+msgstr "Färger"
+
+#: cookie-notice.php:406
+msgid "Button style"
+msgstr "Knappstil"
+
+#: cookie-notice.php:405
+msgid "Animation"
+msgstr "Animation"
+
+#: cookie-notice.php:404
+msgid "Position"
+msgstr "Position"
+
+#: cookie-notice.php:403
+msgid "Design"
+msgstr "Design"
+
+#: cookie-notice.php:400
+msgid "Deactivation"
+msgstr "Avaktivering"
+
+#: cookie-notice.php:399
+msgid "Script placement"
+msgstr "Skriptplacering"
+
+#: cookie-notice.php:398
+msgid "Cookie expiry"
+msgstr "Giltighetstid för cookie"
+
+#: cookie-notice.php:397
+msgid "On scroll"
+msgstr "Vid rullning"
+
+#: cookie-notice.php:392
+msgid "Link target"
+msgstr "Länkmål"
+
+#: cookie-notice.php:390
+msgid "Button text"
+msgstr "Knapptext"
+
+#: cookie-notice.php:389
+msgid "Message"
+msgstr "Meddelande"
+
+#: cookie-notice.php:388
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: cookie-notice.php:372
+msgid "Reset to defaults"
+msgstr "Återställ till standardvärden"
+
+#: cookie-notice.php:354
+msgid "Do you like this plugin?"
+msgstr "Tycker du om detta tillägg?"
+
+#: cookie-notice.php:351
+msgid "Need support?"
+msgstr "Behöver du hjälp?"
+
+#. #-#-#-#-#  cookie-notice-code.pot (Cookie Notice 1.2.44)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: cookie-notice.php:335 cookie-notice.php:346 cookie-notice.php:349
+msgid "Cookie Notice"
+msgstr "Cookie Notice"
+
+#: cookie-notice.php:191
+msgid "No"
+msgstr "Nej"
+
+#: cookie-notice.php:190
+msgid "Ok"
+msgstr "Ok"
+
+#: cookie-notice.php:189
+msgid "We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it."
+msgstr "Vi använder cookies för att se till att vi ger dig den bästa upplevelsen på vår hemsida. Om du fortsätter att använda den här webbplatsen kommer vi att anta att du godkänner detta."
+
+#: cookie-notice.php:183
+msgid "Footer"
+msgstr "Sidfot"
+
+#: cookie-notice.php:182
+msgid "Header"
+msgstr "Sidhuvud"
+
+#: cookie-notice.php:178
+msgid "Slide"
+msgstr "Glid"
+
+#: cookie-notice.php:177
+msgid "Fade"
+msgstr "Fade"
+
+#: cookie-notice.php:172
+msgid "infinity"
+msgstr "oändligt"
+
+#: cookie-notice.php:171
+msgid "1 year"
+msgstr "1 år"
+
+#: cookie-notice.php:170
+msgid "6 months"
+msgstr "6 månader"
+
+#: cookie-notice.php:169
+msgid "3 months"
+msgstr "3 månader"
+
+#: cookie-notice.php:168
+msgid "1 month"
+msgstr "1 månad"
+
+#: cookie-notice.php:167
+msgid "1 week"
+msgstr "1 vecka"
+
+#: cookie-notice.php:166
+msgid "1 day"
+msgstr "1 dag"
+
+#: cookie-notice.php:161
+msgid "Bar color"
+msgstr "Balkfärg"
+
+#: cookie-notice.php:160
+msgid "Text color"
+msgstr "Textfärg"
+
+#: cookie-notice.php:150
+msgid "Page link"
+msgstr "Sidlänk"
+
+#: cookie-notice.php:151
+msgid "Custom link"
+msgstr "Anpassad länk"
+
+#: cookie-notice.php:141
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: cookie-notice.php:140
+msgid "WordPress"
+msgstr "WordPress"
+
+#: cookie-notice.php:139 cookie-notice.php:176
+msgid "None"
+msgstr "Ingen"
+
+#: cookie-notice.php:135
+msgid "Bottom"
+msgstr "Längst ner"
+
+#: cookie-notice.php:134
+msgid "Top"
+msgstr "Högst upp"
