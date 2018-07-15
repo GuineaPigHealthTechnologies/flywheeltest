@@ -1,3 +1,0 @@
-                		<mpns>
-{mpns}
-	                	</mpns>
